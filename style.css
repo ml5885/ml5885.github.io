@@ -1,0 +1,198 @@
+*{margin: 0; padding:0; box-sizing: border-box;}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  background-color:rgb(245,234,198);
+}
+
+header{
+  background-color:black;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 5;
+}
+
+#home{
+  width: 100%;
+  height: 1000px;
+}
+
+#home h1{
+  position: absolute;
+  top: 200px;
+  left:460px;
+  font-size: 200px;
+  font-family: futura;
+  font-weight: lighter;
+  display: inline-block;
+}
+
+#home h2{
+  position: absolute;
+  top: 200px;
+  left:460px;
+  font-size: 50px;
+  font-family: futura;
+  font-weight: lighter;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+a {
+  color: black;
+}
+
+#AboutMe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1000px;
+}
+
+#AboutMe h1{
+  position: relative;
+  font-size: 100px;
+  top: -400px;
+  font-family: futura;
+  font-weight: lighter;
+  text-transform: lowercase;
+  display: inline-block;
+}
+
+#Experience{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  height: 1000px;
+}
+
+#Experience h1{
+  position: relative;
+  font-size: 100px;
+  top: -400px;
+  font-family: futura;
+  font-weight: lighter;
+  text-transform: lowercase;
+  display: inline-block;
+}
+
+#Projects{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1000px;
+}
+
+#Projects h1{
+  position: relative;
+  font-size: 100px;
+  top: -400px;
+  font-family: futura;
+  font-weight: lighter;
+  text-transform: lowercase;
+  display: inline-block;
+}
+
+
+#rectangle1 {
+  position: absolute;
+  width: 22px;
+  height: 500px;
+  transform: translateX(782.5px) translateY(-200px);
+  background: black;
+}
+
+#rectangle2 {
+  position: absolute;
+  width: 22px;
+  height: 1600px;
+  transform: translateX(842.25px) translateY(400px);
+  background: black;
+}
+
+#rectangle3 {
+  position: absolute;
+  width: 350px;
+  height: 655px;
+  transform: rotate(180deg) translateX(-432.5px) translateY(244px);
+  background:rgb(181,63,52);
+  animation-name: rectangle3Animation;
+  animation-duration: 3s;
+}
+
+#rectangle4 {
+  position: absolute;
+  width: 260px;
+  height: 1400px;
+  background:rgb(48,94,141);
+  animation-name: rectangle4Animation;
+  animation-duration: 3s;
+}
+
+#rectangle4Wrapper {
+  transform: rotate(180deg) translateX(295px) translateY(-1820px);;
+}
+
+#rectangle5 {
+  position: absolute;
+  width: 325px;
+  height: 1200px;
+  transform: translateX(-25px) translateY(-1115.5px);
+  background:rgb(222,197,89);
+  animation-name: rectangle5Animation;
+  animation-duration: 3s;
+}
+
+#rectangle5Wrapper{
+  transform: rotate(270deg); 
+}
+
+#positioning{
+  transform: rotate(90deg) translateX(200px) translateY(-480px);
+}
+
+#aboutme{
+  transform: rotate(90deg) translateX(700px) translateY(-300px);
+}
+
+.wrapper{
+  transform: rotate(335deg) translateX(-200px) translateY(-50px);
+}
+
+.aboutMePosition{
+  transform: rotate(90deg) translateX(700px) translateY(-280px);
+}
+
+.experiencePosition{
+  transform: rotate(90deg) translateX(700px) translateY(-130px);
+
+}
+
+.projectsPosition{
+  transform: rotate(90deg) translateX(700px) translateY(20px);
+}
+
+@keyframes rectangle3Animation {
+  0% {height: 0px;}
+  100% {height: 655px;}
+}
+
+@keyframes rectangle4Animation {
+  0% {height: 0px;}
+  100% {height: 1400px;}
+}
+
+@keyframes rectangle5Animation {
+  0% {height: 0px;}
+  100% {height: 1200px;}
+}

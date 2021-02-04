@@ -50,7 +50,6 @@ a {
 }
 
 #AboutMe{
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -68,7 +67,6 @@ a {
 }
 
 #Experience{
-  display: flex;
   align-items: center;
   justify-content: center;  
   width: 100%;
@@ -86,7 +84,6 @@ a {
 }
 
 #Projects{
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;

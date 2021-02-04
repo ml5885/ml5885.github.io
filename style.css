@@ -125,51 +125,69 @@ a {
   height: 1600px;
   transform: translateX(842.25px) translateY(400px);
   background: black;
-  animation-name: rectangle3Animation;
+  animation-name: rectangle2Animation;
   animation-duration: 3s;
 }
 
 #rectangle3 {
   position: absolute;
-  width: 350px;
-  height: 655px;
-  transform: rotate(180deg) translateX(-432.5px) translateY(244px);
-  background:rgb(181,63,52);
+  width: 380px;
+  height: 2400px;
+  background:rgb(222,197,89);
   animation-name: rectangle3Animation;
   animation-duration: 3s;
 }
 
+#rectangle3Wrapper{
+  transform: rotate(180deg) translateX(636px) translateY(-2820px);;
+}
+
 #rectangle4 {
   position: absolute;
-  width: 260px;
-  height: 1400px;
+  width: 300px;
+  height: 300px;
   background:rgb(48,94,141);
   animation-name: rectangle4Animation;
   animation-duration: 3s;
 }
 
 #rectangle4Wrapper {
-  transform: rotate(180deg) translateX(295px) translateY(-1820px);;
+  transform: rotate(0deg) translateX(900px) translateY(440px);;
 }
 
-#rectangle5 {
+
+#circle {
   position: absolute;
-  width: 325px;
-  height: 1200px;
-  transform: translateX(-25px) translateY(-1115.5px);
+  border-radius: 0 0 500px 0;
+  width: 355px;
+  height: 355px;
   background:rgb(222,197,89);
-  animation-name: rectangle5Animation;
+  animation-name: circleAnimation;
   animation-duration: 3s;
 }
 
-#rectangle5Wrapper{
-  transform: rotate(270deg); 
+#circleWrapper{
+  transform: rotate(180deg) translateX(658px) translateY(-300px); 
+}
+
+#circle2 {
+  position: absolute;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  background:rgb(181,63,52);
+  animation-name: circle2Animation;
+  animation-duration: 3s;
+}
+
+#circle2Wrapper{
+  transform: rotate(270deg) translateX(100px) translateY(-700px); 
 }
 
 #rectangle6 {
   position: absolute;
   width: 70px;
-  height: 50px;
+  height: 70px;
   opacity: 0;
   background:rgb(181,63,52);
   transition: 500ms linear;
@@ -187,7 +205,7 @@ a {
 #rectangle7 {
   position: absolute;
   width: 70px;
-  height: 50px;
+  height: 70px;
   opacity: 0;
   background:rgb(181,63,52);
   transition: 500ms linear;
@@ -205,7 +223,7 @@ a {
 #rectangle8 {
   position: absolute;
   width: 70px;
-  height: 50px;
+  height: 70px;
   opacity: 0;
   background:rgb(181,63,52);
   transition: 500ms linear;
@@ -218,6 +236,29 @@ a {
 #rectangle8:hover{
   height:280px;
   opacity:1;
+}
+
+#rectangle9 {
+  position: absolute;
+  width: 22px;
+  height: 1200px;
+  transform: translateX(355px) translateY(-300px);
+  background: rgb(48,94,141);
+  animation-name: rectangle9Animation;
+  animation-duration: 3s;
+}
+
+#rectangle10 {
+  position: absolute;
+  width: 300px;
+  height: 600px;
+  background:rgb(181,63,52);
+  animation-name: rectangle10Animation;
+  animation-duration: 3s;
+}
+
+#rectangle10Wrapper {
+  transform: rotate(90deg) translateX(720px) translateY(-700px);
 }
 
 #positioning{
@@ -241,27 +282,45 @@ a {
 
 }
 
-
 .projectsPosition{
   transform: rotate(90deg) translateX(700px) translateY(20px);
+}
+@keyframes rectangle2Animation {
+  0% {height: 0px;}
+  100% {height: 1600px;}
 }
 
 @keyframes rectangle3Animation {
   0% {height: 0px;}
-  100% {height: 655px;}
+  100% {height: 2400px;}
 }
 
 @keyframes rectangle4Animation {
-  0% {height: 0px;}
-  100% {height: 1400px;}
+  0% {height: 0px; width: 0px}
+  100% {height: 300px; width: 300px}
 }
 
-@keyframes rectangle5Animation {
-  0% {height: 0px;}
-  100% {height: 1200px;}
+@keyframes circleAnimation {
+  0% {height: 0px; width: 0px}
+  100% {height: 350px; width:350px}
+}
+
+@keyframes circle2Animation {
+  0% {height: 0px; width: 0px}
+  100% {height: 300px; width:300px}
 }
 
 @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity:1;}
+}
+
+@keyframes rectangle9Animation {
+  0% {height: 0px;}
+  100% {height: 1200px;}
+}
+
+@keyframes rectangle10Animation {
+  0% {height: 0px;}
+  100% {height: 600px;}
 }

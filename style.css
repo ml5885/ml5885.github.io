@@ -43,6 +43,8 @@ header{
   font-weight: lighter;
   text-transform: uppercase;
   display: inline-block;
+  opacity:0;
+  animation: fadeIn 3s 2.8s forwards;
 }
 
 a {
@@ -108,8 +110,13 @@ a {
   position: absolute;
   width: 22px;
   height: 500px;
-  transform: translateX(782.5px) translateY(-200px);
   background: black;
+  animation-name: rectangle3Animation;
+  animation-duration: 3s;
+}
+
+#rectangle1Wrapper{
+  transform: rotate(180deg) translateX(635.6px) translateY(-250px);
 }
 
 #rectangle2 {
@@ -118,6 +125,8 @@ a {
   height: 1600px;
   transform: translateX(842.25px) translateY(400px);
   background: black;
+  animation-name: rectangle3Animation;
+  animation-duration: 3s;
 }
 
 #rectangle3 {
@@ -157,6 +166,60 @@ a {
   transform: rotate(270deg); 
 }
 
+#rectangle6 {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  opacity: 0;
+  background:rgb(181,63,52);
+  transition: 500ms linear;
+}
+
+#rectangle6Wrapper {
+  transform: rotate(0deg) translateX(734px) translateY(420px);
+}
+
+#rectangle6:hover{
+  height:300px;
+  opacity:1;
+}
+
+#rectangle7 {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  opacity: 0;
+  background:rgb(181,63,52);
+  transition: 500ms linear;
+}
+
+#rectangle7Wrapper {
+  transform: rotate(0deg) translateX(584px) translateY(420px);
+}
+
+#rectangle7:hover{
+  height:324px;
+  opacity:1;
+}
+
+#rectangle8 {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  opacity: 0;
+  background:rgb(181,63,52);
+  transition: 500ms linear;
+}
+
+#rectangle8Wrapper {
+  transform: rotate(0deg) translateX(434px) translateY(420px);
+}
+
+#rectangle8:hover{
+  height:280px;
+  opacity:1;
+}
+
 #positioning{
   transform: rotate(90deg) translateX(200px) translateY(-480px);
 }
@@ -178,6 +241,7 @@ a {
 
 }
 
+
 .projectsPosition{
   transform: rotate(90deg) translateX(700px) translateY(20px);
 }
@@ -195,4 +259,9 @@ a {
 @keyframes rectangle5Animation {
   0% {height: 0px;}
   100% {height: 1200px;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity:1;}
 }

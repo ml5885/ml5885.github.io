@@ -58,7 +58,7 @@ a {
 }
 
 #AboutMe h1{
-  position: absolute;
+  position: relative;
   font-size: 100px;
   top: -400px;
   font-family: futura;
@@ -76,7 +76,7 @@ a {
 }
 
 #Experience h1{
-  position: absolute;
+  position: relative;
   font-size: 100px;
   top: -400px;
   font-family: futura;
@@ -86,6 +86,7 @@ a {
 }
 
 #Projects{
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -93,8 +94,7 @@ a {
 }
 
 #Projects h1{
-  display: flex;
-  position: absolute;
+  position: relative;
   font-size: 100px;
   top: -400px;
   font-family: futura;

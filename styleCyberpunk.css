@@ -1,0 +1,352 @@
+*{margin: 0; padding:0; box-sizing: border-box;}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  background-color:rgb(245,234,198);
+}
+
+header{
+  background-color:black;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 5;
+}
+
+#home{
+  width: 100%;
+  height: 1000px;
+}
+
+#home h1{
+  position: absolute;
+  top: 200px;
+  left:460px;
+  font-size: 200px;
+  font-family: futura;
+  font-weight: lighter;
+  display: inline-block;
+}
+
+#home h2{
+  position: absolute;
+  top: 200px;
+  left:460px;
+  font-size: 50px;
+  font-family: futura;
+  font-weight: lighter;
+  text-transform: uppercase;
+  display: inline-block;
+  opacity:0;
+  animation: fadeIn 3s 2.8s forwards;
+}
+
+a {
+  color: black;
+}
+
+#AboutMe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1000px;
+}
+
+#AboutMe h1{
+  position: relative;
+  font-size: 100px;
+  top: -400px;
+  font-family: futura;
+  font-weight: lighter;
+  text-transform: lowercase;
+  display: inline-block;
+}
+
+#Experience{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  height: 1000px;
+}
+
+#Experience h1{
+  position: relative;
+  font-size: 100px;
+  top: -400px;
+  font-family: futura;
+  font-weight: lighter;
+  text-transform: lowercase;
+  display: inline-block;
+}
+
+#Projects{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1000px;
+}
+
+#Projects h1{
+  position: relative;
+  font-size: 100px;
+  top: -400px;
+  font-family: futura;
+  font-weight: lighter;
+  text-transform: lowercase;
+  display: inline-block;
+}
+
+
+#rectangle1 {
+  position: absolute;
+  width: 22px;
+  height: 500px;
+  background: black;
+  animation-name: rectangle3Animation;
+  animation-duration: 3s;
+}
+
+#rectangle1Wrapper{
+  transform: rotate(180deg) translateX(635.6px) translateY(-250px);
+}
+
+#rectangle2 {
+  position: absolute;
+  width: 22px;
+  height: 1600px;
+  transform: translateX(842.25px) translateY(400px);
+  background: black;
+  animation-name: rectangle2Animation;
+  animation-duration: 3s;
+}
+
+#rectangle3 {
+  position: absolute;
+  width: 380px;
+  height: 2400px;
+  background:rgb(222,197,89);
+  animation-name: rectangle3Animation;
+  animation-duration: 3s;
+}
+
+#rectangle3Wrapper{
+  transform: rotate(180deg) translateX(636px) translateY(-2820px);;
+}
+
+#rectangle4 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background:rgb(48,94,141);
+  animation-name: rectangle4Animation;
+  animation-duration: 3s;
+}
+
+#rectangle4Wrapper {
+  transform: rotate(0deg) translateX(900px) translateY(440px);;
+}
+
+
+#circle {
+  position: absolute;
+  border-radius: 0 0 500px 0;
+  width: 355px;
+  height: 355px;
+  background:rgb(222,197,89);
+  animation-name: circleAnimation;
+  animation-duration: 3s;
+}
+
+#circleWrapper{
+  transform: rotate(180deg) translateX(658px) translateY(-300px); 
+}
+
+#circle2 {
+  position: absolute;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  background:rgb(181,63,52);
+  animation-name: circle2Animation;
+  animation-duration: 3s;
+}
+
+#circle2Wrapper{
+  transform: rotate(270deg) translateX(100px) translateY(-700px); 
+}
+
+#rectangle6 {
+  position: absolute;
+  width: 70px;
+  height: 10px;
+  opacity:0;
+  background:rgb(181,63,52);
+  animation: fadeIn 3s 2.8s forwards;
+  transition: 500ms linear;
+}
+
+#rectangle6Wrapper {
+  transform: rotate(0deg) translateX(734px) translateY(420px);
+}
+
+#rectangle6:hover{
+  height:300px;
+}
+
+#rectangle7 {
+  position: absolute;
+  width: 70px;
+  height: 10px;
+  opacity:0;
+  background:rgb(181,63,52);
+  animation: fadeIn 3s 2.8s forwards;
+  transition: 500ms linear;
+}
+
+#rectangle7Wrapper {
+  transform: rotate(0deg) translateX(584px) translateY(420px);
+}
+
+#rectangle7:hover{
+  height:324px;
+}
+
+#rectangle8 {
+  position: absolute;
+  width: 70px;
+  height: 10px;
+  opacity:0;
+  background:rgb(181,63,52);
+  animation: fadeIn 3s 2.8s forwards;
+  transition: 500ms linear;
+}
+
+#rectangle8Wrapper {
+  transform: rotate(0deg) translateX(434px) translateY(420px);
+}
+
+#rectangle8:hover{
+  height:280px;
+}
+
+#rectangle9 {
+  position: absolute;
+  width: 22px;
+  height: 1200px;
+  transform: translateX(355px) translateY(-300px);
+  background: rgb(48,94,141);
+  animation-name: rectangle9Animation;
+  animation-duration: 3s;
+}
+
+#rectangle10 {
+  position: absolute;
+  width: 300px;
+  height: 600px;
+  background:rgb(181,63,52);
+  animation-name: rectangle10Animation;
+  animation-duration: 3s;
+}
+
+#rectangle10Wrapper {
+  transform: rotate(90deg) translateX(720px) translateY(-700px);
+}
+
+#rectangle11 {
+  position: absolute;
+  width: 1800px;
+  height: 10px;
+  background:rgb(181,63,52);
+  animation: rectangle11Animation 3s forwards;
+}
+
+#rectangle11Wrapper {
+  transform: rotate(0deg) translateX(-200px) translateY(420px);
+}
+
+
+#positioning{
+  transform: rotate(90deg) translateX(200px) translateY(-480px);
+}
+
+#aboutme{
+  transform: rotate(90deg) translateX(700px) translateY(-300px);
+}
+
+.wrapper{
+  transform: rotate(335deg) translateX(-200px) translateY(-50px);
+}
+
+.aboutMePosition{
+  transform: rotate(90deg) translateX(700px) translateY(-280px);
+}
+
+.experiencePosition{
+  transform: rotate(90deg) translateX(700px) translateY(-130px);
+
+}
+
+.projectsPosition{
+  transform: rotate(90deg) translateX(700px) translateY(20px);
+}
+@keyframes rectangle2Animation {
+  0% {height: 0px;}
+  100% {height: 1600px;}
+}
+
+@keyframes rectangle3Animation {
+  0% {height: 0px;}
+  100% {height: 2400px;}
+}
+
+@keyframes rectangle4Animation {
+  0% {height: 0px; width: 0px}
+  100% {height: 300px; width: 300px}
+}
+
+@keyframes circleAnimation {
+  0% {height: 0px; width: 0px}
+  100% {height: 350px; width:350px}
+}
+
+@keyframes circle2Animation {
+  0% {height: 0px; width: 0px}
+  100% {height: 300px; width:300px}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity:1;}
+}
+
+
+@keyframes fadeInQuick {
+  0% {opacity: 0;}
+  25% {opacity:1;}
+  100%{opacity:1;}
+}
+
+
+@keyframes rectangle9Animation {
+  0% {height: 0px;}
+  100% {height: 1200px;}
+}
+
+@keyframes rectangle10Animation {
+  0% {height: 0px;}
+  100% {height: 600px;}
+}
+
+@keyframes rectangle11Animation{
+  0% {width: 0px;}
+  100% {width: 1800px;}
+}

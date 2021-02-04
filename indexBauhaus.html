@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<Title>Michael Li</Title>
+		<link rel="stylesheet" href="styleBauhaus.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("a").on('click', function(event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function(){
+						window.location.hash = hash;
+					});
+				} 
+			});
+		});
+		</script>
+	</head>
+	
+	<body>
+		<div class="main" id="home">
+			<div class="wrapper">
+				<div id="circleWrapper">
+					<div id="circle"></div>
+				</div>
+				<div id="rectangle9Wrapper">
+					<div id="rectangle9"></div>
+				</div>
+				<div id="rectangle10Wrapper">
+					<div id="rectangle10"></div>
+				</div>
+				<div id="circle2Wrapper">
+					<div id="circle2"></div>
+				</div>
+				<div id="rectangle1Wrapper">
+					<div id="rectangle1"></div>
+				</div>
+				<div id="rectangle3Wrapper">
+					<div id="rectangle3"></div>
+				</div>
+				<div id="rectangle4Wrapper">
+					<div id="rectangle4"></div>
+				</div>
+				<div>
+					<h1>michael</h1>
+					<h1 id="positioning">Li</h1>
+				</div>
+				<div id="rectangle11Wrapper">
+					<div id="rectangle11"></div>
+				</div>
+				<a href="#AboutMe">
+					<div id="rectangle6Wrapper">
+						<div id="rectangle6"></div>
+					</div>
+				</a>
+				<div class="aboutMePosition">
+					<a href="#AboutMe">
+						<h2>About Me</h2>
+					</a>
+				</div>
+				<a href="#Experience">
+					<div id="rectangle7Wrapper">
+						<div id="rectangle7"></div>
+					</div>
+				</a>
+				<div class="experiencePosition">
+					<a href="#Experience">
+						<h2>Experience</h2>
+					</a>
+				</div>
+				<a href="#Projects">
+					<div id="rectangle8Wrapper">
+						<div id="rectangle8"></div>
+					</div>
+				</a>
+				<div class="projectsPosition">
+					<a href="#Projects">
+						<h2>Projects</h2>
+					</a>
+				</div>
+				<div id="rectangle2"></div>
+			</div>
+		</div>
+
+		<div class="main" id="AboutMe">
+			<h1>About Me</h1>
+		</div>
+
+		<div class="main" id="Experience">
+			<h1>Experience</h1>
+		</div>
+
+		<div class="main" id="Projects">
+			<h1>Projects</h1>
+		</div>
+	</body>
+	
+</html>

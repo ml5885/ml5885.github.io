@@ -7,24 +7,23 @@
 		<link rel="stylesheet" href="styleCyberpunk.css">
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css">
 		<script>
-		$(document).ready(function(){
-			$("a").on('click', function(event) {
-				if (this.hash !== "") {
-					event.preventDefault();
-					var hash = this.hash;
-					$('html, body').animate({
-						scrollTop: $(hash).offset().top
-					}, 800, function(){
-						window.location.hash = hash;
-					});
-				} 
+			$(document).ready(function(){
+				$("a").on('click', function(event) {
+					if (this.hash !== "") {
+						event.preventDefault();
+						var hash = this.hash;
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+						}, 800, function(){
+							window.location.hash = hash;
+						});
+					} 
+				});
 			});
-		});
 		</script>
 	</head>
 	
 	<body>
-
 		<section class="main">
 			<button class="cybr-btn hidden">
 			</button>
@@ -42,6 +41,7 @@
 				<div class="dropdown-content" style="width: 170px; top: 61px; left: 14px;">
 					<a href="index.html" style="color:black">Bauhaus</a>
 					<a href="indexCyberpunk.html" style="color:black">Cyberpunk</a>
+					<a href="" style="color:black">Webflow Website</a>
 				</div>
 			</div>
 			<div class="menu" style="margin-left: 20%; margin-top: 15%; z-index: 1000; color:white">
@@ -65,56 +65,61 @@
 		</div>
 
 		<section>
-				<div id="AboutMe" style="margin-top: -5%; margin-left: 15%">
+				<div id="AboutMe" style="margin-left: 15%; margin-bottom: 10%; color: whitesmoke; text-shadow: 0px 0px 3px var(--white-glow);">
 					<div class="my-augfiguration" data-augmented-ui="tr-clip bl-clip br-clip-y both" style="opacity:0.6; z-index: -1">
 					</div>
-					<div style="z-index:2; margin-left: 5%; margin-top: -30%; margin-bottom: 28%" >
-						<div>
-							<h1 style="color:Black; font-size:50px; opacity: 1" >About Me</h1>
+					<div style="z-index:2; margin-left: 5%; margin-top: -35%; margin-bottom: 28%; margin-right: 10%" >
+						<div id="textbody">
+							<h1 style="font-size:80px;" >About Me</h1>
 						</div>
 						<br>
-						<div id="textBody" style="margin-right: 20%; color: black; opacity: 1">
-							I am a 16 year old junior in highschool, and I love coding. I have worked with everything from HTML and CSS to 
-							Java and C++ to Python and CSharp. 
+						<br>
+						<div id="textBody" style="opacity: 1; font-size: 20px">
+							I am a 16 year old junior in highschool, and I love coding. I have worked with everything from HTML and CSS 
+							<br> to Java and C++ to Python and CSharp. 
 						</div>
 						<br>
-						<div id="textBody" style="color: black; opacity: 1">
-							I always try to learn new things, and everything I do is something that helps me learn new things and meet new people.
+						<div id="textBody" style="opacity: 1; font-size: 20px">
+							I always try to learn new things, and everything I do is something that helps me learn new things
+							<br>and meet new people. 
 						</div>
 						<br>
-						<div id="textBody" style="color: black; opacity: 1">
+						<div id="textBody" style="opacity: 1; font-size: 20px">
 							When I'm not busy coding, I'm either studying for the SAT (here's hoping for 1500+) or I'm playing the piano.
 						</div>
 					</div>
 				</div>
 
-				<div id="Experience" style="margin-left: 15%">
-					<div class="my-augfiguration" id="AboutMe" data-augmented-ui="tr-clip bl-clip br-clip-y both" style="opacity:0.6; z-index: -1">
+				<div id="Experience" style="margin-left: 15%; margin-bottom: 10%">
+					<div class="my-augfiguration2" id="AboutMe" data-augmented-ui="tr-clip bl-clip br-clip-y both" style="opacity:0.6; z-index: -1">
 					</div>
-					<div style="z-index:2; margin-left: 5%; margin-top: -35%; margin-bottom: 28%" >
+					<div style="z-index:2; margin-left: 5%; margin-top: -45%; margin-bottom: 28%; color: whitesmoke; text-shadow: 0px 0px 3px var(--white-glow);" >
+						<h1 style="font-size:80px;">Experience</h1>
 						<br>
-						<h1 style="color:Black; font-size:50px;">Experience</h1>
-						<br>
-						<div id="textBody2" style="color: black">
-							I am proficient in HTML, CSS, Javascript, Java, Python, C++ and CSharp. 
+						<div id="textBody" style="opacity: 1; font-size: 20px">
+							I am fluent in HTML, CSS, Javascript, Java, Python, C++ and CSharp. 
 						</div>
-						<div id="textBody2" style="color: black">
+						<br>
+						<div id="textBody" style="opacity: 1; font-size: 20px">
 							<b>Amador Valley Robotics Club</b>
 							<br>2018 - Present
 							<br>I work with OpenCV for object detection and image processing.
 						</div>
-						<div id="textBody2" style="color: black">
+						<br>
+						<div id="textBody" style="opacity: 1; font-size: 20px">
 							<b>Omou Learning</b>
 							<br>Frontend Developer Intern
 							<br>July 2019 - Present
 							<br>Omou is an early-stage startup. I have worked with React, HTML, CSS, and JS
 						</div>
-						<div id="textBody2" style="color: black">
+						<br>
+						<div id="textBody" style="opacity: 1; font-size: 20px">
 							<b>AP Computer Science A</b>
 							<br>College-level computer science course.
 							<br>Java was the primary language taught
 						</div>
-						<div id="textBody2" style="color: black">
+						<br>
+						<div id="textBody" style="opacity: 1; font-size: 20px">
 							<b>AP Computer Science Principles</b>
 							<br>Introductory college-level computing course
 							<br>Learned HTML, CSS and Javascript
@@ -122,34 +127,34 @@
 					</div>
 				</div>
 
-				<div id="Projects" style="margin-left: 15%; margin-bottom: 5%">
+				<div id="Projects" style="margin-left: 15%; margin-bottom: 10%">
 					<div class="my-augfiguration" 
 					data-augmented-ui="tr-clip bl-clip br-clip-y both" style="opacity: 0.6; z-index: -1">
 					</div>
-					<div style="margin-left: 5%;  margin-top: -30%; margin-bottom: 50%">
-						<h1 style="color:Black; font-size:50px">Projects</h1>
+					<div style="margin-left: 5%;  margin-top: -33%; margin-bottom: 10%; color: whitesmoke; text-shadow: 0px 0px 3px var(--white-glow);">
+						<h1 id="textbody" style="font-size:80px">Projects</h1>
 						<br>
-						<div id="textBody2" style="color: black">
+						<div id="textBody" style="opacity: 1; font-size: 20px">
 							June 2020 
 							<br><b>Data Day Grind Hackathon</b> - 
-							<a href="https://devpost.com/software/stance-taking-a-stand-against-hate-speech" style="color:black">
+							<a href="https://devpost.com/software/stance-taking-a-stand-against-hate-speech"style="color: whitesmoke"> 
 								Best Data Visualization
 							</a>
 						</div>
-						<div id="textBody2" style="color: black">
+						<div id="textBody" style="opacity: 1; font-size: 20px">
 							July 2020 
-							<br><b>HackItShipIt</b> - <a href="https://devpost.com/software/shipworthy" style="color:black">
+							<br><b>HackItShipIt</b> - <a href="https://devpost.com/software/shipworthy" style="color: whitesmoke">
 								First Overall	
 							</a>
 						</div>
-						<div id="textBody2" style="color: black">
+						<div id="textBody" style="opacity: 1; font-size: 20px">
 							July-August 2020 
-							<br><b>To The Moon and Hack Hackathon</b> - <a href="https://devpost.com/software/ad-lunam" style="color:black">
+							<br><b>To The Moon and Hack Hackathon</b> - <a href="https://devpost.com/software/ad-lunam" style="color: whitesmoke">
 								Third Overall
 							</a>
 						</div>
 
-						<div id="textBody2" style="color: black">
+						<div id="textBody" style="opacity: 1; font-size: 20px">
 							<br>
 							Contact me at 
 							<br><b>bearseascape@gmail.com</b>
@@ -160,10 +165,10 @@
 						</div>
 					</div>
 				</div>
-		</section>
-		<div id="footer">
+			</section>
+			<div id="footer">
 			<div>
-				<h5 style="color: white; font-family: cyber">Website built using HTML, CSS, and JS by Michael Li</h5>
+				<h5 style="font-family: cyber">Website built using HTML, CSS, and JS by Michael Li</h5>
 			</div>
 		</div>
 	</body>	

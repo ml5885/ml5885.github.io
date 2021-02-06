@@ -5,190 +5,125 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<Title>Michael Li</Title>
 		<link rel="stylesheet" href="styleCyberpunk.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$("a").on('click', function(event) {
-					if (this.hash !== "") {
-						event.preventDefault();
-						var hash = this.hash;
-						$('html, body').animate({
-							scrollTop: $(hash).offset().top
-						}, 800, function(){
-							window.location.hash = hash;
-						});
-					} 
-				});
-			});
-		</script>
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css">
 	</head>
 	
 	<body>
-		<div class="dropdown" style="z-index:1">
-			<button class="dropbtn">Style</button>
-			<div class="dropdown-content">
-			<a href="index.html">Bauhaus</a>
-			<a href="indexCyberpunk.html">Cyberpunk</a>
+		<div class="dropdown">
+			<button class="dropbtn cybr-btn "  style="width: 120px; height: 50px;">
+				Style<span aria-hidden>_</span>
+				<span aria-hidden class = "cybr-btn__glitch">Style</span>
+				<span aria-hidden class = "cybr-btn__tag" style="left:100px; top: 45px;">A1</span>
+			</button>
+			<div class="dropdown-content" style="width: 116px">
+				<a href="index.html" >Bauhaus</a>
+				<a href="indexCyberpunk.html">Cyberpunk</a>
 			</div>
 		</div>
-		<div class="main" id="home">
-			<div class="wrapper">
-				<div id="circleWrapper">
-					<div id="circle"></div>
-				</div>
-				<div id="rectangle9Wrapper">
-					<div id="rectangle9"></div>
-				</div>
-				<div id="rectangle10Wrapper">
-					<div id="rectangle10"></div>
-				</div>
-				<div id="circle2Wrapper">
-					<div id="circle2"></div>
-				</div>
-				<div id="rectangle1Wrapper">
-					<div id="rectangle1"></div>
-				</div>
-				<div id="rectangle3Wrapper">
-					<div id="rectangle3"></div>
-				</div>
-				<div id="rectangle4Wrapper">
-					<div id="rectangle4"></div>
-				</div>
-				<div>
-					<h1>michael</h1>
-					<h1 id="positioning">Li</h1>
-				</div>
-				<div id="rectangle11Wrapper">
-					<div id="rectangle11"></div>
-				</div>
-				<a href="#AboutMe">
-					<div id="rectangle6Wrapper">
-						<div id="rectangle6"></div>
-					</div>
-				</a>
-				<div class="aboutMePosition">
-					<a href="#AboutMe">
-						<h2>About Me</h2>
-					</a>
-				</div>
-				<a href="#Experience">
-					<div id="rectangle7Wrapper">
-						<div id="rectangle7"></div>
-					</div>
-				</a>
-				<div class="experiencePosition">
-					<a href="#Experience">
-						<h2>Experience</h2>
-					</a>
-				</div>
-				<a href="#Projects">
-					<div id="rectangle8Wrapper">
-						<div id="rectangle8"></div>
-					</div>
-				</a>
-				<div class="projectsPosition">
-					<a href="#Projects">
-						<h2>Projects</h2>
-					</a>
-				</div>
-				<div id="rectangle2"></div>
+		<section class="main">
+			<button class="cybr-btn hidden">
+			</button>
+			<h1>Michael Li_</h1>
+		</section>
+		<section id="AboutMe" style="margin-top: -15%">
+			<div class="my-augfiguration"
+			data-augmented-ui="tr-clip bl-clip br-clip-y both"
+			>
+			 <br> <h1 style="color:Black; font-size:50px">About Me</h1>
+			 <br>				
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
 			</div>
-		</div>
-		<div class="fade" id="AboutMe">
-			<div>
-				<h1>About Me</h1>
+		</section>
+		<section id="Experience">
+			<div class="my-augfiguration"
+			data-augmented-ui="tr-clip bl-clip br-clip-y both"
+			>
+			 <br> <h1 style="color:Black; font-size:50px">About Me</h1>
+			 <br>				
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
 			</div>
-			<div id="textBody">
-				I am a 16 year old junior in highschool, and I love coding. I have worked with everything from HTML and CSS to 
-				Java and C++ to Python and CSharp. 
+		</section>
+		<section id="Projects">
+			<div class="my-augfiguration"
+			data-augmented-ui="tr-clip bl-clip br-clip-y both"
+			>
+			 <br> <h1 style="color:Black; font-size:50px">About Me</h1>
+			 <br>				
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
 			</div>
-			<div id="textBody">
-				I always try to learn new things, and everything I do is something that helps me learn new things and meet new people.
-			</div>
-			<div id="textBody">
-				When I'm not busy coding, I'm either studying for the SAT (here's hoping for 1500+) or I'm playing the piano.
-			</div>
-		</div>
-
-		<div class="fade" id="Experience">
-			<div>
-				<h1>Experience</h1>
-			</div>
-			<div id="textBody2">
-				I am proficient in HTML, CSS, Javascript, Java, Python, C++ and CSharp. 
-			</div>
-			<div id="textBody2">
-				<b>Amador Valley Robotics Club</b>
-				<br>2018 - Present
-				<br>I work with OpenCV for object detection and image processing.
-			</div>
-			<div id="textBody2">
-				<b>Omou Learning</b>
-				<br>Frontend Developer Intern
-				<br>July 2019 - Present
-				<br>Omou is an early-stage startup. I have worked with React, HTML, CSS, and JS
-			</div>
-			<div id="textBody2">
-				<b>AP Computer Science A</b>
-				<br>College-level computer science course.
-				<br>Java was the primary language taught
-			</div>
-			<div id="textBody2">
-				<b>AP Computer Science Principles</b>
-				<br>Introductory college-level computing course
-				<br>Learned HTML, CSS and Javascript
-			</div>
-		</div>
-
-		<div class="fade" id="Projects">
-			<h1>Projects</h1>
-			<div id="textBody2">
-				June 2020 
-				<br><b>Data Day Grind Hackathon</b> - 
-				<a href="https://devpost.com/software/stance-taking-a-stand-against-hate-speech" style="color:rgb(48,94,141)">
-					Best Data Visualization
-				</a>
-			</div>
-			<div id="textBody2">
-				July 2020 
-				<br><b>HackItShipIt</b> - <a href="https://devpost.com/software/shipworthy" style="color:rgb(48,94,141)">
-					First Overall	
-				</a>
-			</div>
-			<div id="textBody2">
-				July-August 2020 
-				<br><b>To The Moon and Hack Hackathon</b> - <a href="https://devpost.com/software/ad-lunam" style="color:rgb(48,94,141)">
-					Third Overall
-				</a>
-			</div>
-			<div id="textBody2">
-				<br>
-				Contact me at 
-				<br><b>bearseascape@gmail.com</b>
-				<br> <b>ml5885@pleasantonusd.net</b>
-				<br>
-				<br>
-				<br>
-			</div>
-		</div>
-
-		<div id="footer">
-			<a href="https://github.com/ml5885">
-				<img alt="Github Link" src="github-logo.png" width=8% height=8% id="githubImage">
-			</a>
-
-			<a href="https://devpost.com/limichael353" >
-				<img alt="Devpost Link" src="devpostlogo.png" width=10% height=10% id="devpostImage">
-			</a>
-
-			<a href="https://devpost.com/bearseascape" >
-				<img alt="2nd Devpost Link" src="devpostlogo.png" width=10% height=10% id="devpostImage2">
-			</a>
-
-			<div>
-				<h5>Website built using HTML, CSS, and JS by Michael Li</h5>
-			</div>
-		</div>
+		</section>
 	</body>
 	
 </html>

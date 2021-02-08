@@ -279,6 +279,8 @@ body .cybr-btn + .cybr-btn {
   );
 }
 
+
+
 @keyframes glitch {
   0% {
     clip-path: var(--clip-one);

@@ -28,7 +28,6 @@ body {
   margin: 0px;
   top: 0px;
   bottom: 0px;
-  overflow-x: hidden;
   /* background: linear-gradient( #61323B, #141C24 ); */
   background: black fixed !important;
   font-family: cyber;
@@ -43,11 +42,13 @@ body .cybr-btn + .cybr-btn {
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-right: 41%
 }
 
-.main h1{
+.main h2{
   font-family: cyber;
   font-size: 50px;
+  color:white; text-shadow: 0px 0px 3px var(--white-glow)
 }
 
 .cybr-btn {
@@ -83,7 +84,11 @@ body .cybr-btn + .cybr-btn {
   font-weight: 700;
   border: 0;
   transition: background 0.2s;
-
+  width: 175px; 
+  height: 80px; 
+  margin-top: -10%; 
+  margin-bottom:-18%; 
+	font-size: 20px
 }
 
 .cybr-btn:hover {
@@ -121,9 +126,10 @@ body .cybr-btn + .cybr-btn {
   line-height: 1;
   bottom: 20%;
   right: 5%;
-  font-weight: normal;
-  color: hsl(0, 0%, 0%);
+  left:148px; 
   font-size: 12px;
+  color: white; 
+  margin-bottom:-13%;
 }
 
 .cybr-btn__glitch {
@@ -167,14 +173,17 @@ body .cybr-btn + .cybr-btn {
   position: relative;
   display: inline-block;
   z-index: 3;
+  margin-left:30%;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: white;
-  left: 8px;
   font-family: cyber;
+  width: 165px; 
+  top: 61px; 
+  left: 14px;
 }
 
 .dropdown-content a {
@@ -193,20 +202,11 @@ body .cybr-btn + .cybr-btn {
   opacity: 0;
 }
 
-.AboutMe {
-  width: 100%;
-  height: 30%;
-  font-family: cyber;
-  display: inline-block;
-}
-
-.AboutMe h1{
-  font-family: Cyber;
-}
-
-.textBody{
+#textBody{
   width: 75%;
   position: relative;
+  opacity: 1; 
+  font-size: 20px
 }
 
 .my-augfiguration {
@@ -219,7 +219,6 @@ body .cybr-btn + .cybr-btn {
   --aug-inlay-all: 10px;
   --aug-inlay-bg: #fbe806;
   background: transparent;
-  /* color:#88414C; */
   color: whitesmoke;
   height: 450px;
   width: 950px;
@@ -228,6 +227,9 @@ body .cybr-btn + .cybr-btn {
   font-family: cyber;
   margin-top: 10%;
   margin-left: 2%;
+  opacity:0.6; 
+  z-index: -1; 
+  display: inline-block;
   background: repeating-linear-gradient(
     to bottom,
     transparent 0%,
@@ -254,7 +256,6 @@ body .cybr-btn + .cybr-btn {
   --aug-inlay-all: 10px;
   --aug-inlay-bg: #fbe806;
   background: transparent;
-  /* color:#88414C; */
   color: whitesmoke;
   height: 550px;
   width: 950px;
@@ -263,6 +264,9 @@ body .cybr-btn + .cybr-btn {
   font-family: cyber;
   margin-top: 10%;
   margin-left: 2%;
+  opacity:0.6; 
+  z-index: -1;
+  display:inline-block;
   background: repeating-linear-gradient(
     to bottom,
     transparent 0%,
@@ -279,7 +283,65 @@ body .cybr-btn + .cybr-btn {
   );
 }
 
+.my-augfiguration3 {
+  --aug-tr: 25px;
+  --aug-bl: 57px;
+  --aug-br: 25px;
+  --aug-br-inset2: 40%;
+  --aug-border-all: 10px;
+  --aug-border-bg: linear-gradient(to botto...);
+  --aug-inlay-all: 10px;
+  --aug-inlay-bg: #fbe806;
+  background: transparent;
+  /* color:#88414C; */
+  color: whitesmoke;
+  height: 600px;
+  width: 950px;
+  text-align: center;
+  align-content: center;
+  font-family: cyber;
+  margin-top: 10%;
+  margin-left: 2%;
+  opacity:0.6; 
+  z-index: -1; 
+  display: inline-block;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--red-scanline) 1px,
+    var(--red-scanline) 3px,
+    var(--red-scanline) 5px,
+    var(--red-scanline) 4px,
+    transparent 0.5%
+  ),
+  repeating-linear-gradient(
+    to left,
+    var(--black-scanline) 100%,
+    var(--black-scanline) 100%
+  );
+}
 
+.mixin-set [data-augmented-ui] {
+  width: 240px;
+  height: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background: linear-gradient(to bottom right, orange, gold); */
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--red-scanline) 1px,
+    var(--red-scanline) 3px,
+    var(--red-scanline) 5px,
+    var(--red-scanline) 4px,
+    transparent 0.5%
+  ),
+  repeating-linear-gradient(
+    to left,
+    var(--black-scanline) 100%,
+    var(--black-scanline) 100%
+  );
+}
 
 @keyframes glitch {
   0% {
@@ -345,7 +407,6 @@ body .cybr-btn + .cybr-btn {
 
 .menu {
   display: inline-block;
-  margin-left: 150px;
   width: 400px;
   height: 100%;
   background: repeating-linear-gradient(
@@ -362,6 +423,10 @@ body .cybr-btn + .cybr-btn {
       var(--black-scanline) 100%,
       var(--black-scanline) 100%
     );
+  margin-left: 20%; 
+  margin-top: 15%; 
+  z-index: 1000; 
+  color:white
 }
 
 .menu ul {
@@ -455,16 +520,59 @@ body .cybr-btn + .cybr-btn {
   opacity: 0;
 }
 
-.AboutMeLink:active + #AboutMe{
-  opacity: 1;
+#Experience{
+  margin-left: 15%; 
+  margin-bottom: 10%;
 }
 
-.ExperienceLink:active + #Experience{
-  opacity: 1;
+#Experience #div1{
+  z-index:2; 
+  margin-left: 5%; 
+  margin-top: -45%; 
+  color: white; 
+  text-shadow: 0px 0px 3px var(--white-glow);
 }
 
-.ProjectsLink:active + #Projects{
-  opacity: 1;
+#Experience h1{
+  font-size: 80px;
+}
+
+#AboutMe {
+  margin-left: 15%; 
+  margin-bottom: 10%;
+}
+
+#AboutMe h1{
+  font-size: 80px;
+}
+
+#AboutMe #div1{
+  z-index:2; 
+  margin-left: 5%; 
+  margin-top: -35%; 
+  color: white; 
+  text-shadow: 0px 0px 3px var(--white-glow);
+}
+
+#Projects{
+  margin-left: 15%; 
+  margin-bottom: 10%;
+}
+
+#Projects #div1{
+  margin-left: 5%;  
+  margin-top: -45%; 
+  color: white; 
+  text-shadow: 0px 0px 3px var(--white-glow);
+}
+
+#Projects h1{
+  font-size: 80px;
+}
+
+#ProfilePicture {
+  margin-top: 8%;
+  margin-left: 5%;
 }
 
 #footer{
@@ -494,3 +602,20 @@ body .cybr-btn + .cybr-btn {
   margin-bottom: 5%;
 }
 
+#headerImage{
+  width: 117.5%;
+  height: 127.5%;
+  display: block;
+  margin-left: 67.5%;
+  margin-right: auto
+}
+
+#box {
+  border: 1.5px white;
+  border-style: solid;
+  box-shadow: 0px 0px 3px var(--white-glow);
+}
+
+#githubLink{
+  margin-left: 3%;
+}

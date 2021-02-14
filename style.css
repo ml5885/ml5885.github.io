@@ -149,6 +149,10 @@ a {
   text-transform: lowercase;
 }
 
+#Projects a{
+  color:rgb(48,94,141);
+}
+
 #rectangle1 {
   position: absolute;
   width: 22px;
@@ -439,7 +443,7 @@ a {
 
 @keyframes circleAnimation {
   0% {height: 0px; width: 0px}
-  100% {height: 350px; width:350px}
+  100% {height: 355px; width:355px}
 }
 
 @keyframes circle2Animation {

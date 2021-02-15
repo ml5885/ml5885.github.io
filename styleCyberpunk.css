@@ -202,11 +202,13 @@ body .cybr-btn + .cybr-btn {
   opacity: 0;
 }
 
-#textBody{
-  width: 75%;
+.textBody{
   position: relative;
   opacity: 1; 
-  font-size: 20px
+  font-size: 20px;
+  text-align: left;
+  margin-right: 25%;
+  width: 70%;
 }
 
 .my-augfiguration {
@@ -257,7 +259,7 @@ body .cybr-btn + .cybr-btn {
   --aug-inlay-bg: #fbe806;
   background: transparent;
   color: whitesmoke;
-  height: 550px;
+  height: 580px;
   width: 950px;
   text-align: center;
   align-content: center;
@@ -522,7 +524,7 @@ body .cybr-btn + .cybr-btn {
 
 #Experience{
   margin-left: 15%; 
-  margin-bottom: 10%;
+  margin-bottom: 25%;
 }
 
 #Experience #div1{
@@ -539,7 +541,7 @@ body .cybr-btn + .cybr-btn {
 
 #AboutMe {
   margin-left: 15%; 
-  margin-bottom: 10%;
+  margin-bottom: 15%;
 }
 
 #AboutMe h1{
@@ -618,4 +620,20 @@ body .cybr-btn + .cybr-btn {
 
 #githubLink{
   margin-left: 3%;
+}
+
+/*Typewriter Animation*/
+
+.typewrite {
+  border-right: 2px solid rgba(255,255,255,.75);
+  line-height: 1.15;
+}
+
+.anim-typewrite {
+  animation: blinkTextCursor 530ms infinite normal;
+}
+
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }

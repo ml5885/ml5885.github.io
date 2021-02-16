@@ -259,7 +259,7 @@ body .cybr-btn + .cybr-btn {
   --aug-inlay-bg: #fbe806;
   background: transparent;
   color: whitesmoke;
-  height: 580px;
+  height: 650px;
   width: 950px;
   text-align: center;
   align-content: center;
@@ -524,13 +524,13 @@ body .cybr-btn + .cybr-btn {
 
 #Experience{
   margin-left: 15%; 
-  margin-bottom: 20%;
+  margin-bottom: 35%;
 }
 
 #Experience #div1{
   z-index:2; 
   margin-left: 5%; 
-  margin-top: -45%; 
+  margin-top: -50%; 
   color: white; 
   text-shadow: 0px 0px 3px var(--white-glow);
 }

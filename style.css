@@ -8,11 +8,12 @@ body {
   max-width: 100%;
   overflow-x:hidden;
   overflow-y:scroll;
-  background-color:rgb(245,234,198);
+  /* background-color:rgb(245,234,198); */
+  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=f5e9c6ff&noise=626262&density=45&opacity=15);
 }
 
 .button {
-  background-color:rgb(181,63,52); 
+  background-color:#DA3732; 
   border: none;
   color: white;
   padding: 10px 16px;
@@ -150,7 +151,8 @@ a {
 }
 
 #Projects a{
-  color:rgb(48,94,141);
+  /* color:#2558A5; */
+  color: #2558A5;
 }
 
 #rectangle1 {
@@ -180,7 +182,7 @@ a {
   position: absolute;
   width: 380px;
   height: 2400px;
-  background:rgb(222,197,89);
+  background:#EBC146;
   animation-name: rectangle3Animation;
   animation-duration: 3s;
 }
@@ -193,7 +195,7 @@ a {
   position: absolute;
   width: 300px;
   height: 300px;
-  background:rgb(48,94,141);
+  background:#2558A5;
   animation-name: rectangle4Animation;
   animation-duration: 3s;
 }
@@ -208,7 +210,7 @@ a {
   border-radius: 0 0 500px 0;
   width: 355px;
   height: 355px;
-  background:rgb(222,197,89);
+  background:#EBC146;
   animation-name: circleAnimation;
   animation-duration: 3s;
 }
@@ -222,7 +224,7 @@ a {
   border-radius: 50%;
   width: 300px;
   height: 300px;
-  background:rgb(181,63,52);
+  background:#DA3732;
   animation-name: circle2Animation;
   animation-duration: 3s;
 }
@@ -236,7 +238,7 @@ a {
   width: 70px;
   height: 10px;
   opacity:0;
-  background:rgb(181,63,52);
+  background:#DA3732;
   animation: fadeIn 3s 2.8s forwards;
   transition: 500ms linear;
 }
@@ -254,7 +256,7 @@ a {
   width: 70px;
   height: 10px;
   opacity:0;
-  background:rgb(181,63,52);
+  background:#DA3732;
   animation: fadeIn 3s 2.8s forwards;
   transition: 500ms linear;
 }
@@ -272,7 +274,7 @@ a {
   width: 70px;
   height: 10px;
   opacity:0;
-  background:rgb(181,63,52);
+  background:#DA3732;
   animation: fadeIn 3s 2.8s forwards;
   transition: 500ms linear;
 }
@@ -290,7 +292,7 @@ a {
   width: 22px;
   height: 1200px;
   transform: translateX(355px) translateY(-300px);
-  background: rgb(48,94,141);
+  background: #2558A5;
   animation-name: rectangle9Animation;
   animation-duration: 3s;
 }
@@ -299,7 +301,7 @@ a {
   position: absolute;
   width: 350px;
   height: 800px;
-  background:rgb(181,63,52);
+  background:#DA3732;
   animation-name: rectangle10Animation;
   animation-duration: 3s;
 }
@@ -312,7 +314,7 @@ a {
   position: absolute;
   width: 1800px;
   height: 10px;
-  background:rgb(181,63,52);
+  background:#DA3732;
   animation: rectangle11Animation 3s forwards;
 }
 
@@ -378,7 +380,7 @@ a {
 }
 
 .dropbtn {
-  background-color:rgb(181,63,52);
+  background-color:#DA3732;
   color: black;
   padding: 16px;
   font-size: 16px;

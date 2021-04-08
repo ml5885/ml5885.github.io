@@ -38,7 +38,7 @@
 				    	document.getElementsByClassName('js-typewrite1')[0].innerHTML += txt1.charAt(i);
 				    	i++;
 					}
-				    setTimeout(typeWriter, 100);
+				    setTimeout(typeWriter, 20);
 			  	}	
 			  	if (x < txt2.length && i == txt1.length) {
 			  		if(txt2.charAt(x) == "<"){
@@ -49,7 +49,7 @@
 				    	document.getElementsByClassName('js-typewrite2')[0].innerHTML += txt2.charAt(x);
 				    	x++;
 					}
-					setTimeout(typeWriter, 125);
+					setTimeout(typeWriter, 20);
 				}
 			}
 			setTimeout(typeWriter, 1000);

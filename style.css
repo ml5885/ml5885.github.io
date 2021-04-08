@@ -8,8 +8,8 @@ body {
   max-width: 100%;
   overflow-x:hidden;
   overflow-y:scroll;
-  /* background: url(http://api.thumbr.it/whitenoise-361x370.png?background=f5e9c6ff&noise=626262&density=45&opacity=15); */
-  background-image: url('images/background-noise.png'); 
+  /* background-image: url('images/background-noise.png');  */
+  background-image: url('images/background-noise.png');
 }
 
 .button {

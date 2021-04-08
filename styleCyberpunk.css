@@ -625,12 +625,12 @@ body .cybr-btn + .cybr-btn {
 /*Typewriter Animation*/
 
 .typewrite {
-  border-right: 2px solid rgba(255,255,255,.75);
-  line-height: 1.15;
+  /* border-right: 2px solid rgba(255,255,255,.75);
+  line-height: 1.15; */
 }
 
 .anim-typewrite {
-  animation: blinkTextCursor 530ms infinite normal;
+  /* animation: blinkTextCursor 530ms infinite normal; */
 }
 
 @keyframes blinkTextCursor{

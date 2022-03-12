@@ -5,6 +5,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<Title>Michael Li</Title>
 		<link rel="stylesheet" href="styleProfessional.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function() {
+			$(window).scroll( function(){
+				$('.fade').each( function(i){
+					var bottom_of_object = $(this).position().top + $(this).outerHeight();
+					var bottom_of_window = $(window).scrollTop() + $(window).height();
+					if( bottom_of_window > bottom_of_object ){
+						$(this).animate({'opacity':'1'},1500);
+					}						
+				}); 				
+			});				
+		});
+		</script>
     </head>
 
     <body>
@@ -17,20 +31,33 @@
 			<a href="https://about-me-website-3c800b.webflow.io/" style="color:black">Webflow</a>
             </div>
         </div>
-        <div>
-            <div class="vertical-center"> 
-                <div class="user one"></div>
-                <div class="text">
-                    <br/>
-                    bearseascape@gmail.com <br/> <br/>
-                    ml5885@pleasantonusd.net <br/> <br/>
-                    (408) 219 3978 <br/> <br/>
+        <div class="horizontal-center">
+            <heading class="title">
+                <span class="span1">MICHAEL L</span><span class="no-spacing span1">I</span>
+                <div class="rect1Wrapper">
+                    <div class="rect3"></div>
                 </div>
-            </div>
-            <div class="textBody">
-                Hi! My name is Michael Li, and I’m a senior at Amador Valley High School.
-                <br>Feel free to check out my website!
-            </div>
+            </heading>
+            <span class="span2">
+                <div>
+                    <i class="subtext">fig. <sup class="suptext">A</sup></i>
+                </div>
+                <div class="rect1Wrapper">
+                    <div class="rect1"></div>
+                </div>
+                <div class="rect2"></div>
+                <div class="image one"></div>
+                <div class="subtext2">
+                    MMXXII
+                </div>
+            </span>
+            <div class="about fade">
+                <div class="div1"> <i>About</i><br> Michael Li </div>
+                <div class="div2"> <i>I am a senior in highschool, and I love coding. 
+                    I have worked with everything from HTML and CSS to Java and C++ to Python and C#.
+                    <mark>I always try to learn new things,</mark> and everything I do is something that helps me learn new things and meet new people.
+                     When I'm not busy coding, I'm playing the piano.</i> </div>
+           </div>
         </div>
     </body>
 </html>

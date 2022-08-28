@@ -3,7 +3,7 @@ body {
   margin-left: 2vw;
 }
 
-mark{
+mark {
   background-color: yellow;
 }
 
@@ -30,87 +30,114 @@ mark{
 }
 
 .one {
-  background-image: url('images/piano.png');
+  /* background-image: url('images/piano.png'); */
   margin: 1vh 1vh 0.25vh 1vh;
   width: 70vw;
   height: 70vh;
 }
 
-.div1{
-  width: 25vw; float: left; 
-  font-size: 8vh; 
-  text-align: right; 
-  display: table-cell; 
-  padding-right: 1vw; 
+.div1 {
+  width: 25vw;
+  float: left;
+  font-size: 8vh;
+  text-align: right;
+  display: table-cell;
+  padding-right: 1vw;
   border-right: 1.5px solid rgba(0, 0, 0, .75);
 }
 
-.div2{
-  display: table-cell; 
+.div2 {
+  display: table-cell;
   padding-left: 3vw;
   padding-top: 2.5vh;
   text-align: justify;
-  font-size: 1.25vw;;
+  font-size: 1.25vw;
+  ;
   width: 80vw;
 }
 
-.span1{
-  display:inline-block;
+.span1 {
+  display: inline-block;
   border-bottom: 1.5px solid rgba(187, 0, 0, 0.75);
 }
 
-.span2{
-  display:inline-block;
+.span2 {
+  display: inline-block;
   margin-left: -7.5vw;
   margin-top: 2vh;
-  border:  1.5px solid rgba(0, 0, 0, .75);
+  border: 1.5px solid rgba(0, 0, 0, .75);
   box-sizing: border-box;
   vertical-align: middle;
 }
 
-.rect1{
+.rect1 {
   position: absolute;
-  width: 71.5vw; 
+  width: 71.5vw;
   height: 1vh;
   margin-top: -0.5vh;
   margin-left: -0.25vw;
   background: white;
   animation: borderAnimation 5s forwards;
 }
-.rect1Wrapper{
+
+.rect1Wrapper {
   transform: rotate(180deg);
 }
-.rect2{
+
+.rect2 {
   position: absolute;
-  width: 1vh; 
+  width: 1vh;
   height: 73vh;
   margin-top: -0.5vh;
   margin-left: 71vw;
   background: white;
   animation: border2Animation 5s forwards;
 }
-.rect3{
+
+.rect3 {
   position: absolute;
-  width: 50vw; 
+  width: 50vw;
   height: 1vh;
   background: white;
   animation: border3Animation 4s forwards;
 }
 
-@keyframes borderAnimation {  
-  0%{width:71.5vw; height:1vh}
-  100%{width:10vw; height:1vh}
+@keyframes borderAnimation {
+  0% {
+    width: 71.5vw;
+    height: 1vh
+  }
+
+  100% {
+    width: 10vw;
+    height: 1vh
+  }
 }
 
 @keyframes border2Animation {
-  0%{width:1vh; height: 73}
-  100%{width: 1vh; height: 10vh}
+  0% {
+    width: 1vh;
+    height: 73
+  }
+
+  100% {
+    width: 1vh;
+    height: 10vh
+  }
 }
 
-@keyframes border3Animation {  
-  0%{width:50vw; height:1vh}
-  100%{width:0vw; height:1vh}
+@keyframes border3Animation {
+  0% {
+    width: 50vw;
+    height: 1vh
+  }
+
+  100% {
+    width: 0vw;
+    height: 1vh
+  }
 }
+
 .no-spacing {
   letter-spacing: 0em;
 }
@@ -130,44 +157,61 @@ mark{
   float: left;
 }
 
-.subtext{
-  position:absolute; 
-  margin-left: 68vw; 
+.subtext {
+  position: absolute;
+  margin-left: 68vw;
   margin-top: -2vh;
   font-size: 1em;
   z-index: 99;
   animation: appear 5s forwards;
 }
-.subtext2{
-  position:absolute; 
+
+.subtext2 {
+  position: absolute;
   margin-top: 2vh;
   margin-left: -0.2vw;
   font-size: 0.75em;
   z-index: 99;
 }
 
-.suptext{
+.suptext {
   animation: appear 5.5s forwards;
 }
 
 @keyframes appear {
-  0%{color: transparent}
-  80%{color: transparent}
-  100%{color: black}
+  0% {
+    color: transparent
+  }
+
+  80% {
+    color: transparent
+  }
+
+  100% {
+    color: black
+  }
 }
 
-@keyframes fadeIn{
-  0%{opacity: 0}
-  80%{opacity: 0}
-  100%{opacity: 100}
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 100
+  }
 }
 
-.about{
-  width: 127%; 
+.about {
+  width: 127%;
   overflow: hidden;
   margin-left: -12vw;
   padding-top: 12vh;
-  margin-bottom: 30vh; 
+  margin-bottom: 30vh;
   opacity: 0;
 }
 
@@ -201,6 +245,14 @@ mark{
   display: block;
 }
 
-.dropdown-content a:hover {font-style: italic;}
+.dropbtn:hover {
+  font-style: italic;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown-content a:hover {
+  font-style: italic;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<Title>Michael Li</Title>
-		<link rel="stylesheet" href="style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$("a").on('click', function(event) {
-					if (this.hash !== "") {
-						event.preventDefault();
-						var hash = this.hash;
-						$('html, body').animate({
-							scrollTop: $(hash).offset().top
-						}, 800, function(){
-							window.location.hash = hash;
-						});
-					} 
-				});
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<Title>Michael Li</Title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("a").on('click', function (event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function () {
+						window.location.hash = hash;
+					});
+				}
 			});
-		</script>
-		<script>
-		$(document).ready(function() {
-			$(window).scroll( function(){
-				$('.fade').each( function(i){
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$(window).scroll(function () {
+				$('.fade').each(function (i) {
 					var bottom_of_object = $(this).position().top + $(this).outerHeight();
 					var bottom_of_window = $(window).scrollTop() + $(window).height();
-					if( bottom_of_window > bottom_of_object ){
-						$(this).animate({'opacity':'1'},1000);
-					}						
-				}); 				
-			});				
+					if (bottom_of_window > bottom_of_object) {
+						$(this).animate({ 'opacity': '1' }, 1000);
+					}
+				});
+			});
 		});
-		</script>
-	</head>
-	
-	<body>
-		<div class="dropdown" style="z-index:1">
-			<button class="dropbtn">Style</button>
-			<div class="dropdown-content">
+	</script>
+</head>
+
+<body>
+	<div class="dropdown" style="z-index:1">
+		<button class="dropbtn">Style</button>
+		<div class="dropdown-content">
 			<a href="index.html">Bauhaus</a>
 			<a href="indexProfessional.html">Professional</a>
-			<a href="indexCyberpunk.html">Cyberpunk</a>
+			<!-- <a href="indexCyberpunk.html">Cyberpunk</a> -->
 			<a href="https://about-me-website-3c800b.webflow.io/" style="color:black">Webflow</a>
 		</div>
-		</div>
+	</div>
+	<div class="titleWrapper">
 		<div class="main" id="home">
 			<div class="wrapper">
 				<div id="circleWrapper">
@@ -109,19 +111,23 @@
 				<div id="rectangle2"></div>
 			</div>
 		</div>
+	</div>
+	<div class="bodyWrapper">
 		<div class="fade" id="AboutMe">
 			<div>
 				<h1>About Me</h1>
 			</div>
 			<div id="textBody">
-				I am a senior in highschool, and I love coding. I have worked with everything from HTML and CSS to 
-				Java and C++ to Python and CSharp. 
+				I am a freshman at Carnegie Mellon University, pursuing a degree in Statistics and Machine Learning, with an
+				additional major in Artificial Intelligence. I have worked with everything from HTML and CSS to
+				Java and C++ to Python and CSharp.
 			</div>
 			<div id="textBody">
-				I always try to learn new things, and everything I do is something that helps me learn new things and meet new people.
+				I always try to learn new things, and everything I do is something that helps me learn new things and meet new
+				people.
 			</div>
 			<div id="textBody">
-				When I'm not busy coding, I'm playing the piano. 
+				When I'm not busy coding, I'm playing the piano.
 			</div>
 		</div>
 
@@ -130,7 +136,7 @@
 				<h1>Experience</h1>
 			</div>
 			<div id="textBody2">
-				I am proficient in HTML, CSS, Javascript, Java, Python, C++ and CSharp. 
+				Planned Courses: 15-112: Fundamentals of Programming and Computer Science, 21-259: Calculus in Three Dim.
 			</div>
 			<div id="textBody2">
 				<b>University of Victoria</b>
@@ -145,15 +151,16 @@
 				<b>Umlaut Foundation</b>
 				<br> CTO
 				<br>2020 - Present
-				<br>Umlaut Foundation provides foster youth with volunteer-supported mentorship. I help maintain the website and developed an article webpage with podcast, article, and newsletter templates
+				<br>Umlaut Foundation provides foster youth with volunteer-supported mentorship. I help maintain the website and
+				developed an article webpage with podcast, article, and newsletter templates
 			</div>
-			<div id="textBody2">
+			<!-- <div id="textBody2">
 				<b>Rishi Kumar for Congress Campaign</b>
 				<br>May 2021 - October 2021
 				<br>Associate Field Manager for the Palo Alto/Menlo Park canvassing team
 				<br>Responsible for entire Palo Alto team ( eg. distributing flyers and turf lists to interns, organizing and
-					leading weekly meetings, preparings interns with talking points for voter conversations)
-			</div>
+				leading weekly meetings, preparings interns with talking points for voter conversations)
+			</div> -->
 			<div id="textBody2">
 				<b>Amador Valley Robotics Team</b>
 				<br>2018 - Present
@@ -161,31 +168,31 @@
 			</div>
 			<div id="textBody2">
 				<b>ACE Coding</b>
-				<br>Tutor 
+				<br>Tutor
 				<br>2020 - Present
 				<br>Developed and co-taught online C++ curriculum for middle schoolers
-				<br>Co-taught workshop on OpenCV and machine learning	
+				<br>Co-taught workshop on OpenCV and machine learning
 			</div>
 		</div>
 
 		<div class="fade" id="Projects">
 			<h1>Projects</h1>
 			<div id="textBody2">
-				June 2020 
-				<br><b>Data Day Grind Hackathon</b> - 
+				June 2020
+				<br><b>Data Day Grind Hackathon</b> -
 				<a href="https://devpost.com/software/stance-taking-a-stand-against-hate-speech">
 					Best Data Visualization
 				</a>
 			</div>
 			<div id="textBody2">
-				July 2020 
+				July 2020
 				<br><b>HackItShipIt</b> - <a href="https://devpost.com/software/shipworthy">
-					First Overall	
+					First Overall
 				</a>
 			</div>
 			<div id="textBody2">
-				July-August 2020 
-				<br><b>To The Moon and Hack Hackathon</b> - 
+				July-August 2020
+				<br><b>To The Moon and Hack Hackathon</b> -
 				<a href="https://devpost.com/software/ad-lunam">
 					Third Overall
 				</a>
@@ -194,15 +201,15 @@
 				2021 - Present
 				<br><b>COVIDCatcher</b>
 				<a href="https://www.c0vidcatcher.org">
-					1st Place ACSEF, CSEF Nominee
+					1st Place ACSEF, CSEF Nominee 2021 and 2022
 				</a>
 				<a href="https://drive.google.com/file/d/1XDle2Jog9hVSUSG5EgfQgBzyZotg30KL/view?usp=sharing">
-					Bay Area BioGENEius Challenge Finalist
+					Bay Area BioGENEius Challenge Finalist 2021
 				</a>
 			</div>
 			<div id="textBody2">
 				<br>
-				Contact me at 
+				Contact me at
 				<br><b>bearseascape@gmail.com</b>
 				<br> <b>ml5885@pleasantonusd.net</b>
 				<br>
@@ -216,11 +223,11 @@
 				<img alt="Github Link" src="images/github-logo.png" width=8% height=8% id="githubImage">
 			</a>
 
-			<a href="https://devpost.com/limichael353" >
+			<a href="https://devpost.com/limichael353">
 				<img alt="Devpost Link" src="images/devpostlogo.png" width=10% height=10% id="devpostImage">
 			</a>
 
-			<a href="https://devpost.com/bearseascape" >
+			<a href="https://devpost.com/bearseascape">
 				<img alt="2nd Devpost Link" src="images/devpostlogo.png" width=10% height=10% id="devpostImage2">
 			</a>
 
@@ -228,5 +235,7 @@
 				<h5>Website built using HTML, CSS, and JS by Michael Li</h5>
 			</div>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>

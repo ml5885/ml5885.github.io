@@ -1,4 +1,8 @@
-* {margin: 0; padding:0; box-sizing: border-box;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
   overflow-x: hidden;
@@ -6,14 +10,14 @@ html {
 
 body {
   max-width: 100%;
-  overflow-x:hidden;
-  overflow-y:scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   /* background-image: url('images/background-noise.png');  */
   background-image: url('images/background-noise.png');
 }
 
 .button {
-  background-color:#DA3732; 
+  background-color: #DA3732;
   border: none;
   color: white;
   padding: 10px 16px;
@@ -24,39 +28,39 @@ body {
   font-family: futura;
 }
 
-header{
-  background-color:black;
+header {
+  background-color: black;
   position: fixed;
   width: 100%;
   height: 50px;
   z-index: 5;
 }
 
-#home{
+#home {
   width: 100%;
   height: 1000px;
 }
 
-#home h1{
+#home h1 {
   position: absolute;
   top: 200px;
-  left:460px;
+  left: 460px;
   font-size: 200px;
   font-family: futura;
   font-weight: lighter;
   display: inline-block;
 }
 
-#home h2{
+#home h2 {
   position: absolute;
   top: 200px;
-  left:460px;
+  left: 460px;
   font-size: 50px;
   font-family: futura;
   font-weight: lighter;
   text-transform: uppercase;
   display: inline-block;
-  opacity:0;
+  opacity: 0;
   animation: fadeIn 3s 2.8s forwards;
 }
 
@@ -64,26 +68,26 @@ a {
   color: black;
 }
 
-#AboutMe{
+#AboutMe {
   width: 100%;
   height: 600px;
   margin-top: 10%;
-  display:inline-block;
+  display: inline-block;
 }
 
-#AboutMe h1{
+#AboutMe h1 {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  top:10%;
+  top: 10%;
   font-size: 100px;
   font-family: futura;
   font-weight: lighter;
   text-transform: lowercase;
 }
 
-#textBody{
+#textBody {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,26 +102,26 @@ a {
   display: inline-block;
 }
 
-#Experience{
-  display: inline-block; 
+#Experience {
+  display: inline-block;
   width: 100%;
   margin-top: 15%;
   height: 600px;
 }
 
-#Experience h1{
+#Experience h1 {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  top:10%;
+  top: 10%;
   font-size: 100px;
   font-family: futura;
   font-weight: lighter;
   text-transform: lowercase;
 }
 
-#textBody2{
+#textBody2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,14 +136,14 @@ a {
   display: inline-block;
 }
 
-#Projects{
+#Projects {
   display: inline-block;
   width: 100%;
   margin-top: 15%;
   height: 800px;
 }
 
-#Projects h1{
+#Projects h1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,7 +154,7 @@ a {
   text-transform: lowercase;
 }
 
-#Projects a{
+#Projects a {
   /* color:#2558A5; */
   color: #2558A5;
 }
@@ -164,7 +168,7 @@ a {
   animation-duration: 3s;
 }
 
-#rectangle1Wrapper{
+#rectangle1Wrapper {
   transform: rotate(180deg) translateX(635.6px) translateY(-250px);
 }
 
@@ -182,26 +186,28 @@ a {
   position: absolute;
   width: 380px;
   height: 2400px;
-  background:#EBC146;
+  background: #EBC146;
   animation-name: rectangle3Animation;
   animation-duration: 3s;
 }
 
-#rectangle3Wrapper{
-  transform: rotate(180deg) translateX(636px) translateY(-2820px);;
+#rectangle3Wrapper {
+  transform: rotate(180deg) translateX(636px) translateY(-2820px);
+  ;
 }
 
 #rectangle4 {
   position: absolute;
   width: 300px;
   height: 300px;
-  background:#2558A5;
+  background: #2558A5;
   animation-name: rectangle4Animation;
   animation-duration: 3s;
 }
 
 #rectangle4Wrapper {
-  transform: rotate(0deg) translateX(900px) translateY(440px);;
+  transform: rotate(0deg) translateX(900px) translateY(440px);
+  ;
 }
 
 
@@ -210,13 +216,13 @@ a {
   border-radius: 0 0 500px 0;
   width: 355px;
   height: 355px;
-  background:#EBC146;
+  background: #EBC146;
   animation-name: circleAnimation;
   animation-duration: 3s;
 }
 
-#circleWrapper{
-  transform: rotate(180deg) translateX(658px) translateY(-300px); 
+#circleWrapper {
+  transform: rotate(180deg) translateX(658px) translateY(-300px);
 }
 
 #circle2 {
@@ -224,21 +230,21 @@ a {
   border-radius: 50%;
   width: 300px;
   height: 300px;
-  background:#DA3732;
+  background: #DA3732;
   animation-name: circle2Animation;
   animation-duration: 3s;
 }
 
-#circle2Wrapper{
-  transform: rotate(270deg) translateX(100px) translateY(-700px); 
+#circle2Wrapper {
+  transform: rotate(270deg) translateX(100px) translateY(-700px);
 }
 
 #rectangle6 {
   position: absolute;
   width: 70px;
   height: 10px;
-  opacity:0;
-  background:#DA3732;
+  opacity: 0;
+  background: #DA3732;
   animation: fadeIn 3s 2.8s forwards;
   transition: 500ms linear;
 }
@@ -247,16 +253,16 @@ a {
   transform: rotate(0deg) translateX(734px) translateY(420px);
 }
 
-#rectangle6:hover{
-  height:300px;
+#rectangle6:hover {
+  height: 300px;
 }
 
 #rectangle7 {
   position: absolute;
   width: 70px;
   height: 10px;
-  opacity:0;
-  background:#DA3732;
+  opacity: 0;
+  background: #DA3732;
   animation: fadeIn 3s 2.8s forwards;
   transition: 500ms linear;
 }
@@ -265,16 +271,16 @@ a {
   transform: rotate(0deg) translateX(584px) translateY(420px);
 }
 
-#rectangle7:hover{
-  height:324px;
+#rectangle7:hover {
+  height: 324px;
 }
 
 #rectangle8 {
   position: absolute;
   width: 70px;
   height: 10px;
-  opacity:0;
-  background:#DA3732;
+  opacity: 0;
+  background: #DA3732;
   animation: fadeIn 3s 2.8s forwards;
   transition: 500ms linear;
 }
@@ -283,15 +289,15 @@ a {
   transform: rotate(0deg) translateX(434px) translateY(420px);
 }
 
-#rectangle8:hover{
-  height:280px;
+#rectangle8:hover {
+  height: 280px;
 }
 
 #rectangle9 {
   position: absolute;
   width: 22px;
-  height: 1200px;
-  transform: translateX(355px) translateY(-300px);
+  height: 1500px;
+  transform: translateX(355px) translateY(-410px);
   background: #2558A5;
   animation-name: rectangle9Animation;
   animation-duration: 3s;
@@ -301,7 +307,7 @@ a {
   position: absolute;
   width: 350px;
   height: 800px;
-  background:#DA3732;
+  background: #DA3732;
   animation-name: rectangle10Animation;
   animation-duration: 3s;
 }
@@ -314,7 +320,7 @@ a {
   position: absolute;
   width: 1800px;
   height: 10px;
-  background:#DA3732;
+  background: #DA3732;
   animation: rectangle11Animation 3s forwards;
 }
 
@@ -323,55 +329,55 @@ a {
 }
 
 
-#positioning{
+#positioning {
   transform: rotate(90deg) translateX(200px) translateY(-480px);
 }
 
-#aboutme{
+#aboutme {
   transform: rotate(90deg) translateX(700px) translateY(-300px);
 }
 
-#footer{
+#footer {
   display: inline-block;
   width: 100%;
 }
 
-#footer h5{
+#footer h5 {
   font-family: futura;
   font-weight: lighter;
   font-size: 15px;
   text-align: center;
 }
 
-#githubImage{
+#githubImage {
   margin-left: 20%;
   margin-bottom: 6.5%;
 }
 
-#devpostImage{
+#devpostImage {
   margin-left: 15%;
   margin-bottom: 5%;
 }
 
-#devpostImage2{    
+#devpostImage2 {
   margin-left: 10%;
   margin-bottom: 5%;
 }
 
-.wrapper{
+.wrapper {
   transform: rotate(335deg) translateX(-200px) translateY(-50px);
 }
 
-.aboutMePosition{
+.aboutMePosition {
   transform: rotate(90deg) translateX(700px) translateY(-280px);
 }
 
-.experiencePosition{
+.experiencePosition {
   transform: rotate(90deg) translateX(700px) translateY(-130px);
 
 }
 
-.projectsPosition{
+.projectsPosition {
   transform: rotate(90deg) translateX(700px) translateY(20px);
 }
 
@@ -380,7 +386,7 @@ a {
 }
 
 .dropbtn {
-  background-color:#DA3732;
+  background-color: #DA3732;
   color: black;
   padding: 16px;
   font-size: 16px;
@@ -398,7 +404,7 @@ a {
   position: absolute;
   background-color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 2;
   font-family: futura;
 }
@@ -410,18 +416,24 @@ a {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-.dropdown:hover .dropbtn {background-color: rgb(216, 64, 50);}
+.dropdown:hover .dropbtn {
+  background-color: rgb(216, 64, 50);
+}
 
 .loader {
-  position:fixed;
+  position: fixed;
   z-index: 99;
   top: 0;
   left: 0;
-  width:100%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -429,54 +441,127 @@ a {
 }
 
 @keyframes rectangle2Animation {
-  0% {height: 0px;}
-  100% {height: 1600px;}
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 1600px;
+  }
 }
 
 @keyframes rectangle3Animation {
-  0% {height: 0px;}
-  100% {height: 2400px;}
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 2400px;
+  }
 }
 
 @keyframes rectangle4Animation {
-  0% {height: 0px; width: 0px}
-  100% {height: 300px; width: 300px}
+  0% {
+    height: 0px;
+    width: 0px
+  }
+
+  100% {
+    height: 300px;
+    width: 300px
+  }
 }
 
 @keyframes circleAnimation {
-  0% {height: 0px; width: 0px}
-  100% {height: 355px; width:355px}
+  0% {
+    height: 0px;
+    width: 0px
+  }
+
+  100% {
+    height: 355px;
+    width: 355px
+  }
 }
 
 @keyframes circle2Animation {
-  0% {height: 0px; width: 0px}
-  100% {height: 300px; width:300px}
+  0% {
+    height: 0px;
+    width: 0px
+  }
+
+  100% {
+    height: 300px;
+    width: 300px
+  }
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 
 @keyframes fadeInQuick {
-  0% {opacity: 0;}
-  25% {opacity:1;}
-  100%{opacity:1;}
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 
 @keyframes rectangle9Animation {
-  0% {height: 0px;}
-  100% {height: 1200px;}
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 1200px;
+  }
 }
 
 @keyframes rectangle10Animation {
-  0% {height: 0px;}
-  100% {height: 800px;}
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 800px;
+  }
 }
 
-@keyframes rectangle11Animation{
-  0% {width: 0px;}
-  100% {width: 1800px;}
+@keyframes rectangle11Animation {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 1800px;
+  }
+}
+
+.titleWrapper {
+  box-sizing: content-box;
+  width: 1440px;
+  /* padding-left: 160px; */
+  padding-left: 10vw;
+  transform: rotate(-10deg)
+}
+
+.bodyWrapper {
+  box-sizing: content-box;
+  width: 1440px;
+  padding-left: 160px;
 }

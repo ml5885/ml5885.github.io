@@ -1,6 +1,7 @@
 body {
   font-family: DidotLTRoman;
   margin-left: 2vw;
+  height: auto;
 }
 
 mark {
@@ -208,7 +209,7 @@ mark {
 
 .about {
   width: 127%;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-left: -12vw;
   padding-top: 12vh;
   margin-bottom: 30vh;

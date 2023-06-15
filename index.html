@@ -1,260 +1,299 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<Title>Michael Li</Title>
-	<link rel="stylesheet" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			$("a").on('click', function (event) {
-				if (this.hash !== "") {
-					event.preventDefault();
-					var hash = this.hash;
-					$('html, body').animate({
-						scrollTop: $(hash).offset().top
-					}, 800, function () {
-						window.location.hash = hash;
-					});
-				}
-			});
-		});
-	</script>
-	<script>
-		$(document).ready(function () {
-			$(window).scroll(function () {
-				$('.fade').each(function (i) {
-					var bottom_of_object = $(this).position().top + $(this).outerHeight();
-					var bottom_of_window = $(window).scrollTop() + $(window).height();
-					if (bottom_of_window > (bottom_of_object*(3/4))) {
-						$(this).animate({ 'opacity': '1' }, 1000);
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Michael Li</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("a").on("click", function (event) {
+					if (this.hash !== "") {
+						event.preventDefault();
+						var hash = this.hash;
+						$("html, body").animate(
+							{
+								scrollTop: $(hash).offset().top,
+							},
+							800,
+							function () {
+								window.location.hash = hash;
+							}
+						);
 					}
 				});
 			});
-		});
-	</script>
-</head>
+		</script>
+		<script>
+			$(document).ready(function () {
+				$(window).scroll(function () {
+					$(".fade").each(function (i) {
+						var bottom_of_object =
+							$(this).position().top + $(this).outerHeight();
+						var bottom_of_window = $(window).scrollTop() + $(window).height();
+						if (bottom_of_window > bottom_of_object * (3 / 4)) {
+							$(this).animate({ opacity: "1" }, 1000);
+						}
+					});
+				});
+			});
+		</script>
+	</head>
 
-<body>
-	<div class="dropdown" style="z-index:1">
-		<button class="dropbtn">Style</button>
-		<div class="dropdown-content">
-			<a href="index.html">Bauhaus</a>
-			<a href="indexProfessional.html">Professional</a>
-			<!-- <a href="indexCyberpunk.html">Cyberpunk</a> -->
-			<!-- <a href="https://about-me-website-3c800b.webflow.io/" style="color:black">Webflow</a> -->
-			<a href="https://personal-website-450dc4.webflow.io/" style="color:black">Webflow</a>
+	<body>
+		<div class="dropdown" style="z-index: 1">
+			<button class="dropbtn">Style</button>
+			<div class="dropdown-content">
+				<a href="index.html">Bauhaus</a>
+				<a href="indexProfessional.html">Professional</a>
+				<!-- <a href="indexCyberpunk.html">Cyberpunk</a> -->
+				<!-- <a href="https://about-me-website-3c800b.webflow.io/" style="color:black">Webflow</a> -->
+				<a
+					href="https://personal-website-450dc4.webflow.io/"
+					style="color: black"
+					>Webflow</a
+				>
+			</div>
 		</div>
-	</div>
-	<div class="titleWrapper">
-		<div class="main" id="home">
-			<div class="wrapper">
-				<div id="circleWrapper">
-					<div id="circle"></div>
-				</div>
-				<div id="rectangle9Wrapper">
-					<div id="rectangle9"></div>
-				</div>
-				<div id="rectangle10Wrapper">
-					<div id="rectangle10"></div>
-				</div>
-				<div id="circle2Wrapper">
-					<div id="circle2"></div>
-				</div>
-				<div id="rectangle1Wrapper">
-					<div id="rectangle1"></div>
-				</div>
-				<div id="rectangle3Wrapper">
-					<div id="rectangle3"></div>
-				</div>
-				<div id="rectangle4Wrapper">
-					<div id="rectangle4"></div>
-				</div>
-				<div style="color:black">
-					<h1>michael</h1>
-					<h1 id="positioning">Li</h1>
-				</div>
-				<div id="rectangle11Wrapper">
-					<div id="rectangle11"></div>
-				</div>
-				<a href="#AboutMe">
-					<div id="rectangle6Wrapper">
-						<div id="rectangle6"></div>
+		<div class="titleWrapper">
+			<div class="main" id="home">
+				<div class="wrapper">
+					<div id="circleWrapper">
+						<div id="circle"></div>
 					</div>
-				</a>
-				<div class="aboutMePosition">
+					<div id="rectangle9Wrapper">
+						<div id="rectangle9"></div>
+					</div>
+					<div id="rectangle10Wrapper">
+						<div id="rectangle10"></div>
+					</div>
+					<div id="circle2Wrapper">
+						<div id="circle2"></div>
+					</div>
+					<div id="rectangle1Wrapper">
+						<div id="rectangle1"></div>
+					</div>
+					<div id="rectangle3Wrapper">
+						<div id="rectangle3"></div>
+					</div>
+					<div id="rectangle4Wrapper">
+						<div id="rectangle4"></div>
+					</div>
+					<div style="color: black">
+						<h1>michael</h1>
+						<h1 id="positioning">Li</h1>
+					</div>
+					<div id="rectangle11Wrapper">
+						<div id="rectangle11"></div>
+					</div>
 					<a href="#AboutMe">
-						<h2>About Me</h2>
+						<div id="rectangle6Wrapper">
+							<div id="rectangle6"></div>
+						</div>
 					</a>
-				</div>
-				<a href="#Experience">
-					<div id="rectangle7Wrapper">
-						<div id="rectangle7"></div>
+					<div class="aboutMePosition">
+						<a href="#AboutMe">
+							<h2>About Me</h2>
+						</a>
 					</div>
-				</a>
-				<div class="experiencePosition">
 					<a href="#Experience">
-						<h2>Experience</h2>
+						<div id="rectangle7Wrapper">
+							<div id="rectangle7"></div>
+						</div>
 					</a>
-				</div>
-				<a href="#Projects">
-					<div id="rectangle8Wrapper">
-						<div id="rectangle8"></div>
+					<div class="experiencePosition">
+						<a href="#Experience">
+							<h2>Experience</h2>
+						</a>
 					</div>
-				</a>
-				<div class="projectsPosition">
 					<a href="#Projects">
-						<h2>Projects</h2>
+						<div id="rectangle8Wrapper">
+							<div id="rectangle8"></div>
+						</div>
 					</a>
+					<div class="projectsPosition">
+						<a href="#Projects">
+							<h2>Projects</h2>
+						</a>
+					</div>
+					<div id="rectangle2"></div>
 				</div>
-				<div id="rectangle2"></div>
 			</div>
 		</div>
-	</div>
-	<div class="bodyWrapper">
-		<div class="fade" id="AboutMe">
-			<div>
-				<h1>About Me</h1>
+		<div class="bodyWrapper">
+			<div class="fade" id="AboutMe">
+				<div>
+					<h1>About Me</h1>
+				</div>
+				<div id="textBody">
+					I am a freshman at Carnegie Mellon University, pursuing a degree in
+					Statistics and Machine Learning, with an additional major in
+					Artificial Intelligence. I have worked with everything from HTML and
+					CSS to Java and C++ to Python and CSharp.
+				</div>
+				<div id="textBody">
+					I always try to learn new things, and everything I do is something
+					that helps me learn new things and meet new people.
+				</div>
+				<div id="textBody">
+					When I'm not busy coding, I'm playing the piano.
+				</div>
 			</div>
-			<div id="textBody">
-				I am a freshman at Carnegie Mellon University, pursuing a degree in Statistics and Machine Learning, with an
-				additional major in Artificial Intelligence. I have worked with everything from HTML and CSS to
-				Java and C++ to Python and CSharp.
-			</div>
-			<div id="textBody">
-				I always try to learn new things, and everything I do is something that helps me learn new things and meet new
-				people.
-			</div>
-			<div id="textBody">
-				When I'm not busy coding, I'm playing the piano.
-			</div>
-		</div>
 
-		<div class="fade" id="Experience">
-			<div>
-				<h1>Experience</h1>
-			</div>
-			<div id="textBody2">
-				Completed Courses: 15-112: Fundamentals of Programming and Computer Science, 21-259: Calculus in Three Dim.
-				<br>Current Courses: 15-122: Principles of Imperative Computation, 21-127: Concepts of Mathematics.
-			</div>
-			<div id="textBody2">
-				<b>Beaver Health</b>
-				<br> AI Engineer
-				<br>2022 - Present
-				<br><a href="https://www.beaverhealth.org/">www.beaverhealth.org</a>
-				<br>Deployed OpenAI's speech recognition neural net Whisper in Python and evaluated model performance on elderly accented voices.
-				<br>Utilized React to create a web-app demo of virtual talking assistant for elderly people.
-			</div>
-			<div id="textBody2">
-				<b>University of Victoria</b>
-				<br> Researcher
-				<br>2021 - 2023
-				<br>I worked with Professor Xuekui Zhang and PhD student Yushan Hu from the University of Victoria on COVID-19
-				research
-				<br>Implement machine learning models to predict daily COVID cases based on US county daily COVID counts,
-				<br>demographic data and FPCA scores
-				<br>Published as feature article in the Journal of Global Health: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10208648/pdf/jogh-13-03029.pdf
-			</div>
-			<div id="textBody2">
-				<b>Omou Learning</b>
-				<br> Software Development Intern
-				<br>June 2020 - July 2021
-				<br>Omou is a digital learning space for tutoring centers to connect student, parent, and teacher communities.
-				<br>Built Google Classroom integration to enable users to sign in via Google and invite/unenroll students
-				<br>Worked with React framework and built features using HTML, CSS and JS 
-			</div>
-			<!-- <div id="textBody2">
+			<div class="fade" id="Experience">
+				<div>
+					<h1>Experience</h1>
+				</div>
+				<div id="textBody2">
+					Completed Courses: 15-112: Fundamentals of Programming and Computer
+					Science, 21-259: Calculus in Three Dim.
+					<br />Current Courses: 15-122: Principles of Imperative Computation,
+					21-127: Concepts of Mathematics.
+				</div>
+				<div id="textBody2">
+					<b>Beaver Health</b>
+					<br />
+					AI Engineer <br />2022 - Present <br /><a
+						href="https://www.beaverhealth.org/"
+						>www.beaverhealth.org</a
+					>
+					<br />Deployed OpenAI's speech recognition neural net Whisper in
+					Python and evaluated model performance on elderly accented voices.
+					<br />Utilized React to create a web-app demo of virtual talking
+					assistant for elderly people.
+				</div>
+				<div id="textBody2">
+					<b>University of Victoria</b>
+					<br />
+					Researcher <br />2021 - 2023 <br />I worked with Professor Xuekui
+					Zhang and PhD student Yushan Hu from the University of Victoria on
+					COVID-19 research <br />Implement machine learning models to predict
+					daily COVID cases based on US county daily COVID counts,
+					<br />demographic data and FPCA scores <br />Published as
+					<a
+						href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10208648/pdf/jogh-13-03029.pdf"
+						>feature article</a
+					>
+					in the Journal of Global Health
+				</div>
+				<div id="textBody2">
+					<b>Omou Learning</b>
+					<br />
+					Software Development Intern <br />June 2020 - July 2021 <br />Omou is
+					a digital learning space for tutoring centers to connect student,
+					parent, and teacher communities. <br />Built Google Classroom
+					integration to enable users to sign in via Google and invite/unenroll
+					students <br />Worked with React framework and built features using
+					HTML, CSS and JS
+				</div>
+				<!-- <div id="textBody2">
 				<b>Rishi Kumar for Congress Campaign</b>
 				<br>May 2021 - October 2021
 				<br>Associate Field Manager for the Palo Alto/Menlo Park canvassing team
 				<br>Responsible for entire Palo Alto team ( eg. distributing flyers and turf lists to interns, organizing and
 				leading weekly meetings, preparings interns with talking points for voter conversations)
 			</div> -->
-			<div id="textBody2">
-				<b>Amador Valley Robotics Team</b>
-				<br>2018 - Present
-				<br>I work with OpenCV for object detection and image processing.
+				<div id="textBody2">
+					<b>Amador Valley Robotics Team</b>
+					<br />2018 - Present <br />I work with OpenCV for object detection and
+					image processing.
+				</div>
+				<div id="textBody2">
+					<b>Umlaut Foundation</b>
+					<br />
+					CTO <br />2020 - 2021 <br />Umlaut Foundation provides foster youth
+					with volunteer-supported mentorship. I help maintain the website and
+					developed an article webpage with podcast, article, and newsletter
+					templates
+				</div>
+				<div id="textBody2">
+					<b>ACE Coding</b>
+					<br />Tutor <br />2020 - Present <br />Developed and co-taught online
+					C++ curriculum for middle schoolers <br />Co-taught workshop on OpenCV
+					and machine learning
+				</div>
 			</div>
-			<div id="textBody2">
-				<b>Umlaut Foundation</b>
-				<br> CTO
-				<br>2020 - 2021
-				<br>Umlaut Foundation provides foster youth with volunteer-supported mentorship. I help maintain the website and
-				developed an article webpage with podcast, article, and newsletter templates
+
+			<div class="fade" id="Projects">
+				<h1>Projects</h1>
+				<div id="textBody2">
+					June 2020
+					<br /><b>Data Day Grind Hackathon</b> -
+					<a
+						href="https://devpost.com/software/stance-taking-a-stand-against-hate-speech"
+					>
+						Best Data Visualization
+					</a>
+				</div>
+				<div id="textBody2">
+					July 2020
+					<br /><b>HackItShipIt</b> -
+					<a href="https://devpost.com/software/shipworthy"> First Overall </a>
+				</div>
+				<div id="textBody2">
+					July-August 2020
+					<br /><b>To The Moon and Hack Hackathon</b> -
+					<a href="https://devpost.com/software/ad-lunam"> Third Overall </a>
+				</div>
+				<div id="textBody2">
+					2021 - Present
+					<br /><b>COVIDCatcher</b>
+					<a href="https://www.c0vidcatcher.org">
+						1st Place ACSEF, CSEF Nominee 2021 and 2022
+					</a>
+					<a
+						href="https://drive.google.com/file/d/1XDle2Jog9hVSUSG5EgfQgBzyZotg30KL/view?usp=sharing"
+					>
+						Bay Area BioGENEius Challenge Finalist 2021
+					</a>
+				</div>
+				<div id="textBody2">
+					<br />
+					Contact me at
+					<br /><b>bearseascape@gmail.com</b> <br />
+					<b>ml6@andrew.cmu.edu</b>
+					<br />
+					<br />
+					<br />
+				</div>
 			</div>
-			<div id="textBody2">
-				<b>ACE Coding</b>
-				<br>Tutor
-				<br>2020 - Present
-				<br>Developed and co-taught online C++ curriculum for middle schoolers
-				<br>Co-taught workshop on OpenCV and machine learning
+
+			<div id="footer">
+				<a href="https://github.com/ml5885">
+					<img
+						alt="Github Link"
+						src="images/github-logo.png"
+						width="8%"
+						height="8%"
+						id="githubImage"
+					/>
+				</a>
+
+				<a href="https://devpost.com/limichael353">
+					<img
+						alt="Devpost Link"
+						src="images/devpostlogo.png"
+						width="10%"
+						height="10%"
+						id="devpostImage"
+					/>
+				</a>
+
+				<a href="https://devpost.com/bearseascape">
+					<img
+						alt="2nd Devpost Link"
+						src="images/devpostlogo.png"
+						width="10%"
+						height="10%"
+						id="devpostImage2"
+					/>
+				</a>
+
+				<div>
+					<h5>Website built using HTML, CSS, and JS by Michael Li</h5>
+				</div>
 			</div>
 		</div>
-
-		<div class="fade" id="Projects">
-			<h1>Projects</h1>
-			<div id="textBody2">
-				June 2020
-				<br><b>Data Day Grind Hackathon</b> -
-				<a href="https://devpost.com/software/stance-taking-a-stand-against-hate-speech">
-					Best Data Visualization
-				</a>
-			</div>
-			<div id="textBody2">
-				July 2020
-				<br><b>HackItShipIt</b> - <a href="https://devpost.com/software/shipworthy">
-					First Overall
-				</a>
-			</div>
-			<div id="textBody2">
-				July-August 2020
-				<br><b>To The Moon and Hack Hackathon</b> -
-				<a href="https://devpost.com/software/ad-lunam">
-					Third Overall
-				</a>
-			</div>
-			<div id="textBody2">
-				2021 - Present
-				<br><b>COVIDCatcher</b>
-				<a href="https://www.c0vidcatcher.org">
-					1st Place ACSEF, CSEF Nominee 2021 and 2022
-				</a>
-				<a href="https://drive.google.com/file/d/1XDle2Jog9hVSUSG5EgfQgBzyZotg30KL/view?usp=sharing">
-					Bay Area BioGENEius Challenge Finalist 2021
-				</a>
-			</div>
-			<div id="textBody2">
-				<br>
-				Contact me at
-				<br><b>bearseascape@gmail.com</b>
-				<br> <b>ml6@andrew.cmu.edu</b>
-				<br>
-				<br>
-				<br>
-			</div>
-		</div>
-
-		<div id="footer">
-			<a href="https://github.com/ml5885">
-				<img alt="Github Link" src="images/github-logo.png" width=8% height=8% id="githubImage">
-			</a>
-
-			<a href="https://devpost.com/limichael353">
-				<img alt="Devpost Link" src="images/devpostlogo.png" width=10% height=10% id="devpostImage">
-			</a>
-
-			<a href="https://devpost.com/bearseascape">
-				<img alt="2nd Devpost Link" src="images/devpostlogo.png" width=10% height=10% id="devpostImage2">
-			</a>
-
-			<div>
-				<h5>Website built using HTML, CSS, and JS by Michael Li</h5>
-			</div>
-		</div>
-	</div>
-</body>
-
+	</body>
 </html>

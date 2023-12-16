@@ -59,6 +59,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+:root {
+	--sand: #eae4e1;
+}
 
 html {
 	overflow-x: hidden;
@@ -68,7 +71,7 @@ body {
 	max-width: 100%;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	background-color: #f2e6c8;
+	background-color: var(--sand);
 	font-family: "Futura", system-ui, -apple-system, sans-serif;
 }
 

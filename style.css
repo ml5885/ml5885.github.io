@@ -333,6 +333,10 @@ a {
 	text-decoration: none;
 }
 
+#credit {
+	display: flex;
+	justify-content: center;
+}
 #githubImage {
 	margin-left: 20%;
 	margin-bottom: 6.5%;

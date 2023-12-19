@@ -125,7 +125,7 @@ a {
 	flex-direction: column;
 	margin: 0 15%;
 	margin-top: 10vh;
-	gap: 30px;
+	gap: 100px;
 }
 
 #Projects h1 {
@@ -143,7 +143,14 @@ a {
 }
 
 #Projects #textBody2 {
-	display: inline-block;
+	display: flex;
+	flex-direction: row;
+	gap: 60px;
+}
+
+#Projects #textBody2 img {
+	width: 600px;
+	height: auto;
 }
 
 #rectangle1 {

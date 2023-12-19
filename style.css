@@ -381,9 +381,12 @@ a {
 }
 
 #footer h5 {
-	/* font-family: futura; */
 	font-size: 15px;
 	text-align: center;
+}
+
+#footer a {
+	text-decoration: none;
 }
 
 #githubImage {

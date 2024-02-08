@@ -151,6 +151,9 @@ a {
 #Projects #textBody2 img {
 	width: 600px;
 	height: auto;
+	padding: 20px;
+	background-color: #eae4e1;
+	box-shadow: rgba(145, 106, 112, 0.15) 0 6px 24px;
 }
 
 #rectangle1 {

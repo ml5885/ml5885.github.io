@@ -1,56 +1,184 @@
 @font-face {
-	font-family: "Futura";
-	src: url("fonts/Futura/Futura Black/Futura Black.ttf") format("truetype");
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Black-Italic-Trial.otf")
+		format("opentype");
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Black-Trial.otf") format("opentype");
 	font-weight: 900;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: "Futura";
-	src: url("fonts/Futura/Futura Bold/Futura Bold.otf") format("opentype");
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Futura";
-	src: url("fonts/Futura/Futura Bold Italic/Futura Bold Italic.otf")
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Bold-Italic-Trial.otf")
 		format("opentype");
 	font-weight: 700;
 	font-style: italic;
 }
 
 @font-face {
-	font-family: "Futura Book";
-	src: url("fonts/Futura/Futura Book/Futura Book.otf") format("opentype");
-	font-weight: normal;
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Bold-Trial.otf") format("opentype");
+	font-weight: 700;
 	font-style: normal;
 }
-
 @font-face {
-	font-family: "Futura";
-	src: url("fonts/Futura/Futura Heavy/Futura Heavy.otf") format("opentype");
-	font-weight: 900;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Futura";
-	src: url("fonts/Futura/Futura Medium/Futura Medium.otf") format("opentype");
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Futura";
-	src: url("fonts/Futura/Futura Medium Italic/Futura Medium Italic.otf")
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Light-Italic-Trial.otf")
 		format("opentype");
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Futura";
-	src: url("fonts/Futura/Futura Light/Futura Light.otf") format("opentype");
 	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Light-Trial.otf") format("opentype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Medium-Italic-Trial.otf")
+		format("opentype");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Medium-Trial.otf") format("opentype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Regular-Italic-Trial.otf")
+		format("opentype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Regular-Trial.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Text-Italic-Trial.otf")
+		format("opentype");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura";
+	src: url("fonts/GT-Pressura/GT-Pressura-Text-Trial.otf") format("opentype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Black-Italic-Trial.otf")
+		format("opentype");
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Black-Trial.otf")
+		format("opentype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Bold-Italic-Trial.otf")
+		format("opentype");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Bold-Trial.otf")
+		format("opentype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Light-Italic-Trial.otf")
+		format("opentype");
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Light-Trial.otf")
+		format("opentype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Medium-Italic-Trial.otf")
+		format("opentype");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Medium-Trial.otf")
+		format("opentype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Regular-Italic-Trial.otf")
+		format("opentype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Regular-Trial.otf")
+		format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Text-Italic-Trial.otf")
+		format("opentype");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "GT Pressura Extended";
+	src: url("fonts/GT-Pressura/GT-Pressura-Extended-Text-Trial.otf")
+		format("opentype");
+	font-weight: 600;
+	font-style: normal;
 }

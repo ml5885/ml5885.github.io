@@ -1,5 +1,6 @@
 body {
 	font-family: "GT Cinetype", sans-serif;
+	font-weight: normal;
 	margin: 1rem;
 	padding: 1rem;
 	max-width: 60rem;
@@ -53,13 +54,17 @@ li {
 
 a {
 	display: inline-block;
-	color: black;
+	color: #333;
 	transition: all 0.5s;
 	text-decoration: none;
 }
 
 a:hover {
 	transform: skewX(-20deg);
+}
+
+b {
+	font-weight: bolder;
 }
 
 hr {
@@ -74,6 +79,11 @@ ul {
 
 li {
 	margin-bottom: 0.5em;
+}
+
+#experience li {
+	display: flex;
+	justify-content: space-between;
 }
 
 #projects {
@@ -95,7 +105,7 @@ li {
 }
 
 #projects li .date {
-	color: black;
+	color: #333;
 }
 
 #projects li {
@@ -103,7 +113,7 @@ li {
 }
 
 #projects li::marker {
-	color: black;
+	color: #333;
 }
 
 #projects li:hover .project-image {
@@ -112,4 +122,13 @@ li {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 750px) {
+	body {
+		font-size: 0.9em;
+	}
+	#experience-date {
+		display: none;
+	}
 }

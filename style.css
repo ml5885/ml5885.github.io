@@ -28,6 +28,7 @@ main {
 h1 {
 	font-size: 3em;
 	font-weight: bold;
+	margin-bottom: 0;
 }
 
 h1#title {
@@ -40,7 +41,7 @@ h1#title:hover {
 
 h2 {
 	font-size: 1.5em;
-	margin-top: 1.5em;
+	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 }
 

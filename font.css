@@ -47,3 +47,63 @@
 	font-family: "GT Cinetype", monospace;
 	src: url("fonts/GT-Cinetype/GT-Cinetype-Mono-Trial.otf") format("opentype");
 }
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url("fonts/NeueMontreal/NeueMontreal-Regular.woff2") format("woff2");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url("fonts/NeueMontreal/NeueMontreal-Medium.woff2") format("woff2");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url("fonts/NeueMontreal/NeueMontreal-Bold.woff2") format("woff2");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Neue Montreal Mono";
+	src: url("fonts/NeueMontreal/PPNeueMontrealMono-Regular.otf")
+		format("opentype");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Neue Montreal Mono";
+	src: url("fonts/NeueMontreal/PPNeueMontrealMono-Medium.otf")
+		format("opentype");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "Neue Montreal Mono";
+	src: url("fonts/NeueMontreal/PPNeueMontrealMono-Bold.otf") format("opentype");
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Neue Montreal Mono";
+	src: url("fonts/NeueMontreal/PPNeueMontrealMono-Thin.otf") format("opentype");
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: "Neue Montreal Mono";
+	src: url("fonts/NeueMontreal/PPNeueMontrealMono-BoldItalic.otf")
+		format("opentype");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Neue Montreal Mono";
+	src: url("fonts/NeueMontreal/PPNeueMontrealMono-RegularItalic.otf")
+		format("opentype");
+	font-weight: 400;
+	font-style: italic;
+}

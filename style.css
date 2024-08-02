@@ -1,5 +1,5 @@
 body {
-	font-family: "GT Cinetype", sans-serif;
+	font-family: "Neue Montreal Mono", monospace;
 	font-weight: normal;
 	margin: 1rem;
 	padding: 1rem;
@@ -50,6 +50,7 @@ h2 {
 p,
 li {
 	margin-bottom: 1em;
+	font-weight: 500;
 }
 
 a {

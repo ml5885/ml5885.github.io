@@ -57,6 +57,7 @@ a {
 	color: #333;
 	transition: all 0.5s;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 a:hover {

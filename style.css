@@ -89,6 +89,10 @@ li {
 	justify-content: space-between;
 }
 
+#experience a {
+font-weight: normal;
+}
+
 #projects {
 	padding-left: 20px;
 }

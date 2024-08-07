@@ -9,7 +9,7 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	line-height: 1.6;
-	color:black;
+	color: black;
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
 		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><line x1="0" y1="0" x2="0" y2="140" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/><line x1="0" y1="0" x2="140" y2="0" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/></svg>');
 	background-size: 180px 180px;
@@ -55,7 +55,7 @@ li {
 
 a {
 	display: inline-block;
-	color:black;
+	color: black;
 	transition: all 0.5s;
 	text-decoration: none;
 	cursor: pointer;
@@ -78,6 +78,7 @@ hr {
 
 ul {
 	padding-left: 20px;
+	list-style-type: none;
 }
 
 li {
@@ -90,7 +91,7 @@ li {
 }
 
 #experience a {
-font-weight: normal;
+	font-weight: normal;
 }
 
 #projects {
@@ -112,7 +113,7 @@ font-weight: normal;
 }
 
 #projects li .date {
-	color:black;
+	color: black;
 }
 
 #projects li {
@@ -120,7 +121,7 @@ font-weight: normal;
 }
 
 #projects li::marker {
-	color:black;
+	color: black;
 }
 
 #projects li:hover .project-image {

@@ -1,19 +1,37 @@
+a,
+h1#title {
+	transition: 0.5s;
+}
+
+#experience a,
+body {
+	font-weight: 400;
+}
+
+#projects li,
+li,
+p {
+	margin-bottom: 1em;
+}
+
+#projects li .date,
+a,
+body {
+	color: #000;
+}
+
 body {
 	font-family: "Neue Montreal Mono", monospace;
-	font-weight: normal;
-	margin: 1rem;
+	margin: 1rem auto;
 	padding: 1rem;
 	max-width: 60rem;
 	overflow-x: hidden;
 	text-rendering: optimizeLegibility;
-	margin-right: auto;
-	margin-left: auto;
 	line-height: 1.6;
-	color: black;
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><line x1="0" y1="0" x2="0" y2="140" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/><line x1="0" y1="0" x2="140" y2="0" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/></svg>');
-	background-size: 180px 180px;
-	background-position: center;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
+			center/180px 180px,
+		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><line x1="0" y1="0" x2="0" y2="140" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/><line x1="0" y1="0" x2="140" y2="0" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/></svg>')
+			center/180px 180px;
 	font-size: 1.1em;
 }
 
@@ -21,22 +39,25 @@ main {
 	display: block;
 }
 
-*::selection {
+::selection {
 	background-color: transparent;
 	color: #eb7a12;
 }
 
 h1 {
 	font-size: 3em;
-	font-weight: bold;
+	font-weight: 700;
 	margin-bottom: 0;
 	width: fit-content;
 }
 
-h1#title {
-	transition: all 0.5s;
+a,
+b,
+h2 {
+	font-weight: 500;
 }
 
+a:hover,
 h1#title:hover {
 	transform: skewX(-20deg);
 }
@@ -45,29 +66,12 @@ h2 {
 	font-size: 1.5em;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	font-weight: 500;
-}
-
-p,
-li {
-	margin-bottom: 1em;
 }
 
 a {
 	display: inline-block;
-	color: black;
-	transition: all 0.5s;
 	text-decoration: none;
 	cursor: pointer;
-	font-weight: 500;
-}
-
-a:hover {
-	transform: skewX(-20deg);
-}
-
-b {
-	font-weight: 500;
 }
 
 hr {
@@ -76,6 +80,7 @@ hr {
 	margin: 1em 0;
 }
 
+#projects,
 ul {
 	padding-left: 20px;
 	list-style-type: none;
@@ -86,20 +91,29 @@ li {
 }
 
 #experience li {
+	margin-bottom: 1em;
+}
+
+#experience li div {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.experience-description {
+	margin-left: 1.5em;
+	font-size: 0.9em;
+	color: #555;
+	margin-top: 0.5em;
+}
+
+.experience-title {
 	display: flex;
 	justify-content: space-between;
 }
 
-#experience a {
-	font-weight: normal;
-}
-
-#projects {
-	padding-left: 20px;
-}
-
 #projects li {
-	margin-bottom: 1em;
+	color: grey;
 }
 
 .project-image {
@@ -109,19 +123,11 @@ li {
 	z-index: 1000;
 	pointer-events: none;
 	display: none;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-#projects li .date {
-	color: black;
-}
-
-#projects li {
-	color: grey;
+	box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
 
 #projects li::marker {
-	color: black;
+	color: #000;
 }
 
 #projects li:hover .project-image {
@@ -136,6 +142,7 @@ li {
 	body {
 		font-size: 0.9em;
 	}
+
 	#experience-date {
 		display: none;
 	}

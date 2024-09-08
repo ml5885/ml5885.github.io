@@ -21,7 +21,8 @@ body {
 }
 
 body {
-	font-family: "Neue Montreal Mono", monospace;
+/* 	font-family: "Neue Montreal Mono", monospace; */
+	font-family: "Space Mono", monospace
 	margin: 1rem auto;
 	padding: 1rem;
 	max-width: 60rem;

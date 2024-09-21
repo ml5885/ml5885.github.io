@@ -1,10 +1,10 @@
 a,
 h1#title {
-	transition: 0.5s;
+	transition: transform 0.5s ease;
 }
 
 .links a {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 #experience a,
@@ -20,12 +20,17 @@ p {
 
 #projects li .date,
 a,
-body {
-	color: #000;
+body,
+#projects li,
+#experience li,
+.experience-description,
+.experience-title span,
+.pub-info {
+	color: black;
 }
 
 body {
-/* 	font-family: "Neue Montreal Mono", monospace; */
+	/* 	font-family: "Neue Montreal Mono", monospace; */
 	font-family: "Space Mono", monospace;
 	margin: 1rem auto;
 	padding: 1rem;
@@ -46,7 +51,7 @@ main {
 
 ::selection {
 	background-color: transparent;
-	color: #A60321;
+	color: #a60321;
 }
 
 h1 {
@@ -108,7 +113,7 @@ li {
 .experience-description {
 	margin-left: 1.5em;
 	font-size: 0.9em;
-	color: #555;
+	color: grey;
 	margin-top: 0.5em;
 }
 
@@ -132,7 +137,7 @@ li {
 }
 
 #projects li::marker {
-	color: #000;
+	color: black;
 }
 
 #projects li:hover .project-image {
@@ -143,8 +148,8 @@ li {
 	transform: translate(-50%, -50%);
 }
 
-#research span.pub-info{
-  color: grey;
+#research span.pub-info {
+	color: grey;
 }
 
 @media screen and (max-width: 750px) {
@@ -155,4 +160,114 @@ li {
 	#experience-date {
 		display: none;
 	}
+}
+
+body.dark-mode {
+  color: #feb501;
+  transition: background-color 0.2s ease;
+  background-color: #320C4F;
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22140%22%20height%3D%22140%22%20viewBox%3D%220%200%20140%20140%22%3E%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%22140%22%20stroke%3D%22rgb(89, 41, 126)%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%223%203%22/%3E%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22140%22%20y2%3D%220%22%20stroke%3D%22rgb(89, 41, 126)%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%223%203%22/%3E%3C/svg%3E');
+  background-position: center;
+  background-size: 180px 180px;
+}
+
+body.dark-mode a,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode li,
+body.dark-mode .experience-description,
+body.dark-mode .experience-title span,
+body.dark-mode .date,
+body.dark-mode .pub-info,
+body.dark-mode #projects li a,
+body.dark-mode #projects li span,
+body.dark-mode #experience li {
+	color: #feb501;
+}
+
+body.dark-mode p, 
+body.dark-mode li,
+body.dark-mode #research .pub-info {
+  color: #D56DF8 !important;
+}
+
+body.dark-mode .project-image {
+	box-shadow: rgba(254, 181, 1, 0.5) 1px 1px 5px 4px
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+	font-family: "OT 2049", sans-serif;
+}
+
+#dark-mode-toggle {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: #320C4F;
+	color: #feb501;
+	border: 2px solid #feb501;
+	padding: 10px;
+	cursor: pointer;
+	z-index: 1001;
+	font-family: "Space Mono", monospace;
+	transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+#dark-mode-toggle:hover {
+	background: #feb501;
+	color: black;
+	transform: skew(-5deg);
+  animation: glitch 0.7s;
+}
+
+@keyframes glitch {
+	0% {
+		transform: translate(0);
+		opacity: 1;
+	}
+	10% {
+		transform: translate(-3px, -3px) skew(-1deg);
+		opacity: 0.8;
+	}
+	20% {
+		transform: translate(5px, 2px) skew(2deg);
+		opacity: 0.7;
+	}
+	30% {
+		transform: translate(-10px, 3px) skew(-2deg);
+		opacity: 1;
+	}
+	40% {
+		transform: translate(7px, -5px) skew(1deg);
+		opacity: 0.9;
+	}
+	50% {
+		transform: translate(-2px, 1px) skew(-1deg);
+		opacity: 0.6;
+	}
+	60% {
+		transform: translate(3px, -3px) skew(1deg);
+		opacity: 1;
+	}
+	70% {
+		transform: translate(0, 0) skew(0deg);
+		opacity: 1;
+	}
+	80% {
+		transform: translate(-5px, 4px) skew(-1deg);
+		opacity: 0.7;
+	}
+	90% {
+		transform: translate(5px, -5px) skew(1deg);
+		opacity: 0.9;
+	}
+	100% {
+		transform: translate(0, 0) skew(0deg);
+		opacity: 1;
+	}
+}
+
+#dark-mode-toggle:active {
+	transform: scale(0.95);
 }

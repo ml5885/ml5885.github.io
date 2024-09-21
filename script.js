@@ -35,3 +35,9 @@ projects.addEventListener("mouseout", () => {
 		image.style.display = "none";
 	});
 });
+
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+darkModeToggle.addEventListener("click", () => {
+	document.body.classList.toggle("dark-mode");
+});

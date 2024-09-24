@@ -135,6 +135,7 @@ li {
 	pointer-events: none;
 	display: none;
 	box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+	border-radius: 15px;
 }
 
 #projects li::marker {

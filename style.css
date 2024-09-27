@@ -118,6 +118,11 @@ li {
 	margin-top: 0.5em;
 }
 
+.experience-info {
+  font-size: 0.9em;
+  margin-top: 0;
+}
+
 .experience-title {
 	display: flex;
 	justify-content: space-between;

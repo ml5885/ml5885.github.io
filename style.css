@@ -120,7 +120,9 @@ li {
 
 .experience-info {
   font-size: 0.9em;
-  margin-top: 0;
+  margin-top: 0.5em;
+  margin-bottom: -0.5em;
+  margin-left: 1.5em;
 }
 
 .experience-title {
@@ -130,33 +132,54 @@ li {
 
 #projects li {
 	color: grey;
+  cursor: pointer;
 }
 
 .project-image {
-	width: 500px;
-	height: auto;
-	position: absolute;
-	z-index: 1000;
-	pointer-events: none;
-	display: none;
-	box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
-	border-radius: 15px;
+  width: 500px;
+  height: auto;
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  border-radius: 15px;
+  transform: none;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#projects li:hover .project-image {
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -45%);
 }
 
 #projects li::marker {
 	color: black;
 }
 
-#projects li:hover .project-image {
-	display: block;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
 #research span.pub-info {
 	color: grey;
+}
+
+#research span.pub-info b{
+	font-weight: 800;
 }
 
 @media screen and (max-width: 750px) {

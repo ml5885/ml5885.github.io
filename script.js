@@ -1,39 +1,79 @@
-const projects = document.getElementById("projects");
-const projectImages = document.querySelectorAll(".project-image");
+const projectItems = document.querySelectorAll('#projects li');
 
-projects.addEventListener("mouseover", (event) => {
-	const target = event.target;
-	if (
-		target.tagName === "LI" ||
-		target.tagName === "A" ||
-		target.tagName === "P"
-	) {
-		const projectImage = target.querySelector(".project-image");
-		if (projectImage) {
-			projectImage.style.display = "block";
-		}
-	}
-});
+projectItems.forEach((item) => {
+  let activeImage = null;
+  let mouseX = 0,
+    mouseY = 0;
+  let imageX = 0,
+    imageY = 0;
+  const speed = 0.06;
 
-projects.addEventListener("mousemove", (event) => {
-	const target = event.target;
-	if (
-		target.tagName === "LI" ||
-		target.tagName === "A" ||
-		target.tagName === "P"
-	) {
-		const projectImage = target.querySelector(".project-image");
-		if (projectImage) {
-			projectImage.style.top = `${event.clientY - 170}px`;
-			projectImage.style.left = `${event.clientX + 250}px`;
-		}
-	}
-});
+  function animate() {
+    if (activeImage) {
+      const imageWidth = activeImage.offsetWidth;
+      const imageHeight = activeImage.offsetHeight;
 
-projects.addEventListener("mouseout", () => {
-	projectImages.forEach((image) => {
-		image.style.display = "none";
-	});
+      const paddingX = 20;
+      const paddingY = 20;
+
+      const desiredImageX = mouseX + paddingX;
+      const desiredImageY = mouseY - paddingY;
+
+      imageX += (desiredImageX - imageX) * speed;
+      imageY += (desiredImageY - imageY) * speed;
+
+      activeImage.style.left = `${imageX}px`;
+      activeImage.style.top = `${imageY - imageHeight}px`;
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  item.addEventListener('mouseenter', (event) => {
+    const projectImage = item.querySelector('.project-image');
+    if (projectImage) {
+      activeImage = projectImage;
+
+      projectImage.style.display = 'block';
+
+      projectImage.offsetWidth;
+
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+      imageX = mouseX + 20;
+      imageY = mouseY - 20;
+
+      projectImage.style.animation = 'bounceIn 0.3s ease forwards';
+
+      animate();
+    }
+  });
+
+  item.addEventListener('mousemove', (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+
+    if (activeImage) {
+      const hoveredElement = document.elementFromPoint(mouseX, mouseY);
+      if (hoveredElement.closest('a')) {
+        if (activeImage.style.display !== 'none') {
+          activeImage.style.display = 'none';
+        }
+      } else {
+        if (activeImage.style.display === 'none') {
+          activeImage.style.display = 'block';
+        }
+      }
+    }
+  });
+
+  item.addEventListener('mouseleave', () => {
+    if (activeImage) {
+      activeImage.style.display = 'none';
+      activeImage.style.animation = '';
+      activeImage = null;
+    }
+  });
 });
 
 const darkModeToggle = document.getElementById("dark-mode-toggle");

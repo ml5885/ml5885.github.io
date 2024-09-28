@@ -135,6 +135,10 @@ li {
   cursor: pointer;
 }
 
+#projects li span {
+  cursor: auto;
+}
+
 .project-image {
   width: 500px;
   height: auto;

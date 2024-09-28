@@ -55,7 +55,7 @@ projectItems.forEach((item) => {
 
     if (activeImage) {
       const hoveredElement = document.elementFromPoint(mouseX, mouseY);
-      if (hoveredElement.closest('a')) {
+      if (hoveredElement.closest('a') || hoveredElement.closest('span')) {
         if (activeImage.style.display !== 'none') {
           activeImage.style.display = 'none';
         }

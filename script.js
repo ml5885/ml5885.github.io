@@ -10,7 +10,6 @@ projectItems.forEach((item) => {
 
 	function animate() {
 		if (activeImage) {
-			const imageWidth = activeImage.offsetWidth;
 			const imageHeight = activeImage.offsetHeight;
 
 			const paddingX = 20;

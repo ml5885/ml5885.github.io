@@ -1,6 +1,59 @@
+/* General Styles */
+body {
+	font-family: "Space Mono", monospace;
+	margin: 1rem auto;
+	padding: 1rem;
+	max-width: 60rem;
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+	line-height: 1.6;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
+			center/180px 180px,
+		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><line x1="0" y1="0" x2="0" y2="140" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/><line x1="0" y1="0" x2="140" y2="0" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/></svg>')
+			center/180px 180px;
+	font-size: 1.1em;
+	transition: background-color 0.2s ease;
+}
+
+main {
+	display: block;
+}
+
+::selection {
+	background-color: transparent;
+	color: #a60321;
+}
+
+/* Typography */
+h1 {
+	font-size: 3em;
+	font-weight: 700;
+	margin-bottom: 0;
+	width: fit-content;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
 a,
-h1#title {
+b,
+h2 {
+	font-weight: 500;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
 	transition: transform 0.5s ease;
+}
+
+a:hover,
+h1#title:hover {
+	transform: skewX(-20deg);
 }
 
 .links a {
@@ -13,7 +66,6 @@ body {
 }
 
 #projects li,
-li,
 p {
 	margin-bottom: 1em;
 }
@@ -29,68 +81,7 @@ body,
 	color: black;
 }
 
-body {
-	/* 	font-family: "Neue Montreal Mono", monospace; */
-	font-family: "Space Mono", monospace;
-	margin: 1rem auto;
-	padding: 1rem;
-	max-width: 60rem;
-	overflow-x: hidden;
-	text-rendering: optimizeLegibility;
-	line-height: 1.6;
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
-			center/180px 180px,
-		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><line x1="0" y1="0" x2="0" y2="140" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/><line x1="0" y1="0" x2="140" y2="0" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/></svg>')
-			center/180px 180px;
-	font-size: 1.1em;
-        transition: background-color 0.2s ease;
-}
-
-main {
-	display: block;
-}
-
-::selection {
-	background-color: transparent;
-	color: #a60321;
-}
-
-h1 {
-	font-size: 3em;
-	font-weight: 700;
-	margin-bottom: 0;
-	width: fit-content;
-}
-
-a,
-b,
-h2 {
-	font-weight: 500;
-}
-
-a:hover,
-h1#title:hover {
-	transform: skewX(-20deg);
-}
-
-h2 {
-	font-size: 1.5em;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-a {
-	display: inline-block;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-hr {
-	border: none;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
-}
-
+/* Lists */
 #projects,
 ul {
 	padding-left: 20px;
@@ -111,18 +102,34 @@ li {
 	flex-wrap: wrap;
 }
 
+#projects li {
+	color: grey;
+	cursor: default;
+}
+
+#projects li::marker {
+	color: black;
+}
+
+/* Experience */
 .experience-description {
 	margin-left: 1.5em;
 	font-size: 0.9em;
 	color: grey;
 	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 .experience-info {
-  font-size: 0.9em;
-  margin-top: 0.5em;
-  margin-bottom: -0.5em;
-  margin-left: 1.5em;
+	font-size: 0.9em;
+	margin-bottom: 0.5em;
+	margin-left: 1.5em;
+	margin-top: 0em;
+}
+
+.experience-info a {
+	color: grey;
+	text-decoration: underline;
 }
 
 .experience-title {
@@ -130,79 +137,51 @@ li {
 	justify-content: space-between;
 }
 
-#projects li {
-	color: grey;
-  cursor: pointer;
-}
-
-#projects li span {
-  cursor: auto;
-}
-
+/* Project Image */
 .project-image {
-  width: 500px;
-  height: auto;
-  position: absolute;
-  z-index: 1000;
-  pointer-events: none;
-  display: none;
-  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
-  border-radius: 15px;
-  transform: none;
-}
-
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+	width: 500px;
+	height: auto;
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	display: none;
+	box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+	border-radius: 15px;
+	transform: none;
 }
 
 #projects li:hover .project-image {
-  display: block;
-  position: fixed;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -45%);
+	display: block;
+	position: fixed;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -45%);
 }
 
-#projects li::marker {
-	color: black;
-}
-
+/* Research */
 #research span.pub-info {
 	color: grey;
 }
 
-#research span.pub-info b{
+#research span.pub-info b {
 	font-weight: 800;
 }
 
-@media screen and (max-width: 750px) {
-	body {
-		font-size: 0.9em;
-	}
-
-	#experience-date {
-		display: none;
-	}
+/* Horizontal Rule */
+hr {
+	border: none;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
 }
 
+/* Dark Mode */
 body.dark-mode {
-  color: #feb501;
-  transition: background-color 0.2s ease;
-  background-color: #320C4F;
-  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22140%22%20height%3D%22140%22%20viewBox%3D%220%200%20140%20140%22%3E%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%22140%22%20stroke%3D%22rgb(89, 41, 126)%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%223%203%22/%3E%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22140%22%20y2%3D%220%22%20stroke%3D%22rgb(89, 41, 126)%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%223%203%22/%3E%3C/svg%3E');
-  background-position: center;
-  background-size: 180px 180px;
+	color: #feb501;
+	transition: background-color 0.2s ease;
+	background-color: #320c4f;
+	background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22140%22%20height%3D%22140%22%20viewBox%3D%220%200%20140%20140%22%3E%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%22140%22%20stroke%3D%22rgb(89, 41, 126)%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%223%203%22/%3E%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22140%22%20y2%3D%220%22%20stroke%3D%22rgb(89, 41, 126)%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%223%203%22/%3E%3C/svg%3E");
+	background-position: center;
+	background-size: 180px 180px;
 }
 
 body.dark-mode a,
@@ -219,10 +198,10 @@ body.dark-mode #experience li {
 	color: #feb501;
 }
 
-body.dark-mode p, 
+body.dark-mode p,
 body.dark-mode li,
 body.dark-mode #research .pub-info {
-  color: #D56DF8 !important;
+	color: #d56df8 !important;
 }
 
 body.dark-mode .project-image {
@@ -234,6 +213,7 @@ body.dark-mode h2 {
 	font-family: "OT 2049", sans-serif;
 }
 
+/* Dark Mode Toggle */
 #dark-mode-toggle {
 	position: absolute;
 	top: 10px;
@@ -252,7 +232,27 @@ body.dark-mode h2 {
 	background: #feb501;
 	color: black;
 	transform: skew(-5deg);
-  animation: glitch 0.7s;
+	animation: glitch 0.7s;
+}
+
+#dark-mode-toggle:active {
+	transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes bounceIn {
+	0% {
+		transform: scale(0.9);
+		opacity: 0;
+	}
+	60% {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 @keyframes glitch {
@@ -302,6 +302,13 @@ body.dark-mode h2 {
 	}
 }
 
-#dark-mode-toggle:active {
-	transform: scale(0.95);
+/* Media Queries */
+@media screen and (max-width: 750px) {
+	body {
+		font-size: 0.9em;
+	}
+
+	#experience-date {
+		display: none;
+	}
 }

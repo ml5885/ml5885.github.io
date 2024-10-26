@@ -1,0 +1,550 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--sand: #eae4e1;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-color: var(--sand);
+	font-family: "Futura", system-ui, -apple-system, sans-serif;
+}
+
+.button {
+	background-color: #da3732;
+	border: none;
+	color: white;
+	padding: 10px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+}
+
+header {
+	background-color: black;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 5;
+}
+
+#home {
+	width: 100%;
+	height: 1000px;
+}
+
+#home h1,
+#home h2 {
+	position: absolute;
+	top: 200px;
+	left: 481.5px;
+	font-size: 200px;
+	font-weight: normal;
+	display: inline-block;
+}
+
+#home h2 {
+	font-size: 50px;
+	text-transform: uppercase;
+	opacity: 0;
+	animation: fadeIn 3s 2.8s forwards;
+}
+
+a {
+	color: black;
+}
+
+#AboutMe {
+	margin: 0 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#AboutMe h1 {
+	position: relative;
+	top: 10%;
+	font-size: 100px;
+	font-weight: normal;
+	text-transform: lowercase;
+	padding: 40px;
+}
+
+#textBody,
+#textBody2 {
+	font-size: 30px;
+	font-weight: normal;
+	text-align: justify;
+	z-index: 1;
+}
+
+#textBody2 #experienceLine {
+	display: flex;
+	justify-content: space-between;
+	font-size: 30px;
+}
+
+#textBody2 #experienceLine i {
+	font-size: 25px;
+}
+
+#Experience {
+	display: flex;
+	flex-direction: column;
+	margin: 0 15%;
+	margin-top: 10vh;
+	gap: 50px;
+}
+
+#Experience h1 {
+	position: relative;
+	top: 10%;
+	font-size: 100px;
+	font-weight: normal;
+	text-transform: lowercase;
+	padding: 20px;
+	text-align: center;
+}
+
+#Experience #courses {
+	margin-left: 25px;
+}
+
+#Projects {
+	display: flex;
+	flex-direction: column;
+	margin: 0 15%;
+	margin-top: 10vh;
+	gap: 100px;
+}
+
+#Projects h1 {
+	position: relative;
+	top: 10%;
+	font-size: 100px;
+	font-weight: normal;
+	text-transform: lowercase;
+	padding: 20px;
+	text-align: center;
+}
+
+#Projects a {
+	color: black;
+}
+
+#Projects #textBody2 {
+	display: flex;
+	flex-direction: row;
+	gap: 60px;
+}
+
+#Projects #textBody2 img {
+	width: 600px;
+	height: auto;
+	padding: 20px;
+	background-color: #eae4e1;
+	box-shadow: rgba(145, 106, 112, 0.15) 0 6px 24px;
+}
+
+#rectangle1 {
+	position: absolute;
+	width: 18px;
+	height: 500px;
+	background: black;
+	animation-name: rectangle3Animation;
+	animation-duration: 3s;
+}
+
+#rectangle1Wrapper {
+	transform: rotate(180deg) translateX(635.6px) translateY(-250px);
+}
+
+#rectangle2 {
+	position: absolute;
+	width: 18px;
+	height: 1600px;
+	transform: translateX(847.75px) translateY(385px);
+	background: black;
+	animation-name: rectangle2Animation;
+	animation-duration: 3s;
+}
+
+#rectangle3 {
+	position: absolute;
+	width: 380px;
+	height: 2400px;
+	background: #ebc146;
+	animation-name: rectangle3Animation;
+	animation-duration: 3s;
+}
+
+#rectangle3Wrapper {
+	transform: rotate(180deg) translateX(636px) translateY(-2820px);
+}
+
+#rectangle4 {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background: #2558a5;
+	animation-name: rectangle4Animation;
+	animation-duration: 3s;
+}
+
+#rectangle4Wrapper {
+	transform: rotate(0deg) translateX(900px) translateY(440px);
+}
+
+#circle {
+	position: absolute;
+	border-radius: 0 0 500px 0;
+	width: 355px;
+	height: 355px;
+	background: #ebc146;
+	animation-name: circleAnimation;
+	animation-duration: 3s;
+}
+
+#circleWrapper {
+	transform: rotate(180deg) translateX(653px) translateY(-300px);
+}
+
+#circle2 {
+	position: absolute;
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+	background: #da3732;
+	animation-name: circle2Animation;
+	animation-duration: 3s;
+}
+
+#circle2Wrapper {
+	transform: rotate(270deg) translateX(100px) translateY(-700px);
+}
+
+#rectangle6 {
+	position: absolute;
+	width: 70px;
+	height: 10px;
+	opacity: 0;
+	background: #da3732;
+	animation: fadeIn 3s 2.8s forwards;
+	transition: 500ms linear;
+}
+
+#rectangle6Wrapper {
+	transform: rotate(0deg) translateX(734px) translateY(420px);
+}
+
+#rectangle6:hover {
+	height: 300px;
+}
+
+#rectangle7 {
+	position: absolute;
+	width: 70px;
+	height: 10px;
+	opacity: 0;
+	background: #da3732;
+	animation: fadeIn 3s 2.8s forwards;
+	transition: 500ms linear;
+}
+
+#rectangle7Wrapper {
+	transform: rotate(0deg) translateX(584px) translateY(420px);
+}
+
+#rectangle7:hover {
+	height: 324px;
+}
+
+#rectangle8 {
+	position: absolute;
+	width: 70px;
+	height: 10px;
+	opacity: 0;
+	background: #da3732;
+	animation: fadeIn 3s 2.8s forwards;
+	transition: 500ms linear;
+}
+
+#rectangle8Wrapper {
+	transform: rotate(0deg) translateX(434px) translateY(420px);
+}
+
+#rectangle8:hover {
+	height: 280px;
+}
+
+#rectangle9 {
+	position: absolute;
+	width: 22px;
+	height: 1300px;
+	transform: translateX(355px) translateY(-410px);
+	background: #2558a5;
+	animation-name: rectangle9Animation;
+	animation-duration: 3s;
+}
+
+#rectangle10 {
+	position: absolute;
+	width: 350px;
+	height: 800px;
+	background: #da3732;
+	animation-name: rectangle10Animation;
+	animation-duration: 3s;
+}
+
+#rectangle10Wrapper {
+	transform: rotate(90deg) translateX(670px) translateY(-900px);
+}
+
+#rectangle11 {
+	position: absolute;
+	width: 1800px;
+	height: 10px;
+	background: #da3732;
+	animation: rectangle11Animation 3s forwards;
+}
+
+#rectangle11Wrapper {
+	transform: rotate(0deg) translateX(-200px) translateY(420px);
+}
+
+#positioning {
+	transform: rotate(90deg) translateX(200px) translateY(-480px);
+}
+
+#aboutme {
+	transform: rotate(90deg) translateX(700px) translateY(-300px);
+}
+
+#footer {
+	width: 100%;
+}
+
+#footer h5 {
+	font-size: 15px;
+	text-align: center;
+}
+
+#footer a {
+	text-decoration: none;
+}
+
+#credit {
+	display: flex;
+	justify-content: center;
+}
+#githubImage {
+	margin-left: 20%;
+	margin-bottom: 6.5%;
+}
+
+#devpostImage {
+	margin-left: 15%;
+	margin-bottom: 5%;
+}
+
+#devpostImage2 {
+	margin-left: 10%;
+	margin-bottom: 5%;
+}
+
+.wrapper {
+	transform: rotate(335deg) translateX(-200px) translateY(-50px);
+}
+
+.aboutMePosition {
+	transform: rotate(90deg) translateX(700px) translateY(-280px);
+}
+
+.experiencePosition {
+	transform: rotate(90deg) translateX(700px) translateY(-130px);
+}
+
+.projectsPosition {
+	transform: rotate(90deg) translateX(700px) translateY(20px);
+}
+
+.dropbtn {
+	font-family: "Futura";
+	background-color: #da3732;
+	color: black;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: white;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 2;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: rgb(216, 64, 50);
+}
+
+.loader {
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+@keyframes rectangle2Animation {
+	0% {
+		height: 0px;
+	}
+
+	100% {
+		height: 1600px;
+	}
+}
+
+@keyframes rectangle3Animation {
+	0% {
+		height: 0px;
+	}
+
+	100% {
+		height: 2400px;
+	}
+}
+
+@keyframes rectangle4Animation {
+	0% {
+		height: 0px;
+		width: 0px;
+	}
+
+	100% {
+		height: 300px;
+		width: 300px;
+	}
+}
+
+@keyframes circleAnimation {
+	0% {
+		height: 0px;
+		width: 0px;
+	}
+
+	100% {
+		height: 355px;
+		width: 355px;
+	}
+}
+
+@keyframes circle2Animation {
+	0% {
+		height: 0px;
+		width: 0px;
+	}
+
+	100% {
+		height: 300px;
+		width: 300px;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInQuick {
+	0% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes rectangle9Animation {
+	0% {
+		height: 0px;
+	}
+
+	100% {
+		height: 1300px;
+	}
+}
+
+@keyframes rectangle10Animation {
+	0% {
+		height: 0px;
+	}
+
+	100% {
+		height: 800px;
+	}
+}
+
+@keyframes rectangle11Animation {
+	0% {
+		width: 0px;
+	}
+
+	100% {
+		width: 1800px;
+	}
+}
+
+.titleWrapper {
+	box-sizing: content-box;
+	width: 1440px;
+	padding-left: 10vw;
+	transform: rotate(-10deg);
+}

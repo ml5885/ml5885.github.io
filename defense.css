@@ -1,0 +1,109 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: OwnersTRIAL, sans-serif; /* Changed font to Helvetica Neue */
+	color: white;
+	background: black;
+}
+
+section {
+	text-align: center; /* Center-align all content within sections */
+	margin-bottom: 20px;
+	margin: 0px 150px;
+	padding: 50px 150px;
+	border-bottom: 1.5px solid white;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 124px;
+	letter-spacing: 0.04em;
+	line-height: 0.88709677;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 85px;
+	letter-spacing: 0.02em;
+	line-height: 1.05;
+	font-weight: normal;
+	text-align: left;
+	margin: 10px 0;
+}
+
+h3 {
+	font-size: 25px;
+	letter-spacing: 0.06em;
+	line-height: 1.05;
+	font-weight: medium;
+}
+
+h3#title {
+	height: 60px;
+}
+
+p {
+	margin: 15px 0;
+	font-size: 16px;
+	line-height: 18.5px;
+	letter-spacing: 0.06em;
+	font-weight: 400;
+	font-style: normal;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* Personal Information Section */
+#personal-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Work Experience and Projects Sections */
+#work-experience {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.project-grid {
+	margin: 25px 0px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+}
+
+/* Projects Cards */
+.project-card {
+	padding: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	background: url("https://img.freepik.com/premium-photo/white-paper-texture-background-close-up_60487-2343.jpg")
+		repeat #fff 0 0;
+	width: 500px;
+	height: 600px;
+	text-align: left;
+	color: black;
+}
+
+.project-card img {
+	width: 500px;
+	height: 300px;
+	margin-bottom: 20px;
+}
+
+.project-divider {
+	border-top: 2px solid black;
+	margin: 10px 0;
+}

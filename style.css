@@ -65,11 +65,6 @@ body {
 	font-weight: 400;
 }
 
-#projects li,
-p {
-	margin-bottom: 1em;
-}
-
 #projects li .date,
 a,
 body,
@@ -135,7 +130,7 @@ li {
 }
 
 #experience li {
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 }
 
 #experience li div {
@@ -147,6 +142,7 @@ li {
 #projects li {
 	color: grey;
 	cursor: default;
+	padding: 10px 0px;
 }
 
 #projects li::marker {

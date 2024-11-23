@@ -7,8 +7,11 @@ projectItems.forEach((item) => {
 	let imageX = 0,
 		imageY = 0;
 	const speed = 0.06;
+	let isAnimating = false;
 
 	function animate() {
+		if (!isAnimating) return;
+
 		if (activeImage) {
 			const imageHeight = activeImage.offsetHeight;
 
@@ -42,6 +45,7 @@ projectItems.forEach((item) => {
 			imageX = mouseX + 20;
 			imageY = mouseY - 20;
 
+			isAnimating = true;
 			animate();
 		}
 	});
@@ -68,6 +72,7 @@ projectItems.forEach((item) => {
 		if (activeImage) {
 			activeImage.style.display = "none";
 			activeImage = null;
+			isAnimating = false;
 		}
 	});
 });

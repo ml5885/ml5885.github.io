@@ -9,8 +9,7 @@ body {
 	max-width: 60rem;
 	overflow-x: hidden;
 	line-height: 1.6;
-	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><line x1="0" y1="0" x2="0" y2="140" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/><line x1="0" y1="0" x2="140" y2="0" stroke="rgba(0, 0, 0, 0.1)" stroke-width="2" stroke-dasharray="3 3"/></svg>')
-			center/180px 180px;
+	background: url(grid.svg) center/180px 180px;
 	background-color: #f0efea;
 	font-size: 16px;
 	transition: background-color 0.2s ease;

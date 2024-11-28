@@ -6,7 +6,7 @@ projectItems.forEach((item) => {
 		mouseY = 0;
 	let imageX = 0,
 		imageY = 0;
-	const speed = 0.06;
+	const speed = 0.075;
 	let isAnimating = false;
 
 	function animate() {

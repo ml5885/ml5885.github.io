@@ -3,17 +3,30 @@ font-face {
 	src: url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 }
 
-body {
+/* body {
 	font-family: "Space Mono", monospace;
 	margin: 1rem auto;
 	padding: 1rem;
 	max-width: 60rem;
 	overflow-x: hidden;
-	line-height: 1.6;
 	background: url(grid.svg) center/180px 180px;
 	background-color: #f0efea;
+	color: #333;
 	font-size: 16px;
-	transition: background-color 0.2s ease;
+	line-height: 1.6;
+	transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+body {
+	font-family: "GT Cinetype", sans-serif;
+	margin: 2rem auto;
+	padding: 0 1rem;
+	max-width: 60rem;
+	background: url(grid.svg) center/180px 180px;
+	background-color: #f9f8f6;
+	color: #333;
+	line-height: 1.7;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main {

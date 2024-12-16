@@ -1,36 +1,51 @@
+:root {
+	--primary-color: #a60321;
+	--secondary-color: #feb501;
+	--background-light: #f0efea;
+	--background-dark: #320c4f;
+	--text-light: #000;
+	--text-dark: #feb501;
+}
+
 font-face {
 	font-family: "Space Mono";
 	src: url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 }
 
-/* body {
+body {
 	font-family: "Space Mono", monospace;
 	margin: 1rem auto;
-	padding: 1rem;
+	padding: 1rem 150px;
 	max-width: 60rem;
 	overflow-x: hidden;
-	background: url(grid.svg) center/180px 180px;
-	background-color: #f0efea;
-	color: #333;
-	font-size: 16px;
 	line-height: 1.6;
-	transition: background-color 0.3s ease, color 0.3s ease;
-} */
-
-body {
-	font-family: "GT Cinetype", sans-serif;
-	margin: 2rem auto;
-	padding: 0 1rem;
-	max-width: 60rem;
-	background: url(grid.svg) center/180px 180px;
-	background-color: #f9f8f6;
-	color: #333;
-	line-height: 1.7;
-	transition: background-color 0.3s ease, color 0.3s ease;
+	background: url(grid.svg) center / 180px 180px;
+	background-color: #f0efea;
+	font-size: 16px;
+	transition: background-color 0.2s ease;
 }
 
 main {
 	display: block;
+}
+
+#header-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header {
+	display: flex;
+	align-items: stretch;
+}
+
+.profile-pic {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 section {
@@ -39,13 +54,13 @@ section {
 
 ::selection {
 	background-color: transparent;
-	color: #a60321;
+	color: var(--primary-color);
 }
 
 h1 {
 	font-size: 50px;
 	font-weight: 700;
-	margin-bottom: 0;
+	margin: 0;
 	width: fit-content;
 }
 
@@ -67,10 +82,6 @@ h1#title:hover {
 	transform: skewX(-20deg);
 }
 
-.links a {
-	text-decoration: underline;
-}
-
 #experience a,
 body {
 	font-weight: 400;
@@ -84,14 +95,14 @@ body,
 .experience-description,
 .experience-title span,
 .pub-info {
-	color: black;
+	color: var(--text-light);
 }
 
 .dropbtn {
-	color: black;
+	color: var(--text-light);
 	padding: 8px 16px;
 	font-size: 16px;
-	border: 2px solid black;
+	border: 2px solid var(--text-light);
 	font-family: "Space Mono", monospace;
 	background: none;
 }
@@ -145,7 +156,7 @@ li {
 }
 
 #projects li::marker {
-	color: black;
+	color: var(--text-light);
 }
 
 .experience-description {
@@ -208,9 +219,9 @@ hr {
 }
 
 body.dark-mode {
-	color: #feb501;
+	color: var(--text-dark);
 	transition: background-color 0.2s ease;
-	background-color: #320c4f;
+	background-color: var(--background-dark);
 	background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22140%22%20height%3D%22140%22%20viewBox%3D%220%200%20140%20140%22%3E%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%22140%22%20stroke%3D%22rgb(89, 41, 126)%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%223%203%22/%3E%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22140%22%20y2%3D%220%22%20stroke%3D%22rgb(89, 41, 126)%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%223%203%22/%3E%3C/svg%3E");
 	background-position: center;
 	background-size: 180px 180px;
@@ -227,7 +238,7 @@ body.dark-mode .pub-info,
 body.dark-mode #projects li a,
 body.dark-mode #projects li span,
 body.dark-mode #experience li {
-	color: #feb501;
+	color: var(--text-dark);
 }
 
 body.dark-mode p,
@@ -246,8 +257,8 @@ body.dark-mode h2 {
 }
 
 body.dark-mode .dropbtn {
-	color: #feb501;
-	border: 2px solid #feb501;
+	color: var(--text-dark);
+	border: 2px solid var(--text-dark);
 }
 
 #dark-mode-toggle {
@@ -255,8 +266,8 @@ body.dark-mode .dropbtn {
 	top: 10px;
 	right: 10px;
 	background: black;
-	color: #feb501;
-	border: 2px solid #feb501;
+	color: var(--text-dark);
+	border: 2px solid var(--text-dark);
 	padding: 10px;
 	cursor: pointer;
 	z-index: 1001;
@@ -265,7 +276,7 @@ body.dark-mode .dropbtn {
 }
 
 #dark-mode-toggle:hover {
-	background: #feb501;
+	background: var(--text-dark);
 	color: black;
 	transform: skew(-5deg);
 	animation: glitch 0.7s;
@@ -339,10 +350,33 @@ body.dark-mode .dropbtn {
 
 @media screen and (max-width: 750px) {
 	body {
-		font-size: 16px;
+		padding: 1rem;
+	}
+
+	p,
+	li {
+		font-size: 14px !important;
+	}
+
+	h1 {
+		font-size: 40px;
 	}
 
 	#experience-date {
 		display: none;
+	}
+
+	.dropdown,
+	#dark-mode-toggle {
+		display: none;
+	}
+
+	#header-wrapper {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+	}
+
+	.profile-pic {
+		margin: 0;
 	}
 }

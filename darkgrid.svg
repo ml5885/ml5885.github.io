@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+    <line 
+        x1="0" 
+        y1="0" 
+        x2="0" 
+        y2="140" 
+        stroke="rgb(89, 41, 126)" 
+        stroke-width="3" 
+        stroke-dasharray="5 5"
+    />
+    <line 
+        x1="0" 
+        y1="0" 
+        x2="140" 
+        y2="0" 
+        stroke="rgb(89, 41, 126)" 
+        stroke-width="3" 
+        stroke-dasharray="5 5"
+    />
+</svg>

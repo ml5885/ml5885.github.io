@@ -10,7 +10,7 @@ mark {
 
 @font-face {
 	font-family: DidotLTRoman;
-	src: url("../fonts/DidotLTStd-Roman.otf");
+	src: url("DidotLTStd-Roman.otf");
 }
 
 .title {
@@ -235,7 +235,6 @@ mark {
 	position: absolute;
 	background-color: transparent;
 	min-width: 160px;
-	z-index: 2;
 }
 
 .dropdown-content a {
@@ -243,6 +242,7 @@ mark {
 	padding: 12px 5px;
 	text-decoration: none;
 	display: block;
+	cursor: pointer;
 }
 
 .dropbtn:hover {

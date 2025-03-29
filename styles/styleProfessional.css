@@ -1,16 +1,11 @@
 body {
-	font-family: DidotLTRoman;
+	font-family: "DidotLTRoman";
 	margin-left: 2vw;
 	height: auto;
 }
 
 mark {
 	background-color: yellow;
-}
-
-@font-face {
-	font-family: DidotLTRoman;
-	src: url("../fonts/DidotLTStd-Roman.otf");
 }
 
 .title {
@@ -221,7 +216,7 @@ mark {
 	font-size: 16px;
 	background-color: transparent;
 	border: none;
-	font-family: DidotLTRoman;
+	font-family: "DidotLTRoman";
 }
 
 .dropdown {

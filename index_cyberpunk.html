@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Michael Li</title>
-    <link rel="stylesheet" href="style_cyberpunk.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css" />
-    <script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Michael Li</title>
+        <link rel="stylesheet" href="styles/style_cyberpunk.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css" />
+        <script>
 			$(document).ready(function () {
 				$("a").on("click", function (event) {
 					if (this.hash !== "") {
@@ -28,7 +28,7 @@
 				});
 			});
 		</script>
-    <script>
+        <script>
 			var i = 0;
 			var x = 0;
 			var y = 0;
@@ -65,159 +65,165 @@
 			}
 			setTimeout(typeWriter, 1000);
 		</script>
-  </head>
+    </head>
 
-  <body>
-    <section class="main">
-      <button class="cybr-btn hidden"></button>
-      <img src="images/header.png" id="headerImage" />
-      <!-- <div id="box">		
+    <body>
+        <section class="main">
+            <button class="cybr-btn hidden"></button>
+            <img src="images/header.png" id="headerImage" />
+            <!-- <div id="box">		
 				<h2>Michael Li_</h2>
 			</div>	 -->
-    </section>
+        </section>
 
-    <div class="sidenav">
-      <div class="dropdown">
-        <button class="dropbtn cybr-btn">
-          Style<span aria-hidden>_</span>
-          <span aria-hidden class="cybr-btn__glitch">Style</span>
-          <span aria-hidden class="cybr-btn__tag">A1</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="index.html" style="color: black">Main</a>
-          <a href="index_bauhaus.html" style="color: black">Bauhaus</a>
-          <a href="index_classical.html" style="color: black">Professional</a>
-          <a href="index_cyberpunk.html" style="color: black">Cyberpunk</a>
+        <div class="sidenav">
+            <div class="dropdown">
+                <button class="dropbtn cybr-btn">
+                    Style<span aria-hidden>_</span>
+                    <span aria-hidden class="cybr-btn__glitch">Style</span>
+                    <span aria-hidden class="cybr-btn__tag">A1</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html" style="color: black">Main</a>
+                    <a href="index_bauhaus.html"
+                        style="color: black">Bauhaus</a>
+                    <a href="index_classical.html"
+                        style="color: black">Professional</a>
+                    <a href="index_cyberpunk.html"
+                        style="color: black">Cyberpunk</a>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <a href="#AboutMe"><li>About Me</li></a>
+                    <a href="#Experience"><li>Experience</li></a>
+                    <a href="#Projects"><li>Projects</li></a>
+                    <a href="https://github.com/ml5885" id="githubLink">
+                        <img
+                            alt="Github Link"
+                            src="images/github-logo.png"
+                            width="25%"
+                            height="25%" />
+                    </a>
+
+                    <a href="https://devpost.com/limichael353">
+                        <img
+                            alt="Devpost Link"
+                            src="images/devpostlogo.png"
+                            width="30%"
+                            height="30%" />
+                    </a>
+
+                    <a href="https://devpost.com/bearseascape">
+                        <img
+                            alt="2nd Devpost Link"
+                            src="images/devpostlogo.png"
+                            width="30%"
+                            height="30%" />
+                    </a>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="menu">
-        <ul>
-          <a href="#AboutMe"><li>About Me</li></a>
-          <a href="#Experience"><li>Experience</li></a>
-          <a href="#Projects"><li>Projects</li></a>
-          <a href="https://github.com/ml5885" id="githubLink">
-            <img
-              alt="Github Link"
-              src="images/github-logo.png"
-              width="25%"
-              height="25%" />
-          </a>
 
-          <a href="https://devpost.com/limichael353">
-            <img
-              alt="Devpost Link"
-              src="images/devpostlogo.png"
-              width="30%"
-              height="30%" />
-          </a>
+        <section>
+            <div id="AboutMe">
+                <div
+                    class="my-augfiguration"
+                    data-augmented-ui="tr-clip bl-clip br-clip-y both"></div>
+                <div id="div1">
+                    <div class="textbody">
+                        <h1>About Me</h1>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="textBody">
+                        <span class="typewrite anim-typewrite js-typewrite1">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="Experience">
+                <div
+                    class="my-augfiguration2"
+                    data-augmented-ui="tr-clip bl-clip br-clip-y both"></div>
+                <div id="div1">
+                    <h1>Experience</h1>
+                    <br />
+                    <div class="textBody">
+                        <span class="typewrite anim-typewrite js-typewrite2">
+                        </span>
+                    </div>
+                </div>
+            </div>
 
-          <a href="https://devpost.com/bearseascape">
-            <img
-              alt="2nd Devpost Link"
-              src="images/devpostlogo.png"
-              width="30%"
-              height="30%" />
-          </a>
-        </ul>
-      </div>
-    </div>
+            <div id="Projects">
+                <div
+                    class="my-augfiguration3"
+                    data-augmented-ui="tr-clip bl-clip br-clip-y both"></div>
+                <div id="div1">
+                    <h1 class="textbody">Projects</h1>
+                    <br />
+                    <div class="textBody">
+                        June 2020
+                        <br /><b>Data Day Grind Hackathon</b> -
+                        <a
+                            href="https://devpost.com/software/stance-taking-a-stand-against-hate-speech"
+                            style="color: whitesmoke">
+                            Best Data Visualization
+                        </a>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="textBody">
+                        July 2020
+                        <br /><b>HackItShipIt</b> -
+                        <a
+                            href="https://devpost.com/software/shipworthy"
+                            style="color: whitesmoke">
+                            First Overall
+                        </a>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="textBody">
+                        July-August 2020
+                        <br /><b>To The Moon and Hack Hackathon</b> -
+                        <a
+                            href="https://devpost.com/software/ad-lunam"
+                            style="color: whitesmoke">
+                            Third Overall
+                        </a>
+                    </div>
 
-    <section>
-      <div id="AboutMe">
-        <div
-          class="my-augfiguration"
-          data-augmented-ui="tr-clip bl-clip br-clip-y both"></div>
-        <div id="div1">
-          <div class="textbody">
-            <h1>About Me</h1>
-          </div>
-          <br />
-          <br />
-          <div class="textBody">
-            <span class="typewrite anim-typewrite js-typewrite1"> </span>
-          </div>
+                    <div id="textBody">
+                        2021 - Present
+                        <br /><b>COVIDCatcher</b>
+                        <a href="https://www.c0vidcatcher.org">
+                            1st Place ACSEF, CSEF Nominee, Bay Area BioGENEius
+                            Challenge
+                            Finalist
+                        </a>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="textBody">
+                        <br />
+                        Contact me at
+                        <br /><b>bearseascape@gmail.com</b> <br />
+                        <b>ml6@andrew.cmu.edu</b>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="footer">
+            <div>
+                <h5 style="font-family: cyber">
+                    Website built using HTML, CSS, and JS by Michael Li
+                </h5>
+            </div>
         </div>
-      </div>
-      <div id="Experience">
-        <div
-          class="my-augfiguration2"
-          data-augmented-ui="tr-clip bl-clip br-clip-y both"></div>
-        <div id="div1">
-          <h1>Experience</h1>
-          <br />
-          <div class="textBody">
-            <span class="typewrite anim-typewrite js-typewrite2"> </span>
-          </div>
-        </div>
-      </div>
-
-      <div id="Projects">
-        <div
-          class="my-augfiguration3"
-          data-augmented-ui="tr-clip bl-clip br-clip-y both"></div>
-        <div id="div1">
-          <h1 class="textbody">Projects</h1>
-          <br />
-          <div class="textBody">
-            June 2020
-            <br /><b>Data Day Grind Hackathon</b> -
-            <a
-              href="https://devpost.com/software/stance-taking-a-stand-against-hate-speech"
-              style="color: whitesmoke">
-              Best Data Visualization
-            </a>
-          </div>
-          <br />
-          <br />
-          <div class="textBody">
-            July 2020
-            <br /><b>HackItShipIt</b> -
-            <a
-              href="https://devpost.com/software/shipworthy"
-              style="color: whitesmoke">
-              First Overall
-            </a>
-          </div>
-          <br />
-          <br />
-          <div class="textBody">
-            July-August 2020
-            <br /><b>To The Moon and Hack Hackathon</b> -
-            <a
-              href="https://devpost.com/software/ad-lunam"
-              style="color: whitesmoke">
-              Third Overall
-            </a>
-          </div>
-
-          <div id="textBody">
-            2021 - Present
-            <br /><b>COVIDCatcher</b>
-            <a href="https://www.c0vidcatcher.org">
-              1st Place ACSEF, CSEF Nominee, Bay Area BioGENEius Challenge
-              Finalist
-            </a>
-          </div>
-          <br />
-          <br />
-          <div class="textBody">
-            <br />
-            Contact me at
-            <br /><b>bearseascape@gmail.com</b> <br />
-            <b>ml6@andrew.cmu.edu</b>
-            <br />
-            <br />
-            <br />
-          </div>
-        </div>
-      </div>
-    </section>
-    <div id="footer">
-      <div>
-        <h5 style="font-family: cyber">
-          Website built using HTML, CSS, and JS by Michael Li
-        </h5>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>

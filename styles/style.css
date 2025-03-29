@@ -23,7 +23,7 @@ body {
 	max-width: 40rem;
 	overflow-x: hidden;
 	line-height: 1.6;
-	background: url(grid.svg) center / 100px 100px;
+	background: url(../grid.svg) center / 100px 100px;
 	background-color: var(--background-light);
 	font-size: var(--text-base);
 	transition: background-color 0.2s ease;
@@ -223,7 +223,7 @@ hr {
 body.dark-mode {
 	color: var(--text-dark);
 	transition: background-color 0.2s ease;
-	background: url(darkgrid.svg) center / 100px 100px;
+	background: url(../darkgrid.svg) center / 100px 100px;
 	background-color: var(--background-dark);
 }
 

@@ -128,6 +128,49 @@ body,
 	display: block;
 }
 
+.dropdown-info {
+	position: absolute;
+	top: 20px;
+	left: 100px;
+}
+
+.dropdown-info button {
+	font-size: var(--text-base);
+	color: grey;
+	font-family: "Space Mono", monospace;
+	background: none;
+	border: none;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.tooltip {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 300px;
+	padding: 10px;
+	background-color: var(--background-light);
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+	font-size: var(--text-sm);
+	text-align: left;
+}
+
+.tooltip.show {
+	display: block;
+	animation: bounceIn 0.3s;
+}
+
+body.dark-mode .tooltip {
+	background-color: var(--background-dark);
+	border-color: var(--text-dark);
+	color: var(--text-dark);
+}
+
 #projects,
 ul {
 	padding-left: 0px;
@@ -362,6 +405,7 @@ body.dark-mode .dropbtn {
 	}
 
 	.dropdown,
+	.dropdown-info,
 	#dark-mode-toggle {
 		display: none;
 	}

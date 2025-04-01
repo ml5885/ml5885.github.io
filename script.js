@@ -95,3 +95,19 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 		}
 	});
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+	const infoButton = document.querySelector(".dropdown-info button");
+	const tooltip = document.querySelector(".dropdown-info .tooltip");
+
+	infoButton.addEventListener("click", function (e) {
+		e.stopPropagation();
+		tooltip.classList.toggle("show");
+	});
+
+	document.addEventListener("click", function (e) {
+		if (!tooltip.contains(e.target) && e.target !== infoButton) {
+			tooltip.classList.remove("show");
+		}
+	});
+});

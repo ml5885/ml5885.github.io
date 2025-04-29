@@ -14,62 +14,17 @@
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
         <style>
-    /* body { 
-      max-width: 55%;
-      counter-reset: sidenote-counter; 
-    }
-    h1.title { margin-top: 2rem; margin-bottom: 1.5rem; }
-    .subtitle { font-style: italic; margin-top: 0; }
-    .author { margin-top: 1rem; margin-bottom: 1rem; font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; }
-    .date { margin-top: 1rem; margin-bottom: 1rem; font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; } */
-    code { font-size: 0.9rem; }
-    pre { 
-      background-color: #f7f7f7; 
-      padding: 1em; 
-      overflow-x: auto;
-      font-size: 0.9rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-    table {
-      border-collapse: collapse;
-      margin: 1rem 0;
-      width: 100%;
-    }
-    table th, table td {
-      border: 1px solid #ccc;
-      padding: 0.5rem;
-      text-align: left;
-    }
-    table th {
-      background-color: #f2f2f2;
-    }
-    figure {
-      margin: 1.5rem 0;
-      text-align: center;
-    }
-    figure img {
-      max-width: 100%;
-    }
-    figcaption {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-      font-style: italic;
-    }
-    .katex { font-size: 1.1em; }
-    .abstract {
-      margin: 2rem 0;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .abstract p:first-of-type:before {
-      content: "Abstract: ";
-      font-weight: bold;
-    }
-    /* @media (max-width: 760px) {
-      body { max-width: 90%; }
-    } */
-  </style>
+            table {
+                border-collapse: collapse;
+                margin: 1rem 0;
+                width: 100%;
+            }
+            table th, table td {
+                border: 1px solid #ccc;
+                padding: 0.5rem;
+                text-align: left;
+            }
+        </style>
     </head>
 
     <body>
@@ -87,9 +42,8 @@
                     Ultimately, I found that a neural scoring method that
                     combines the principled aspects of information theory with
                     the flexibility of neural networks performed best,
-                    demonstrating that sometimes the marriage of linguistic
-                    theory and modern machine learning yields superior
-                    results.</p>
+                    showing that integrating ideas from linguistic theory and
+                    modern machine learning can be effective.</p>
             </section>
 
             <section>
@@ -172,8 +126,8 @@
                     segmentation are particularly salient for low-resource
                     languages. When working with limited data, capturing the
                     grammatical regularities encoded in morphology can
-                    dramatically improve model performance on downstream tasks.
-                    For instance, in machine translation, recognizing that
+                    improve model performance on downstream tasks. For instance,
+                    in machine translation, recognizing that
                     Turkish <em>evlerimden</em> decomposes into
                     <em>ev-ler-im-den</em> ("from my houses") allows a model to
                     generalize across all words with similar affixes, rather
@@ -226,7 +180,7 @@
                     morphological structures that differ significantly from
                     better-studied languages like English. Working with these
                     low-resource languages also presents an opportunity to
-                    develop methods that could be valuable for the many other
+                    develop methods that could be valuable for many other
                     understudied languages around the world.</p>
             </section>
 
@@ -327,7 +281,8 @@ def clean_target_segmentation(src, tgt_line):
                     </tr>
                 </table>
 
-                <p>My goal was to beat these baselines with my own approach.</p>
+                <p>My goal was simply to improve on these baselines with my own
+                    approach.</p>
             </section>
 
             <section>
@@ -336,19 +291,23 @@ def clean_target_segmentation(src, tgt_line):
                 <p>I started with an information-theoretic approach based on
                     conditional entropy. The intuition is that morpheme
                     boundaries often correspond to points of high uncertainty or
-                    "surprisal" in character sequences. When you're reading a
-                    word character by character, you'll be more surprised by the
-                    first character of a new morpheme than by a character that
+                    "surprisal" in character sequences. When reading a word
+                    character by character, the first character of a new
+                    morpheme is typically less predictable than one that
                     continues the current morpheme. This approach is
-                    conceptually related to methods like BPE, but instead of
-                    using frequency to identify units, we focus on identifying
-                    boundaries based on predictability.</p>
+                    conceptually
+                    related to methods like BPE, but it focuses on identifying
+                    boundaries based on
+                    predictability rather than mere frequency.</p>
 
-                <p>This is actually a deeply principled approach. Morphemes are
-                    by definition meaningful units, so they should have high
-                    internal coherence (low surprisal within a morpheme) and
-                    lower coherence across boundaries (high surprisal at
-                    morpheme boundaries).<label for="sn-3"
+                <p>This is actually quite principled. Since morphemes are by
+                    definition
+                    meaningful units, they should exhibit high internal
+                    coherence
+                    (low surprisal within a morpheme) and lower coherence at
+                    boundaries (high surprisal across morpheme
+                    boundaries).<label
+                        for="sn-3"
                         class="margin-toggle sidenote-number"></label><input
                         type="checkbox" id="sn-3" class="margin-toggle" /><span
                         class="sidenote">Goldsmith, John.
@@ -360,17 +319,14 @@ def clean_target_segmentation(src, tgt_line):
                     morpheme boundaries occur at points of
                     unpredictability—where the number of possible next phonemes
                     suddenly increases. Similarly, the Minimum Description
-                    Length (MDL) principle suggests that the most compact
-                    representation of linguistic data should balance the size of
-                    the grammar against the size of the data encoded by that
-                    grammar.<label for="sn-mdl"
+                    Length (MDL) principle suggests that an efficient linguistic
+                    representation balances the size of the grammar with the
+                    size of the encoded data.<label for="sn-mdl"
                         class="margin-toggle sidenote-number"></label><input
                         type="checkbox" id="sn-mdl"
                         class="margin-toggle" /><span class="sidenote">Rissanen,
                         Jorma. "Modeling by Shortest Data Description."
-                        Automatica, 1978. The MDL principle has been applied to
-                        morphological induction by several researchers,
-                        including Goldsmith's Linguistica project.</span></p>
+                        Automatica, 1978.</span></p>
 
                 <p>Mathematically, I calculated the surprisal of a character
                     given its prefix using:</p>
@@ -381,10 +337,9 @@ def clean_target_segmentation(src, tgt_line):
 
                 <p>where the probability is estimated using an n-gram model
                     built from the training corpus. When this surprisal exceeds
-                    a preset threshold, I place a morpheme boundary. The key
-                    insight here is that the transition between morphemes should
-                    be less predictable than transitions within morphemes,
-                    resulting in higher surprisal values at boundaries.</p>
+                    a preset threshold, a morpheme boundary is placed. The idea
+                    is that the transition between morphemes will be marked by
+                    higher surprisal values.</p>
 
                 <pre>
 class NGramModel:
@@ -429,47 +384,35 @@ class NGramModel:
         segments.append(word[start:])
         return " ".join(segments)</pre>
 
-                <p>I experimented with different surprisal thresholds to find
-                    the optimal value for each language. Here's how the F1 score
-                    varied with the threshold:</p>
+                <p>I experimented with different surprisal thresholds to
+                    identify the best values for each language. The best
+                    thresholds turned out to be around 3.06 for Shipibo-Konibo
+                    (F1 = 0.3326) and 2.86 for Rarámuri (F1 = 0.2680). While
+                    this approach improved upon some baselines for one language,
+                    it did not for the other.</p>
 
-                <figure>
-                    <img src="/api/placeholder/800/400"
-                        alt="Morphological Segmentation F1 Score vs. Surprisal Threshold">
-                    <figcaption>Figure 1: F1 score as a function of surprisal
-                        threshold for both languages</figcaption>
-                </figure>
-
-                <p>After tuning, I found the best thresholds to be around 3.06
-                    for Shipibo-Konibo (F1 = 0.3326) and 2.86 for Rarámuri (F1 =
-                    0.2680). This barely beats the Morfessor baseline for
-                    Shipibo-Konibo but falls short for Rarámuri.</p>
-
-                <p>While elegant in theory, this approach has limitations. It
-                    relies solely on character-level statistics and doesn't
-                    leverage linguistic patterns or semantic information that
-                    neural approaches might capture. Still, I think it's a good
-                    starting point and helps us understand the task from first
-                    principles.</p>
+                <p>While elegant in theory, this approach relies solely on
+                    character-level statistics and does not incorporate
+                    linguistic patterns or semantic information that modern
+                    neural methods might capture. Nonetheless, it serves as a
+                    useful starting point for thinking about the problem.</p>
             </section>
 
             <section>
                 <h2>Second Attempt: Transformer-Based Approach</h2>
 
-                <p>Next, I decided to try a more modern approach with neural
-                    networks. I framed morphological segmentation as a sequence
-                    labeling task, where each character is labeled as either the
-                    start of a morpheme (1) or a continuation (0), and
-                    implemented this using a transformer architecture.<label
-                        for="sn-transformer"
+                <p>Next, I experimented with a more modern neural network
+                    approach by framing morphological segmentation as a sequence
+                    labeling task. In this setting, each character is labeled as
+                    either the start of a morpheme (1) or a continuation (0),
+                    and I implemented this using a transformer
+                    architecture.<label for="sn-transformer"
                         class="margin-toggle sidenote-number"></label><input
                         type="checkbox" id="sn-transformer"
-                        class="margin-toggle" /><span class="sidenote">These
-                        days, it seems like transformers are applied to every
-                        NLP problem regardless of whether they're the most
-                        appropriate solution. While effective, I wanted to
-                        explore if there were more principled approaches for
-                        this specific task.</span></p>
+                        class="margin-toggle" /><span class="sidenote">Although
+                        transformers are popular for many NLP tasks, I wanted to
+                        see how a targeted approach would perform on this
+                        specific segmentation task.</span></p>
 
                 <p>I implemented a character-level transformer model with
                     positional encoding:</p>
@@ -496,25 +439,23 @@ class MorphemeTransformer(nn.Module):
         return logits</pre>
 
                 <p>I trained the model using cross-entropy loss on the training
-                    set and evaluated it on the development set. The results
-                    were surprisingly good (or maybe not so surprising if you're
-                    used to transformers crushing traditional approaches):</p>
+                    set and evaluated it on the development set. The
+                    transformer-based approach performed better than the
+                    baselines in terms of F1 score:</p>
 
                 <p>Shipibo-Konibo dev F1 score: 0.7843<br>
                     Rarámuri dev F1 score: 0.8357</p>
 
-                <p>After training on the combined train and dev sets, the model
-                    achieved test F1 scores of:</p>
+                <p>After training on the combined train and development sets,
+                    the test F1 scores were:</p>
 
                 <p>Shipibo-Konibo test F1 score: 0.6435<br>
                     Rarámuri test F1 score: 0.4892</p>
 
-                <p>These results significantly outperform the baselines, but I
-                    felt that while effective, the transformer approach offered
-                    limited linguistic insight into why particular segmentations
-                    were chosen. This motivated me to explore more interpretable
-                    approaches that could better capture the linguistic
-                    principles behind morphological segmentation.</p>
+                <p>While this approach improved over the baselines, it did not
+                    provide much insight into the linguistic factors behind the
+                    segmentation decisions, which led me to explore more
+                    interpretable methods.</p>
             </section>
 
             <section>
@@ -522,37 +463,28 @@ class MorphemeTransformer(nn.Module):
 
                 <p>Next, I explored an autoencoder-based approach. The idea was
                     to learn a compressed representation of the input data where
-                    the latent space captures morpheme boundaries. This is
-                    somewhat more principled than a pure transformer approach
-                    because it's loosely connected to the information-theoretic
-                    view of morphology (that morphemes are compressed
-                    representations of meaning).<label for="sn-4"
+                    the latent space captures morpheme boundaries. This approach
+                    is connected to the information-theoretic view that
+                    morphemes are compressed representations of meaning.<label
+                        for="sn-4"
                         class="margin-toggle sidenote-number"></label><input
                         type="checkbox" id="sn-4" class="margin-toggle" /><span
                         class="sidenote">Cotterell, Ryan, et al.
-                        "Morphological Segmentation Inside-Out." EMNLP, 2016.
-                        The connection between information theory and morphology
-                        has been explored by several researchers who suggest
-                        that languages evolve to balance expressivity and
-                        compressibility, with morphemes serving as optimally
-                        compressed units of meaning.</span></p>
+                        "Morphological Segmentation Inside-Out." EMNLP,
+                        2016.</span></p>
 
-                <p>However, autoencoders have a continuous latent space, while
-                    morpheme boundaries are discrete. To address this, I used
-                    the Gumbel-Softmax trick, which allows sampling from a
-                    categorical distribution in a way that's differentiable.
-                    This technique provides a continuous approximation to
-                    discrete sampling by adding Gumbel noise and using a softmax
-                    function with a temperature parameter that controls the
-                    sharpness of the distribution.<label for="sn-gumbel"
+                <p>However, autoencoders inherently have a continuous latent
+                    space, while morpheme boundaries are discrete. To bridge
+                    this gap, I used the Gumbel-Softmax trick, which allows
+                    sampling from a categorical distribution in a differentiable
+                    way by adding Gumbel noise and applying a softmax with a
+                    temperature parameter.<label for="sn-gumbel"
                         class="margin-toggle sidenote-number"></label><input
                         type="checkbox" id="sn-gumbel"
                         class="margin-toggle" /><span class="sidenote">Jang,
                         Eric, et al.
                         "Categorical Reparameterization with Gumbel-Softmax."
-                        ICLR, 2017. The paper that introduced the Gumbel-Softmax
-                        trick for differentiable sampling from discrete
-                        distributions.</span></p>
+                        ICLR, 2017.</span></p>
 
                 <figure>
                     <img src="/api/placeholder/800/400"
@@ -574,7 +506,7 @@ class MorphemeTransformer(nn.Module):
                         not)</li>
                     <li>A Gumbel-Softmax layer that converts these logits to
                         differentiable discrete samples</li>
-                    <li>A decoder LSTM that takes both the embeddings and the
+                    <li>A decoder LSTM that uses both the embeddings and the
                         discrete latent variables to reconstruct the input</li>
                 </ol>
 
@@ -601,7 +533,6 @@ class MorphAutoencoder(nn.Module):
         latent_logits = self.fc_latent(enc_out)
         
         # Apply Gumbel-Softmax for discrete latent space
-        # This allows for backpropagation through discrete samples
         latent = F.gumbel_softmax(latent_logits, tau=tau, hard=hard, dim=-1)
         
         # Concatenate embeddings with latent variables for decoding
@@ -613,51 +544,34 @@ class MorphAutoencoder(nn.Module):
         
         return output_logits, latent_logits, latent</pre>
 
-                <p>The Gumbel-Softmax trick works by adding Gumbel noise to the
-                    logits and then applying a softmax function:</p>
+                <p>For training, I used two loss components. Here are the loss
+                    functions expressed in LaTeX:</p>
 
                 <p>\[
-                    y_i = \frac{\exp((\log(\pi_i) + g_i) / \tau)}{\sum_{j=1}^{k}
-                    \exp((\log(\pi_j) + g_j) / \tau)}
+                    \mathcal{L}_{\text{recon}} = -\frac{1}{N}\sum_{i=1}^{N}
+                    \mathbf{1}_{x_i \neq 0} \sum_{c=1}^{C} y_{i,c}
+                    \log(\hat{y}_{i,c})
                     \]</p>
 
-                <p>where \(g_i\) are samples from a Gumbel(0, 1) distribution,
-                    \(\pi_i\) are the unnormalized probabilities (logits), and
-                    \(\tau\) is the temperature parameter. As \(\tau\)
-                    approaches 0, the samples become closer to one-hot vectors
-                    (truly discrete), while higher values of \(\tau\) make the
-                    distribution more uniform and the gradients smoother.</p>
+                <p>\[
+                    \mathcal{L}_{\text{seg}} = -\frac{1}{M}\sum_{j=1}^{M}
+                    \sum_{k=0}^{1} z_{j,k} \log(p_{j,k})
+                    \]</p>
 
-                <p>I trained with two loss components: a reconstruction loss to
-                    ensure the autoencoder reconstructs the input properly, and
-                    a segmentation loss that encourages the latent
-                    representation to match the true morpheme boundaries:</p>
+                <p>\[
+                    \mathcal{L}_{\text{total}} = \lambda_{\text{recon}} \cdot
+                    \mathcal{L}_{\text{recon}} + \lambda_{\text{seg}} \cdot
+                    \mathcal{L}_{\text{seg}}
+                    \]</p>
 
-                <pre>
-# reconstruction loss
-recon_loss = F.cross_entropy(output_logits.view(-1, output_logits.size(-1)),
-                           src.view(-1), ignore_index=0)
+                <p>The balancing of these loss components is crucial.
+                    Emphasizing reconstruction too much can lead the model to
+                    simply copy the input, while overemphasizing segmentation
+                    can harm reconstruction quality.</p>
 
-# segmentation loss
-seg_loss = F.cross_entropy(latent_logits.view(-1, 2), labels.view(-1))
-
-loss = lambda_recon * recon_loss + lambda_seg * seg_loss</pre>
-
-                <p>The balancing of these two loss components is crucial. If we
-                    emphasize reconstruction too much, the model might learn to
-                    copy the input perfectly without identifying meaningful
-                    morpheme boundaries. Conversely, if we emphasize
-                    segmentation too much, the reconstruction quality might
-                    suffer, indicating that the latent representations aren't
-                    capturing the full character-level information needed for
-                    morphological analysis.</p>
-
-                <p>I used Optuna, a hyperparameter optimization framework, to
-                    tune the relative weights of these losses (lambda_seg and
+                <p>I used Optuna to tune the relative weights (lambda_seg and
                     lambda_recon) and found optimal values of lambda_seg=0.559
-                    and lambda_recon=3.542 after 10 trials. The optimization
-                    objective was to maximize the F1 score on the development
-                    set.</p>
+                    and lambda_recon=3.542 after 10 trials.</p>
 
                 <pre>
 def objective(trial):
@@ -685,8 +599,7 @@ def objective(trial):
 study = optuna.create_study(direction="minimize")
 study.optimize(objective, n_trials=10)</pre>
 
-                <p>The results on the development set after training with the
-                    optimized hyperparameters were:</p>
+                <p>On the development set, the results were:</p>
 
                 <p>Shipibo-Konibo dev F1 score: 0.6957<br>
                     Rarámuri dev F1 score: 0.7346</p>
@@ -696,101 +609,75 @@ study.optimize(objective, n_trials=10)</pre>
                 <p>Shipibo-Konibo test F1 score: 0.7380<br>
                     Rarámuri test F1 score: 0.5024</p>
 
-                <p>This approach outperformed the transformer for Shipibo-Konibo
-                    but was slightly worse for Rarámuri. Still, I found this
-                    approach more satisfying because it attempted to model the
-                    actual structure of morphology rather than just learning
-                    statistical patterns, representing a significant step
-                    forward for interpretability and linguistic grounding.</p>
+                <p>This approach improved over the transformer for
+                    Shipibo-Konibo but was slightly lower for Rarámuri. It
+                    provided a different perspective by attempting to model the
+                    structure of morphology directly, without overcomplicating
+                    the project.</p>
             </section>
 
             <section>
                 <h2>Final Approach: Neural Scoring for Segmentation</h2>
 
-                <p>After mulling over the results for a few days, I had a
-                    realization. What if we could combine the principled
-                    information-theoretic approach with the power of neural
-                    networks? This led me to explore differentiable programming,
-                    where you take a traditionally non-differentiable algorithm
-                    and reformulate it in a continuous way so that the entire
-                    process can be optimized using gradient descent.<label
-                        for="sn-5"
+                <p>After reviewing the previous approaches, I combined the
+                    information-theoretic ideas with neural networks via
+                    differentiable programming. The goal was to use a neural
+                    scoring function to assign a quality score to every possible
+                    candidate segment in a word, and then use dynamic
+                    programming to compute a global score for the
+                    segmentation.<label for="sn-5"
                         class="margin-toggle sidenote-number"></label><input
                         type="checkbox" id="sn-5" class="margin-toggle" /><span
                         class="sidenote">Mensch, Arthur, and Mathieu Blondel.
                         "Differentiable Dynamic Programming for Structured Prediction and Attention."
-                        ICML, 2018. This approach has been gaining traction in
-                        the ML community as a way to incorporate algorithmic
-                        priors while maintaining end-to-end differentiability,
-                        effectively getting the best of both worlds between
-                        traditional algorithms and neural approaches.</span></p>
+                        ICML, 2018.</span></p>
 
                 <p>This approach draws inspiration from structured prediction
-                    methods in machine learning, which aim to predict structured
-                    objects (like sequences or trees) rather than simple class
-                    labels. The key insight is that we want to score complete
-                    segmentations of a word, not just make independent decisions
-                    at each character position. This is important because
-                    morphological segmentation decisions are inherently
-                    interdependent — the decision to place a boundary at one
-                    position affects the plausibility of boundaries at other
-                    positions.</p>
+                    methods. Instead of making independent decisions for each
+                    character, it scores complete segmentations, acknowledging
+                    that segmentation decisions are interdependent.</p>
 
-                <p>The plan was to use a neural scoring function to assign a
-                    quality score to every possible candidate segment in a word.
-                    Concretely, I implemented the following steps:</p>
+                <p>The steps implemented were:</p>
 
                 <ol>
-                    <li><strong>Encoding:</strong> Run a character-level LSTM
-                        over the input word, obtaining hidden representations
-                        \(h_1, h_2, \dots, h_n\) at each position.</li>
+                    <li><strong>Encoding:</strong> Use a character-level LSTM to
+                        obtain hidden representations \(h_1, h_2, \dots, h_n\)
+                        for the input word.</li>
                     <li><strong>Scoring Segments:</strong> For any candidate
                         segment spanning positions \(i\) to \(j\), compute a
                         score \(s(i,j) = \text{MLP}(h_i \oplus h_{j-1})\), where
                         \(\oplus\) denotes vector concatenation. This score
-                        reflects how plausible it is that the substring forms a
-                        valid morpheme.</li>
+                        reflects the plausibility of the substring being a valid
+                        morpheme.</li>
                     <li><strong>Global Segmentation Score:</strong> Use a
                         differentiable dynamic programming algorithm to compute
-                        the global score of the segmentation and the
-                        corresponding partition function \(Z\).</li>
-                    <li><strong>Loss Function:</strong> Define the loss as
-                        \(\mathcal{L} = \log Z - s_{\text{gold}}\), which
-                        encourages the model to assign a higher global score to
-                        the correct segmentation relative to all possible
-                        segmentations.</li>
-                </ol>
+                        the overall segmentation score and the partition
+                        function \(Z\), where:
+                        <p>\[
+                            Z = \sum_{S} \exp(s(S))
+                            \]</p>
+                        <p>and
+                            <p>\[
+                                \log Z = \log\left(\sum_{S} \exp(s(S))\right)
+                                \]</p>
+                            <p>The dynamic programming recurrence is given by:
+                                <p>\[
+                                    \text{dp}[i] = \log\sum_{j=0}^{i-1}
+                                    \exp(\text{dp}[j] +
+                                    s(j,i))
+                                    \]</p>
+                            </p>
+                        </li>
+                        <li><strong>Loss Function:</strong> Define the loss as
+                            \(\mathcal{L} = \log Z - s_{\text{gold}}\), which
+                            encourages a higher global score for the correct
+                            segmentation relative to all possible
+                            segmentations.</li>
+                    </ol>
 
-                <p>The dynamic programming algorithm is particularly
-                    interesting. It efficiently computes the partition function
-                    \(Z\), which is the sum of scores over all possible
-                    segmentations:</p>
+                    <p>Here's the implementation of the Segmenter model:</p>
 
-                <p>\[
-                    Z = \sum_{S} \exp(s(S))
-                    \]</p>
-
-                <p>where \(s(S)\) is the score of segmentation \(S\). Taking the
-                    logarithm, we get:</p>
-
-                <p>\[
-                    \log Z = \log\left(\sum_{S} \exp(s(S))\right)
-                    \]</p>
-
-                <p>This can be computed efficiently using dynamic programming
-                    with the following recurrence relation:</p>
-
-                <p>\[
-                    \text{dp}[i] = \log\sum_{j=0}^{i-1} \exp(\text{dp}[j] +
-                    s(j,i))
-                    \]</p>
-
-                <p>where \(\text{dp}[i]\) represents the log-partition function
-                    for the first \(i\) characters of the word.</p>
-
-                <p>Here's the implementation of the Segmenter model:</p>
-
-                <pre>
+                    <pre>
 class Segmenter(nn.Module):
     def __init__(self, vocab_size, emb_dim, hidden_dim, max_seg_len, char2idx, idx2char):
         super().__init__()
@@ -820,7 +707,6 @@ class Segmenter(nn.Module):
             for j in range(0, i):
                 score = self.segment_score(h, j, i)
                 candidates.append(dp[j] + score)
-                
             dp[i] = torch.logsumexp(torch.stack(candidates), dim=0)
         
         # Compute score of gold segmentation
@@ -850,7 +736,6 @@ class Segmenter(nn.Module):
         for i in range(1, L+1):
             best_score = -float('inf')
             best_j = None
-
             for j in range(0, i):
                 score = dp[j] + self.segment_score(h, j, i).item()
                 if score > best_score:
@@ -865,17 +750,14 @@ class Segmenter(nn.Module):
         while i > 0:
             boundaries.append(bp[i])
             i = bp[i]
-        
         boundaries = boundaries[::-1]
         boundaries.append(L)
-        
         return boundaries
 
     # Forward pass
     def forward(self, src, labels=None):
         emb = self.emb(src)
         out, _ = self.lstm(emb)
-        
         if labels is not None:
             loss = 0.0    
             for b in range(src.size(0)):
@@ -892,254 +774,134 @@ class Segmenter(nn.Module):
                 preds.append(self.decode_word(h, src[b]))
             return preds</pre>
 
-                <p>This approach combines the best aspects of traditional
-                    dynamic programming algorithms (which ensure global
-                    consistency in segmentation decisions) with the
-                    representational power of neural networks (which can learn
-                    complex character-level patterns). The differentiable nature
-                    of the entire pipeline allows end-to-end training via
-                    gradient descent.</p>
+                    <p>This approach combines dynamic programming, which
+                        enforces global consistency, with the representational
+                        capabilities of neural networks. The entire pipeline is
+                        differentiable, allowing for end-to-end training with
+                        gradient descent.</p>
 
-                <figure>
-                    <img src="/api/placeholder/800/400"
-                        alt="Neural Segmentation with Dynamic Programming">
-                    <figcaption>Figure 3: Neural segmentation with dynamic
-                        programming. The model computes segment scores using a
-                        neural network, then uses dynamic programming to find
-                        globally optimal segmentations.</figcaption>
-                </figure>
+                    <figure>
+                        <img src="/api/placeholder/800/400"
+                            alt="Neural Segmentation with Dynamic Programming">
+                        <figcaption>Figure 3: Neural segmentation using dynamic
+                            programming to compute globally optimal
+                            segmentations based on neural segment
+                            scores.</figcaption>
+                    </figure>
 
-                <p>I trained this model for 25 epochs and achieved:</p>
+                    <p>After training for 25 epochs, the model achieved the
+                        following:</p>
 
-                <p>Shipibo-Konibo dev F1 score: 0.7854<br>
-                    Rarámuri dev F1 score: 0.7493</p>
+                    <p>Shipibo-Konibo dev F1 score: 0.7854<br>
+                        Rarámuri dev F1 score: 0.7493</p>
 
-                <p>And on the test set:</p>
+                    <p>And on the test set:</p>
 
-                <p>Shipibo-Konibo test F1 score: 0.8126<br>
-                    Rarámuri test F1 score: 0.6018</p>
+                    <p>Shipibo-Konibo test F1 score: 0.8126<br>
+                        Rarámuri test F1 score: 0.6018</p>
 
-                <p>These are the best results yet! The combination of linguistic
-                    theory (via structured prediction) and modern neural methods
-                    yielded superior performance to either approach alone,
-                    demonstrating the value of integrating theoretical
-                    linguistic knowledge with data-driven techniques.</p>
-            </section>
+                    <p>Among the approaches I tried, the neural scoring method
+                        produced the highest scores.</p>
+                </section>
 
-            <section>
-                <h2>Conclusion and Final Results</h2>
+                <section>
+                    <h2>Conclusion and Final Results</h2>
 
-                <p>Let's summarize the results across all my approaches:</p>
+                    <p>Here is a summary of the results across all the
+                        approaches:</p>
 
-                <table>
-                    <tr>
-                        <th>Method</th>
-                        <th>Shipibo-Konibo (F1)</th>
-                        <th>Rarámuri (F1)</th>
-                    </tr>
-                    <tr>
-                        <td>Morfessor (baseline)</td>
-                        <td>0.3207</td>
-                        <td>0.2959</td>
-                    </tr>
-                    <tr>
-                        <td>BPE (baseline)</td>
-                        <td>0.2682</td>
-                        <td>0.4213</td>
-                    </tr>
-                    <tr>
-                        <td>Unigram (baseline)</td>
-                        <td>0.2616</td>
-                        <td>0.3369</td>
-                    </tr>
-                    <tr>
-                        <td>Conditional Entropy</td>
-                        <td>0.3326</td>
-                        <td>0.2680</td>
-                    </tr>
-                    <tr>
-                        <td>Transformer</td>
-                        <td>0.6435</td>
-                        <td>0.4892</td>
-                    </tr>
-                    <tr>
-                        <td>Autoencoder</td>
-                        <td>0.7380</td>
-                        <td>0.5024</td>
-                    </tr>
-                    <tr>
-                        <td>Neural Scoring</td>
-                        <td>0.8126</td>
-                        <td>0.6018</td>
-                    </tr>
-                </table>
+                    <table>
+                        <tr>
+                            <th>Method</th>
+                            <th>Shipibo-Konibo (F1)</th>
+                            <th>Rarámuri (F1)</th>
+                        </tr>
+                        <tr>
+                            <td>Morfessor (baseline)</td>
+                            <td>0.3207</td>
+                            <td>0.2959</td>
+                        </tr>
+                        <tr>
+                            <td>BPE (baseline)</td>
+                            <td>0.2682</td>
+                            <td>0.4213</td>
+                        </tr>
+                        <tr>
+                            <td>Unigram (baseline)</td>
+                            <td>0.2616</td>
+                            <td>0.3369</td>
+                        </tr>
+                        <tr>
+                            <td>Conditional Entropy</td>
+                            <td>0.3326</td>
+                            <td>0.2680</td>
+                        </tr>
+                        <tr>
+                            <td>Transformer</td>
+                            <td>0.6435</td>
+                            <td>0.4892</td>
+                        </tr>
+                        <tr>
+                            <td>Autoencoder</td>
+                            <td>0.7380</td>
+                            <td>0.5024</td>
+                        </tr>
+                        <tr>
+                            <td>Neural Scoring</td>
+                            <td>0.8126</td>
+                            <td>0.6018</td>
+                        </tr>
+                    </table>
 
-                <figure>
-                    <img src="/api/placeholder/800/500"
-                        alt="Comparison of F1 scores across different approaches">
-                    <figcaption>Figure 4: Comparison of F1 scores across
-                        different morphological segmentation approaches for both
-                        languages. The neural scoring approach with dynamic
-                        programming consistently outperforms other
-                        methods.</figcaption>
-                </figure>
+                    <p>The results show a consistent improvement from the
+                        traditional methods to neural approaches, with the
+                        neural scoring method achieving the highest F1 scores.
+                        Some key observations include:</p>
 
-                <p>The progression from traditional methods to neural approaches
-                    and finally to a hybrid approach shows a clear trend of
-                    improvement. The neural scoring method, which combines the
-                    structural insights of dynamic programming with the
-                    representational power of neural networks, achieved the best
-                    results by a significant margin.</p>
+                    <ol>
+                        <li><strong>Global consistency:</strong> Approaches that
+                            consider the entire word for segmentation tend to
+                            perform better than those making independent
+                            decisions for each character.</li>
+                        <li><strong>Linguistic inductive bias:</strong>
+                            Incorporating the intuition that words consist of a
+                            sequence of morphemes helps guide the model.</li>
+                        <li><strong>Representational power:</strong> A
+                            bidirectional LSTM encoder can capture complex
+                            patterns that signal morpheme boundaries.</li>
+                        <li><strong>End-to-end optimization:</strong> The
+                            differentiable design enables direct optimization of
+                            segmentation quality.</li>
+                    </ol>
 
-                <p>It's worth reflecting on why the neural scoring approach
-                    worked so well. I believe there are several key factors:</p>
+                    <p>Overall, I found the project to be a fun and engaging
+                        exploration of both traditional and neural methods for
+                        morphological segmentation. Although this was just a
+                        class project, it provided useful insights and a good
+                        exercise in combining theoretical principles with
+                        practical machine learning techniques. Future directions
+                        could include incorporating morphophonological rules,
+                        exploring multilingual models, semi-supervised learning,
+                        hierarchical segmentation, and extending the methods to
+                        other morphological types.</p>
 
-                <ol>
-                    <li><strong>Global consistency:</strong> Unlike the
-                        transformer and autoencoder approaches, which make
-                        decisions about morpheme boundaries at each position
-                        independently, the neural scoring approach enforces
-                        global consistency by considering complete
-                        segmentations.</li>
-                    <li><strong>Linguistic inductive bias:</strong> The dynamic
-                        programming component encodes the linguistic intuition
-                        that words consist of a sequence of morphemes, providing
-                        a strong inductive bias that guides the learning
-                        process.</li>
-                    <li><strong>Representational power:</strong> The
-                        bidirectional LSTM encoder captures complex contextual
-                        patterns in character sequences, allowing the model to
-                        learn language-specific regularities that signal
-                        morpheme boundaries.</li>
-                    <li><strong>End-to-end optimization:</strong> The
-                        differentiable nature of the entire pipeline allows
-                        gradient-based optimization of the neural network
-                        parameters to directly maximize the probability of
-                        correct segmentations.</li>
-                </ol>
+                    <p>This project has been an enjoyable way to investigate
+                        morphological segmentation while learning more about
+                        different computational approaches in NLP.</p>
+                </section>
+            </article>
 
-                <p>Interestingly, the relative performance of different
-                    approaches varied between the two languages. The neural
-                    scoring approach showed a more dramatic improvement for
-                    Shipibo-Konibo than for Rarámuri, suggesting that the
-                    morphological patterns in these languages may differ in ways
-                    that make them more or less amenable to different
-                    computational approaches.<label for="sn-lang-diff"
-                        class="margin-toggle sidenote-number"></label><input
-                        type="checkbox" id="sn-lang-diff"
-                        class="margin-toggle" /><span class="sidenote">This
-                        observation aligns with linguistic descriptions:
-                        Shipibo-Konibo has been characterized as having more
-                        regular agglutinative morphology, while Rarámuri
-                        exhibits more complex morphophonological processes that
-                        can obscure morpheme boundaries. These language-specific
-                        properties likely impact the effectiveness of different
-                        computational approaches.</span></p>
-
-                <p>This project taught me several valuable lessons. First, while
-                    neural networks are powerful, they work best when combined
-                    with principled linguistic insights. Second, structured
-                    prediction (via dynamic programming) provides a way to
-                    ensure global consistency in segmentation decisions. And
-                    finally, sometimes the best approach is not the most complex
-                    one, but rather the one that best captures the underlying
-                    structure of the problem.</p>
-
-                <p>For future work, there are several promising directions to
-                    explore:</p>
-
-                <ol>
-                    <li><strong>Incorporating morphophonological rules:</strong>
-                        Many languages have specific phonological processes that
-                        occur at morpheme boundaries, such as vowel harmony,
-                        consonant gradation, or assimilation. Explicitly
-                        modeling these processes could further improve
-                        segmentation accuracy.<label for="sn-morphophono"
-                            class="margin-toggle sidenote-number"></label><input
-                            type="checkbox" id="sn-morphophono"
-                            class="margin-toggle" /><span
-                            class="sidenote">Cotterell, Ryan, et al.
-                            "Joint Morphological and Syntactic Analysis for Richly Inflected Languages."
-                            TACL, 2015.</span></li>
-                    <li><strong>Multilingual models:</strong> Training a single
-                        model on multiple related languages could help capture
-                        shared morphological patterns and improve performance,
-                        particularly for low-resource languages.<label
-                            for="sn-multilingual"
-                            class="margin-toggle sidenote-number"></label><input
-                            type="checkbox" id="sn-multilingual"
-                            class="margin-toggle" /><span
-                            class="sidenote">McCarthy, Arya D., et al.
-                            "Marrying Universal Dependencies and Universal Morphology."
-                            Proceedings of the Second Workshop on Universal
-                            Dependencies, 2018.</span></li>
-                    <li><strong>Semi-supervised learning:</strong> Incorporating
-                        unlabeled data through techniques like self-training or
-                        co-training could improve performance without requiring
-                        additional annotated examples.<label
-                            for="sn-semisupervised"
-                            class="margin-toggle sidenote-number"></label><input
-                            type="checkbox" id="sn-semisupervised"
-                            class="margin-toggle" /><span
-                            class="sidenote">Ruder, Sebastian, and Barbara
-                            Plank.
-                            "Strong Baselines for Neural Semi-supervised Learning under Domain Shift."
-                            ACL, 2018.</span></li>
-                    <li><strong>Hierarchical segmentation:</strong> Some
-                        languages have complex morphological structures with
-                        multiple levels (e.g., derivation followed by
-                        inflection). Developing models that can capture this
-                        hierarchical structure would be an interesting
-                        challenge.<label for="sn-hierarchical"
-                            class="margin-toggle sidenote-number"></label><input
-                            type="checkbox" id="sn-hierarchical"
-                            class="margin-toggle" /><span class="sidenote">Kann,
-                            Katharina, et al.
-                            "Neural Multi-step Reasoning for Question Answering on Semi-structured Tables."
-                            EMNLP, 2020.</span></li>
-                    <li><strong>Extension to other morphological types:</strong>
-                        While the languages in this study exhibit primarily
-                        concatenative morphology, many languages use
-                        non-concatenative processes like infixation,
-                        reduplication, or templatic morphology. Adapting our
-                        approach to handle these cases would be a significant
-                        contribution.<label for="sn-nonconcatenative"
-                            class="margin-toggle sidenote-number"></label><input
-                            type="checkbox" id="sn-nonconcatenative"
-                            class="margin-toggle" /><span
-                            class="sidenote">Kirov, Christo, and Ryan Cotterell.
-                            "Recurrent Neural Networks in Linguistic Theory: Revisiting Pinker and Prince (1988) and the Past Tense Debate."
-                            TACL, 2018.</span></li>
-                </ol>
-
-                <p>Overall, I'm quite satisfied with the results of this
-                    project. We significantly outperformed the baselines and
-                    developed a principled approach that combines the best of
-                    both traditional and neural methods. The success of the
-                    neural scoring approach with dynamic programming reinforces
-                    the value of incorporating linguistic knowledge into machine
-                    learning models, especially for structured prediction tasks
-                    like morphological segmentation.</p>
-
-                <p>As NLP moves beyond English and other high-resource
-                    languages, techniques like those explored in this project
-                    will become increasingly important for developing language
-                    technologies that work effectively across the full diversity
-                    of human languages.</p>
-            </section>
-        </article>
-
-        <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      renderMathInElement(document.body, {
-        delimiters: [
-          {left: "$$", right: "$$", display: true},
-          {left: "\\[", right: "\\]", display: true},
-          {left: "$", right: "$", display: false},
-          {left: "\\(", right: "\\)", display: false}
-        ]
-      });
-    });
-  </script>
-    </body>
-</html>
+            <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              renderMathInElement(document.body, {
+                delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+                ]
+              });
+            });
+        </script>
+        </body>
+    </html>

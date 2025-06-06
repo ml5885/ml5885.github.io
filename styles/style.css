@@ -252,6 +252,10 @@ li {
 	font-weight: 800;
 }
 
+#research li {
+	padding: 10px 0px;
+}
+
 hr {
 	border: none;
 	border-top: 1px solid #ccc;

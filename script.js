@@ -1,4 +1,6 @@
-const projectItems = document.querySelectorAll("#projects li, #research li");
+const projectItems = document.querySelectorAll(
+	"#projects li, .paper-hover-container"
+);
 
 projectItems.forEach((item) => {
 	let activeImage = null;

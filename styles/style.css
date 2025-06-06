@@ -15,7 +15,7 @@ body {
 	font-family: "Space Mono", monospace;
 	margin: 1rem auto;
 	padding: 1rem 150px;
-	max-width: 40rem;
+	max-width: 42rem;
 	overflow-x: hidden;
 	line-height: 1.6;
 	background: url(../grid.svg) center / 100px 100px;
@@ -207,6 +207,11 @@ li {
 	padding: 10px 0px;
 }
 
+.paper-hover-container {
+	display: inline-block;
+	cursor: default;
+}
+
 #projects li::marker {
 	color: var(--text-light);
 }
@@ -255,6 +260,14 @@ li {
 }
 
 #research li:hover .project-image {
+	display: block;
+	position: fixed;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -45%);
+}
+
+.paper-hover-container:hover .project-image {
 	display: block;
 	position: fixed;
 	left: 50%;

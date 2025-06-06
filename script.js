@@ -1,4 +1,4 @@
-const projectItems = document.querySelectorAll("#projects li");
+const projectItems = document.querySelectorAll("#projects li, #research li");
 
 projectItems.forEach((item) => {
 	let activeImage = null;
@@ -56,7 +56,9 @@ projectItems.forEach((item) => {
 
 		if (activeImage) {
 			const hoveredElement = document.elementFromPoint(mouseX, mouseY);
-			if (hoveredElement.closest("a")) {
+			const isResearchSection = item.closest("#research");
+
+			if (hoveredElement.closest("a") && !isResearchSection) {
 				if (activeImage.style.display !== "none") {
 					activeImage.style.display = "none";
 				}

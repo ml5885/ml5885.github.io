@@ -81,6 +81,10 @@ h1#title:hover {
 	transform: skewX(-20deg);
 }
 
+#research a:hover {
+	transform: skewX(-10deg);
+}
+
 #experience a,
 body {
 	font-weight: 400;
@@ -197,6 +201,12 @@ li {
 	padding: 10px 0px;
 }
 
+#research li {
+	color: grey;
+	cursor: default;
+	padding: 10px 0px;
+}
+
 #projects li::marker {
 	color: var(--text-light);
 }
@@ -237,6 +247,14 @@ li {
 }
 
 #projects li:hover .project-image {
+	display: block;
+	position: fixed;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -45%);
+}
+
+#research li:hover .project-image {
 	display: block;
 	position: fixed;
 	left: 50%;

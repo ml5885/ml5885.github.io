@@ -14,6 +14,12 @@
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
         <style>
+            h1.title {
+                width: 70%;
+            }
+            h2 {
+                margin-top: 0;
+            }
             table {
                 border-collapse: collapse;
                 margin: 1rem 0;
@@ -55,19 +61,18 @@
                     (Byte Pair Encoding) that are also based on
                     information-theoretic principles, morphemes differ in that
                     they're defined by linguistic meaning rather than
-                    statistical frequency.<label for="sn-bpe"
+                    statistical frequency. For example, the English word
+                    "invincible" consists of three morphemes: "in-" (meaning
+                    "not"), "vinc" (the root meaning "conquer"), and "-ible"
+                    (meaning
+                    "able to be").<label for="sn-morpheme"
                         class="margin-toggle sidenote-number"></label><input
                         type="checkbox" id="sn-bpe"
-                        class="margin-toggle" /><span class="sidenote">Methods
-                        like BPE and SentencePiece use statistical approaches to
-                        identify frequent character sequences, creating
-                        efficient vocabulary compression. While effective for
-                        many NLP tasks, these statistically-derived units don't
-                        always align with linguistically meaningful
-                        units.</span> For example, the English word
-                    "unbreakable" consists of three morphemes: "un-" (meaning
-                    "not"), "break" (the root), and "-able" (meaning
-                    "can be done"). Each of these pieces contributes to the
+                        class="margin-toggle" /><span class="sidenote">This is
+                        just
+                        my best guess at how the word would break down. Actual
+                        linguists may disagree!</span>
+                    Each of these pieces contributes to the
                     overall meaning of the word in a systematic way.</p>
 
                 <p>Morphological analysis is fundamental to understanding
@@ -100,13 +105,13 @@
                         sentence in English into a single complex word.</li>
                 </ul>
 
-                <p>The languages we're studying in this project—Rarámuri and
-                    Shipibo-Konibo—fall toward the agglutinative and
+                <p>The languages we're studying in this project - Rarámuri and
+                    Shipibo-Konibo - fall toward the agglutinative and
                     polysynthetic end of this spectrum, making morphological
                     segmentation both challenging and particularly important for
                     understanding their structure.</p>
 
-                <p>So why is morphological segmentation important? For starters,
+                <p>So why is morphological segmentation important? First,
                     morphology is critical for understanding how words are
                     formed across languages. Different languages build words in
                     different ways, and morphological analysis helps us
@@ -208,18 +213,12 @@ Source: konári         Target: ko nári</pre>
                     than exact segmentation boundaries) due to allomorphy in the
                     data.</p>
 
-                <p>Speaking of allomorphy — that was a challenging aspect of
-                    this dataset. Allomorphy is when a morpheme has different
+                <p>Allomorphy is when a morpheme has different
                     forms (allomorphs) depending on its context. For example, in
                     English, the plural morpheme has allomorphs like "-s"
                     (cats), "-es" (boxes), and "-en" (oxen). In our dataset,
                     some morphemes don't concatenate perfectly, meaning there
-                    can be additional characters at morpheme boundaries.<label
-                        for="sn-2"
-                        class="margin-toggle sidenote-number"></label><input
-                        type="checkbox" id="sn-2" class="margin-toggle" /><span
-                        class="sidenote">Haspelmath, Martin, and Andrea D. Sims.
-                        "Understanding Morphology." Routledge, 2013.</span></p>
+                    can be additional characters at morpheme boundaries.</p>
 
                 <p>To deal with this, I implemented a preprocessing step that
                     "cleans" target segmentations using Levenshtein distance to
@@ -300,10 +299,9 @@ def clean_target_segmentation(src, tgt_line):
                     boundaries based on
                     predictability rather than mere frequency.</p>
 
-                <p>This is actually quite principled. Since morphemes are by
-                    definition
-                    meaningful units, they should exhibit high internal
-                    coherence
+                <p>This makes some intuitive sense. Since morphemes are by
+                    definition minimum meaningful units, they should
+                    exhibit high internal coherence
                     (low surprisal within a morpheme) and lower coherence at
                     boundaries (high surprisal across morpheme
                     boundaries).<label
@@ -314,12 +312,9 @@ def clean_target_segmentation(src, tgt_line):
                         "Unsupervised Learning of the Morphology of a Natural Language."
                         Computational Linguistics, 2001.</span></p>
 
-                <p>This approach aligns with broader information-theoretic
-                    principles in linguistics. Harris (1955) proposed that
-                    morpheme boundaries occur at points of
-                    unpredictability—where the number of possible next phonemes
-                    suddenly increases. Similarly, the Minimum Description
-                    Length (MDL) principle suggests that an efficient linguistic
+                <p>This approach is related to the Minimum Description
+                    Length (MDL) principle, which suggests that an efficient
+                    linguistic
                     representation balances the size of the grammar with the
                     size of the encoded data.<label for="sn-mdl"
                         class="margin-toggle sidenote-number"></label><input
@@ -328,7 +323,7 @@ def clean_target_segmentation(src, tgt_line):
                         Jorma. "Modeling by Shortest Data Description."
                         Automatica, 1978.</span></p>
 
-                <p>Mathematically, I calculated the surprisal of a character
+                <p>Formally, we can calculate the surprisal of a character
                     given its prefix using:</p>
 
                 <p>\[
@@ -383,13 +378,21 @@ class NGramModel:
                 start = i
         segments.append(word[start:])
         return " ".join(segments)</pre>
-
                 <p>I experimented with different surprisal thresholds to
                     identify the best values for each language. The best
                     thresholds turned out to be around 3.06 for Shipibo-Konibo
                     (F1 = 0.3326) and 2.86 for Rarámuri (F1 = 0.2680). While
                     this approach improved upon some baselines for one language,
                     it did not for the other.</p>
+
+                <figure>
+                    <img src="images/surprisal_thresholds.png"
+                        alt="F1 score vs. surprisal threshold for Shipibo-Konibo and Rarámuri"
+                        loading="lazy">
+                    <span class="marginnote">Figure 1: F1 score as a function of
+                        surprisal threshold. Peaks indicate the selected
+                        thresholds for each language.</span>
+                </figure>
 
                 <p>While elegant in theory, this approach relies solely on
                     character-level statistics and does not incorporate
@@ -406,13 +409,7 @@ class NGramModel:
                     labeling task. In this setting, each character is labeled as
                     either the start of a morpheme (1) or a continuation (0),
                     and I implemented this using a transformer
-                    architecture.<label for="sn-transformer"
-                        class="margin-toggle sidenote-number"></label><input
-                        type="checkbox" id="sn-transformer"
-                        class="margin-toggle" /><span class="sidenote">Although
-                        transformers are popular for many NLP tasks, I wanted to
-                        see how a targeted approach would perform on this
-                        specific segmentation task.</span></p>
+                    architecture.</p>
 
                 <p>I implemented a character-level transformer model with
                     positional encoding:</p>
@@ -421,21 +418,55 @@ class NGramModel:
 class MorphemeTransformer(nn.Module):
     def __init__(self, vocab_size, embed_dim, num_heads, num_layers, dropout, max_len):
         super(MorphemeTransformer, self).__init__()
-        self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=0)
-        self.pos_encoder = PositionalEncoding(embed_dim, dropout, max_len)
-        encoder_layer = nn.TransformerEncoderLayer(d_model=embed_dim, nhead=num_heads, dropout=dropout)
-        self.transformer_encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
-        self.fc = nn.Linear(embed_dim, 2)  # output logits for binary decision at each character
-        self.embed_dim = embed_dim
 
-    def forward(self, src):
-        # src has shape (batch, seq_len); we embed and add positional encodings
-        x = self.embedding(src)           # (batch, seq_len, embed_dim)
-        x = self.pos_encoder(x)           # (batch, seq_len, embed_dim)
-        x = x.transpose(0, 1)             # transformer expects (seq_len, batch, embed_dim)
-        x = self.transformer_encoder(x)   # (seq_len, batch, embed_dim)
-        x = x.transpose(0, 1)             # back to (batch, seq_len, embed_dim)
-        logits = self.fc(x)               # (batch, seq_len, 2)
+        # Config
+        self.embed_dim = embed_dim
+        self.pad_idx = 0  # padding token index
+
+        # Token and position encodings
+        self.embedding = nn.Embedding(
+            num_embeddings=vocab_size,
+            embedding_dim=embed_dim,
+            padding_idx=self.pad_idx,
+        )
+        self.pos_encoder = PositionalEncoding(
+            d_model=embed_dim,
+            dropout=dropout,
+            max_len=max_len,
+        )
+
+        # Transformer encoder stack (expects input as (seq_len, batch, embed_dim))
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=embed_dim,
+            nhead=num_heads,
+            dropout=dropout,
+        )
+        self.transformer_encoder = nn.TransformerEncoder(
+            encoder_layer=encoder_layer,
+            num_layers=num_layers,
+        )
+
+        # Per-character binary classifier: 0 = continue, 1 = start
+        self.fc = nn.Linear(embed_dim, 2)
+
+    def forward(self, src: torch.Tensor) -> torch.Tensor:
+        """
+        Args:
+            src: LongTensor of shape (batch, seq_len) with character indices.
+        Returns:
+            FloatTensor of shape (batch, seq_len, 2) with per-character logits.
+        """
+        # Embed tokens and add positional encodings
+        emb = self.embedding(src)                  # (batch, seq_len, embed_dim)
+        emb = self.pos_encoder(emb)                # (batch, seq_len, embed_dim)
+
+        # TransformerEncoder expects (seq_len, batch, embed_dim)
+        enc_in = emb.transpose(0, 1)               # (seq_len, batch, embed_dim)
+        enc_out = self.transformer_encoder(enc_in) # (seq_len, batch, embed_dim)
+
+        # Back to (batch, seq_len, embed_dim) and classify
+        enc_out = enc_out.transpose(0, 1)          # (batch, seq_len, embed_dim)
+        logits = self.fc(enc_out)                  # (batch, seq_len, 2)
         return logits</pre>
 
                 <p>I trained the model using cross-entropy loss on the training
@@ -486,15 +517,15 @@ class MorphemeTransformer(nn.Module):
                         "Categorical Reparameterization with Gumbel-Softmax."
                         ICLR, 2017.</span></p>
 
-                <figure>
+                <!-- <figure>
                     <img src="/api/placeholder/800/400"
                         alt="Autoencoder Architecture with Gumbel-Softmax">
                     <figcaption>Figure 2: Autoencoder architecture with
                         Gumbel-Softmax for discrete latent
                         representation</figcaption>
-                </figure>
+                </figure> -->
 
-                <p>My autoencoder model architecture consists of:</p>
+                <p>The autoencoder model architecture consists of:</p>
 
                 <ol>
                     <li>A character embedding layer that converts input indices
@@ -511,45 +542,74 @@ class MorphemeTransformer(nn.Module):
                 </ol>
 
                 <p>The implementation looks like this:</p>
-
-                <pre>
+                <pre><code class="language-python">
 class MorphAutoencoder(nn.Module):
     def __init__(self, vocab_size, embed_dim, hidden_dim, pad_idx):
         super(MorphAutoencoder, self).__init__()
-        self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=pad_idx)
-        self.encoder = nn.LSTM(embed_dim, hidden_dim, batch_first=True)
-        self.fc_latent = nn.Linear(hidden_dim, 2)  # Binary decision: morpheme boundary or not
-        self.decoder = nn.LSTM(embed_dim + 2, hidden_dim, batch_first=True)
-        self.fc_output = nn.Linear(hidden_dim, vocab_size)
 
-    def forward(self, src_indices, tau=1.0, hard=True):
-        # Embed input characters
-        emb = self.embedding(src_indices)
-        
-        # Encode sequence
-        enc_out, (h_n, c_n) = self.encoder(emb)
-        
-        # Generate logits for morpheme boundaries
-        latent_logits = self.fc_latent(enc_out)
-        
-        # Apply Gumbel-Softmax for discrete latent space
-        latent = F.gumbel_softmax(latent_logits, tau=tau, hard=hard, dim=-1)
-        
-        # Concatenate embeddings with latent variables for decoding
-        dec_input = torch.cat([emb, latent], dim=-1)
-        
-        # Decode and reconstruct input
-        dec_out, _ = self.decoder(dec_input)
-        output_logits = self.fc_output(dec_out)
-        
-        return output_logits, latent_logits, latent</pre>
+        # Config
+        self.embed_dim = embed_dim
+        self.hidden_dim = hidden_dim
+        self.pad_idx = pad_idx
 
-                <p>For training, I used two loss components. Here are the loss
-                    functions expressed in LaTeX:</p>
+        # Encoder
+        self.embedding = nn.Embedding(
+            num_embeddings=vocab_size,
+            embedding_dim=embed_dim,
+            padding_idx=self.pad_idx,
+        )
+        self.encoder = nn.LSTM(
+            input_size=embed_dim,
+            hidden_size=hidden_dim,
+            batch_first=True,
+        )
+
+        # Boundary predictor (2 classes: 0 = continue, 1 = start)
+        self.boundary_head = nn.Linear(hidden_dim, 2)
+
+        # Decoder (condition on embeddings + boundary one-hot)
+        self.decoder = nn.LSTM(
+            input_size=embed_dim + 2,
+            hidden_size=hidden_dim,
+            batch_first=True,
+        )
+        self.output_head = nn.Linear(hidden_dim, vocab_size)
+
+    def forward(self, src: torch.Tensor, tau: float = 1.0, hard: bool = True):
+        """
+        Args:
+            src: LongTensor of shape (batch, seq_len) with character indices.
+            tau: float Gumbel-Softmax temperature.
+            hard: bool; if True, straight-through one-hot boundary samples.
+
+        Returns:
+            logits: FloatTensor of shape (batch, seq_len, vocab_size) reconstruction logits.
+            boundary_logits: FloatTensor of shape (batch, seq_len, 2) raw boundary logits.
+            boundary_onehot: FloatTensor of shape (batch, seq_len, 2) Gumbel-Softmax samples.
+        """
+        # Encode tokens
+        emb = self.embedding(src)                           # (batch, seq_len, embed_dim)
+        enc_out, _ = self.encoder(emb)                      # (batch, seq_len, hidden_dim)
+
+        # Boundary logits and Gumbel-Softmax samples
+        boundary_logits = self.boundary_head(enc_out)       # (batch, seq_len, 2)
+        boundary_onehot = F.gumbel_softmax(
+            boundary_logits, tau=tau, hard=hard, dim=-1
+        )                                                   # (batch, seq_len, 2)
+
+        # Decode (condition on boundaries)
+        dec_in = torch.cat([emb, boundary_onehot], dim=-1)  # (batch, seq_len, embed_dim + 2)
+        dec_out, _ = self.decoder(dec_in)                   # (batch, seq_len, hidden_dim)
+        logits = self.output_head(dec_out)                  # (batch, seq_len, vocab_size)
+
+        return logits, boundary_logits, boundary_onehot
+</code></pre>
+
+                <p>For training, I used two loss components:</p>
 
                 <p>\[
                     \mathcal{L}_{\text{recon}} = -\frac{1}{N}\sum_{i=1}^{N}
-                    \mathbf{1}_{x_i \neq 0} \sum_{c=1}^{C} y_{i,c}
+                    \mathbb{1}_{x_i \neq 0} \sum_{c=1}^{C} y_{i,c}
                     \log(\hat{y}_{i,c})
                     \]</p>
 
@@ -564,40 +624,16 @@ class MorphAutoencoder(nn.Module):
                     \mathcal{L}_{\text{seg}}
                     \]</p>
 
-                <p>The balancing of these loss components is crucial.
-                    Emphasizing reconstruction too much can lead the model to
-                    simply copy the input, while overemphasizing segmentation
-                    can harm reconstruction quality.</p>
+                <p>Weighing these losses together is important. Too much
+                    emphasis on reconstruction encourages trivial copying of the
+                    input, while too much emphasis on segmentation degrades
+                    reconstruction quality.</p>
 
                 <p>I used Optuna to tune the relative weights (lambda_seg and
                     lambda_recon) and found optimal values of lambda_seg=0.559
-                    and lambda_recon=3.542 after 10 trials.</p>
-
-                <pre>
-def objective(trial):
-    lambda_seg = trial.suggest_float("lambda_seg", 0.5, 2.0)
-    lambda_recon = trial.suggest_float("lambda_recon", 1.0, 5.0)
-    
-    lang = 'tar'
-    char2idx_lang = create_char2idx(data, lang)
-    idx2char_lang = create_idx2char(char2idx_lang)
-    vocab_size = len(char2idx_lang)
-    pad_idx = char2idx_lang['<PAD>']
-    
-    model = MorphAutoencoder(vocab_size, embed_dim=embed_dim, hidden_dim=hidden_dim, pad_idx=pad_idx).to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
-    train_loader = train_loaders[lang]
-    train_autoencoder(model, train_loader, optimizer, num_epochs=num_epochs, device=device,
-                      tau=1.0, lambda_seg=lambda_seg, lambda_recon=lambda_recon)
-    
-    dev_loader = dev_loaders[lang]
-    avg_loss, f1 = evaluate_autoencoder(model, dev_loader, device, idx2char_lang,
-                                        tau=1.0, lambda_seg=lambda_seg, lambda_recon=lambda_recon)
-    print(f"Trial: lambda_seg={lambda_seg:.3f}, lambda_recon={lambda_recon:.3f}, F1={f1:.4f}")
-    return -f1
-
-study = optuna.create_study(direction="minimize")
-study.optimize(objective, n_trials=10)</pre>
+                    and lambda_recon=3.542 after 10 trials. This suggests that
+                    the model benefits from a stronger emphasis on
+                    reconstruction relative to segmentation.</p>
 
                 <p>On the development set, the results were:</p>
 
@@ -610,10 +646,7 @@ study.optimize(objective, n_trials=10)</pre>
                     Rarámuri test F1 score: 0.5024</p>
 
                 <p>This approach improved over the transformer for
-                    Shipibo-Konibo but was slightly lower for Rarámuri. It
-                    provided a different perspective by attempting to model the
-                    structure of morphology directly, without overcomplicating
-                    the project.</p>
+                    Shipibo-Konibo but was slightly lower for Rarámuri.</p>
             </section>
 
             <section>
@@ -625,24 +658,25 @@ study.optimize(objective, n_trials=10)</pre>
                     scoring function to assign a quality score to every possible
                     candidate segment in a word, and then use dynamic
                     programming to compute a global score for the
-                    segmentation.<label for="sn-5"
+                    segmentation.</p>
+
+                <p>This approach draws inspiration from structured prediction
+                    methods.<label for="sn-5"
                         class="margin-toggle sidenote-number"></label><input
                         type="checkbox" id="sn-5" class="margin-toggle" /><span
                         class="sidenote">Mensch, Arthur, and Mathieu Blondel.
                         "Differentiable Dynamic Programming for Structured Prediction and Attention."
-                        ICML, 2018.</span></p>
-
-                <p>This approach draws inspiration from structured prediction
-                    methods. Instead of making independent decisions for each
+                        ICML, 2018.</span>
+                    Instead of making independent decisions for each
                     character, it scores complete segmentations, acknowledging
                     that segmentation decisions are interdependent.</p>
 
                 <p>The steps implemented were:</p>
 
                 <ol>
-                    <li><strong>Encoding:</strong> Use a character-level LSTM to
-                        obtain hidden representations \(h_1, h_2, \dots, h_n\)
-                        for the input word.</li>
+                    <li><strong>Encoding:</strong> Use a character-level
+                        bidirectional LSTM to obtain hidden representations
+                        \(h_1, h_2, \dots, h_n\) for the input word.</li>
                     <li><strong>Scoring Segments:</strong> For any candidate
                         segment spanning positions \(i\) to \(j\), compute a
                         score \(s(i,j) = \text{MLP}(h_i \oplus h_{j-1})\), where
@@ -874,20 +908,15 @@ class Segmenter(nn.Module):
                             segmentation quality.</li>
                     </ol>
 
-                    <p>Overall, I found the project to be a fun and engaging
-                        exploration of both traditional and neural methods for
-                        morphological segmentation. Although this was just a
-                        class project, it provided useful insights and a good
-                        exercise in combining theoretical principles with
-                        practical machine learning techniques. Future directions
-                        could include incorporating morphophonological rules,
-                        exploring multilingual models, semi-supervised learning,
+                    <p>Overall, I found the project to be a fun exploration of
+                        both traditional and neural methods for morphological
+                        segmentation. It's nice when a method that's based on
+                        linguistic principles can outperform more data-driven
+                        approaches. Future directions could include
+                        incorporating morphophonological rules, exploring
+                        multilingual models, semi-supervised learning,
                         hierarchical segmentation, and extending the methods to
                         other morphological types.</p>
-
-                    <p>This project has been an enjoyable way to investigate
-                        morphological segmentation while learning more about
-                        different computational approaches in NLP.</p>
                 </section>
             </article>
 

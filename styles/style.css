@@ -1,18 +1,19 @@
 :root {
+	--font: "PP Neue Montreal Mono", monospace;
 	--primary-color: #a60321;
 	--secondary-color: #feb501;
 	--background-light: #f0efea;
 	--background-dark: #320c4f;
 	--text-light: #000;
 	--text-dark: #feb501;
-	--text-xl: 44px;
-	--text-lg: 21px;
-	--text-base: 16px;
-	--text-sm: 14px;
+	--text-xl: 50px;
+	--text-lg: 28px;
+	--text-base: 15px;
+	--text-sm: 12px;
 }
 
 body {
-	font-family: "Space Mono", monospace;
+	font-family: var(--font);
 	margin: 1rem auto;
 	padding: 1rem 150px;
 	max-width: 42rem;
@@ -29,9 +30,9 @@ main {
 }
 
 #header-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .header {
@@ -53,6 +54,13 @@ section {
 ::selection {
 	background-color: transparent;
 	color: var(--primary-color);
+}
+
+h1,
+h2 {
+	/* font-family: "PP Editorial New"; */
+	font-family: "Grenette Pro";
+	font-weight: 500 !important;
 }
 
 h1 {
@@ -105,7 +113,7 @@ body,
 	padding: 8px 16px;
 	font-size: var(--text-base);
 	border: 2px solid var(--text-light);
-	font-family: "Space Mono", monospace;
+	font-family: var(--font);
 	background: none;
 }
 
@@ -140,7 +148,7 @@ body,
 .dropdown-info button {
 	font-size: var(--text-base);
 	color: grey;
-	font-family: "Space Mono", monospace;
+	font-family: var(--font);
 	background: none;
 	border: none;
 	text-decoration: underline;
@@ -343,7 +351,7 @@ body.dark-mode .dropbtn {
 	padding: 10px;
 	cursor: pointer;
 	z-index: 1001;
-	font-family: "Space Mono", monospace;
+	font-family: var(--font);
 	transition: background-color 0.4s ease, transform 0.4s ease;
 }
 

@@ -15,10 +15,11 @@
 body {
 	font-family: var(--font);
 	margin: 1rem auto;
-	padding: 1rem 150px;
-	max-width: 42rem;
+	padding: 1rem 0px;
+	max-width: 560px;
 	overflow-x: hidden;
 	line-height: 1.6;
+	text-align: justify;
 	background: url(../grid.svg) center / 100px 100px;
 	background-color: var(--background-light);
 	font-size: var(--text-base);

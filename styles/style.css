@@ -2,7 +2,8 @@
 	--font: "Neue Montreal Mono", monospace;
 	--primary-color: #a60321;
 	--secondary-color: #feb501;
-	--background-light: #faf8f3;
+	/* --background-light: #faf8f3; */
+	--background-light: #fff8e7;
 	--background-dark: #320c4f;
 	--text-light: #000000;
 	--text-dark: #feb501;

@@ -244,6 +244,10 @@ li {
 	text-decoration: underline;
 }
 
+.experience-info {
+	text-align: left;
+}
+
 .experience-title {
 	display: flex;
 	justify-content: space-between;
@@ -269,14 +273,6 @@ li {
 	transform: translate(-50%, -45%);
 }
 
-#research li:hover .project-image {
-	display: block;
-	position: fixed;
-	left: 50%;
-	top: 55%;
-	transform: translate(-50%, -45%);
-}
-
 .paper-hover-container:hover .project-image {
 	display: block;
 	position: fixed;
@@ -286,6 +282,10 @@ li {
 }
 
 #research span.pub-info {
+	color: grey;
+}
+
+#research span.pub-info a {
 	color: grey;
 }
 

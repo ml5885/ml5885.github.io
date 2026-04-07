@@ -331,6 +331,10 @@ body.dark-mode #research .pub-info {
 	color: #d56df8 !important;
 }
 
+body.dark-mode #research span.pub-info a {
+	color: #d56df8 !important;
+}
+
 body.dark-mode .project-image {
 	box-shadow: rgba(254, 181, 1, 0.5) 0 0 10px 2px;
 }

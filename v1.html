@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Michael Li</title>
+        <link rel="stylesheet" href="font.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="icon" type="image/x-icon" href="favicon.svg" />
+    </head>
+
+    <body>
+        <div class="dropdown">
+            <button class="dropbtn">Style</button>
+            <div class="dropdown-content">
+                <a href="index.html">Academic</a>
+                <a href="v1.html">v1</a>
+                <a href="index_bauhaus.html">Bauhaus</a>
+                <a href="index_classical.html">Professional</a>
+            </div>
+        </div>
+        <div class="dropdown-info">
+            <button>
+                What is this?
+            </button>
+            <div class="tooltip">
+                When I first created this website in high school, HTML, CSS, and
+                JavaScript were all new to me. Building something visual was a
+                refreshing change from the low-level C code I was used to
+                writing for my robotics club. Over time, I played with
+                several different versions of my personal site. While I've kept
+                these older versions for posterity, I plan to maintain only this
+                one going forward.
+            </div>
+        </div>
+
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        <main>
+            <div id="header-wrapper">
+                <div>
+                    <header class="header">
+                        <h1 id="title">Michael Li</h1>
+                    </header>
+                    <nav class="links">
+                        [<a href="https://github.com/ml5885" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>]  
+                        [<a href="https://devpost.com/bearseascape"
+                            target="_blank"
+                            rel="noopener noreferrer">Devpost</a>]  
+                        [<a
+                            href="https://scholar.google.com/citations?user=JP1PmjYAAAAJ&hl=en"
+                            target="_blank"
+                            rel="noopener noreferrer">Google Scholar</a>]
+                    </nav>
+                </div>
+                <img src="images/profilepicture.jpeg" alt="Michael Li" class="profile-pic" />
+            </div>
+            <section>
+                <h2>About</h2>
+                <p>
+                    Hi, I'm Michael. I'm studying statistics
+                    and machine learning at Carnegie Mellon University.
+                    <br /><br />
+                    I'm interested in advancing our mechanistic
+                    understanding of
+                    <a
+                        href="https://arxiv.org/pdf/2501.16496"
+                        target="_blank" rel="noopener noreferrer">how modern
+                        deep learning
+                        models work</a>.
+                </p>
+                <p>
+                    Outside of this, I enjoy <a
+                        href="https://devpost.com/bearseascape"
+                        target="_blank"
+                        rel="noopener noreferrer">hackathons</a>, <a
+                        href="https://youtu.be/1yjtBMZ6ZhU?feature=shared"
+                        target="_blank"
+                        rel="noopener noreferrer">playing the piano</a> and
+                    <a
+                        href="https://en.wikipedia.org/wiki/Speedcubing"
+                        target="_blank"
+                        rel="noopener noreferrer">speedcubing.</a>
+                </p>
+            </section>
+            <section>
+                <h2>Work</h2>
+                <ul id="experience">
+                    <li>
+                        <span class="experience-title">
+                            <span>
+                                Software Engineering Intern,
+                                <a
+                                    href="https://research.google/teams/global-networking/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">Google</a>
+                            </span>
+                            <span id="experience-date">
+                                (Summer 2025)
+                            </span>
+                        </span>
+                        <p class="experience-description">
+                            Worked on self-supervised graph neural networks
+                            (GNNs) for network anomaly detection.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="experience-title">
+                            <span>
+                                Machine Learning Intern,
+                                <a href="https://www.epirusinc.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">Epirus</a>
+                            </span>
+                            <span id="experience-date">(Summer 2024)</span>
+                        </span>
+                        <p class="experience-description">
+                            Built a real-time drone simulation environment and
+                            trained reinforcement learning agents with
+                            Proximal Policy Optimization (PPO) to engage unknown
+                            drone swarms.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="experience-title">
+                            <span>
+                                Software Engineering Intern,
+                                <a href="https://www.beaverhealth.org/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">Beaver Health</a>
+                            </span>
+                            <span id="experience-date">(Summer 2023)</span>
+                        </span>
+                        <p class="experience-description">
+                            Developed a generative AI dialogue framework using
+                            GPT-4 and TypeScript to digitize evidence-based
+                            health interventions for Alzheimer's patients.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="experience-title">
+                            <span>Researcher, University of Victoria</span>
+                            <span id="experience-date">(2022 - 2023)</span>
+                        </span>
+                        <p class="experience-description">
+                            Implemented and trained Temporal Convolutional
+                            Networks (TCNs) to forecast COVID-19 cases.
+                        </p>
+                        <p class="experience-info">
+                            <a
+                                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10208648/"
+                                target="_blank"
+                                rel="noopener noreferrer">Paper</a>,
+                            <a href="./assets/BioGENEius_2022_Poster.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer">Research Poster</a>,
+                            <a href="./assets/CSEF_2022_Presentation.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer">Slides</a>
+                        </p>
+                    </li>
+                    <li>
+                        <span class="experience-title">
+                            <span>Creator & Software Engineer,
+                                COVIDCatcher</span>
+                            <span id="experience-date">(2021 - 2023)</span>
+                        </span>
+                        <p class="experience-description">
+                            Developed a multimodal machine learning model
+                            (VGG-19,
+                            XGBoost) for COVID-19 symptom detection, deployed
+                            with React, Flask, and AWS.
+                        </p>
+                        <p class="experience-info">
+                            <a href="./assets/CovidCatcherPresentation.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer">Research Poster</a>,
+                            <a href="./assets/CSEF_2021_Presentation.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer">Slides</a>
+                        </p>
+                    </li>
+                    <li>
+                        <span class="experience-title">
+                            <span>
+                                Software Engineer,
+                                <a href="https://avbotz.com/" target="_blank"
+                                    rel="noopener noreferrer">AVBotz</a>
+                            </span>
+                            <span id="experience-date">(2018 - 2022)</span>
+                        </span>
+                        <p class="experience-description">
+                            Implemented real-time object detection in ROS with
+                            OpenCV and C++. Automated image annotation for
+                            dataset creation using YOLOv5 and DetNet in PyTorch.
+                        </p>
+                        <p class="experience-info">
+                            <a href="https://www.avbotz.com/resources/journal-papers/2022.pdf"
+                                target="_blank" rel="noopener noreferrer">2022 Technical Report</a>,
+                            <a href="https://www.avbotz.com/resources/journal-papers/2021.pdf"
+                                target="_blank" rel="noopener noreferrer">2021 Technical Report</a>,
+                            <a href="https://www.avbotz.com/resources/journal-papers/2020.pdf"
+                                target="_blank" rel="noopener noreferrer">2020 Technical Report</a>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Research</h2>
+                <ul id="research">
+                    <li>
+                        <div class="paper-hover-container">
+                            <a
+                                href="./assets/Model_Internal_Sleuthing__Finding_Lexical_Identity_and_Inflectional_Morphology_in_Modern_Language_Models.pdf"
+                                target="_blank" rel="noopener noreferrer">
+                                Model Internal Sleuthing: Finding Lexical
+                                Identity and Inflectional Morphology in
+                                Modern
+                                Language Models
+                            </a>
+                            <img src="./images/classifier_methodology.png"
+                                class="project-image"
+                                loading="lazy"
+                                alt="Model Internal Sleuthing methodology diagram" />
+                        </div>
+                        <br />
+                        <span class="pub-info">
+                            Michael Li, <a href="https://nishantsubramani.github.io/" target="_blank" rel="noopener noreferrer">Nishant Subramani</a><br />
+                            ACL 2026 Main
+                        </span>
+                    </li>
+                    <li>
+                        <div class="paper-hover-container">
+                            <a
+                                href="https://arxiv.org/abs/2506.02132"
+                                target="_blank" rel="noopener noreferrer">
+                                BERTology in the Modern World
+                            </a>
+                            <img src="./images/pipeline_heatmap.png"
+                                class="project-image"
+                                loading="lazy"
+                                alt="Echoes of BERT paper figure" />
+                        </div>
+                        <br />
+                        <span class="pub-info">
+                            Michael Li, <a href="https://nishantsubramani.github.io/" target="_blank" rel="noopener noreferrer">Nishant Subramani</a><br />
+                            Workshop on the Interplay of Model Behavior and
+                            Model Internals (INTERPLAY) at COLM 2025
+                        </span>
+                    </li>
+                    <li>
+                        <div class="paper-hover-container">
+                            <a
+                                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10208648/"
+                                target="_blank"
+                                rel="noopener noreferrer">Predicting
+                                the daily counts of COVID-19 infection using
+                                temporal convolutional networks</a>
+                            <img src="./images/COVIDCatcherDashboard.png"
+                                class="project-image"
+                                loading="lazy"
+                                alt="COVID-19 prediction dashboard" />
+                        </div>
+                        <br />
+                        <span class="pub-info">
+                            Michael Li, Fatemeh Esfahani, Li Xing, Xuekui
+                            Zhang <br />
+                            Journal of Global Health 13, 2023
+                        </span>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Projects</h2>
+                <ul id="projects">
+                     <li>
+                        <a
+                            href="https://devpost.com/software/autoclaim-q8who1"
+                            target="_blank"
+                            rel="noopener noreferrer">CLaiM</a>
+                        <span class="date">(October 2024)</span>
+                        Automatically file home insurance claims after
+                        natural
+                        disasters using computer vision. Won the Hyperbolic
+                        Prize ($1000) at CalHacks 11.0
+                        <img src="./images/CLaiM.png" class="project-image"
+                            loading="lazy"
+                            alt="Screenshot of CLaiM project" />
+                    </li>
+                    <li>
+                        <a href="https://file-explorer-ruby.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer">Github Repo
+                            Explorer</a>
+                        <span class="date">(June 2024)</span>
+                        Explore GitHub repos as folders.
+                        <img src="./images/FileExplorer.png"
+                            class="project-image"
+                            loading="lazy"
+                            alt="Screenshot of Github Repo Explorer project" />
+                    </li>
+                    <li>
+                        <a
+                            href="https://wesanderson-color-palettes.vercel.app"
+                            target="_blank" rel="noopener noreferrer">Colors
+                            of
+                            Wes Anderson</a>
+                        <span class="date">(October 2023)</span>
+                        Color palettes from Wes Anderson films.
+                        <img src="./images/WesAnderson.png"
+                            class="project-image"
+                            loading="lazy"
+                            alt="Screenshot of Colors of Wes Anderson project" />
+                    </li>
+                    <li>
+                        <a
+                            href="https://devpost.com/software/multivac-du7wve"
+                            target="_blank"
+                            rel="noopener noreferrer">Multivac</a>
+                        <span class="date">(October 2023)</span>
+                        Infinite text adventure game built with Python,
+                        React,
+                        Flask, LangChain, and LlamaIndex. Harvard Hacks
+                        2023.
+                        <img src="./images/Multivac.png"
+                            class="project-image"
+                            loading="lazy"
+                            alt="Screenshot of Multivac project" />
+                    </li>
+                    <li>
+                        <a href="https://github.com/The-Roast"
+                            target="_blank"
+                            rel="noopener noreferrer">The Roast</a>
+                        <span class="date">(July 2023)</span>
+                        Daily personalized newsletter using GPT, Claude, and
+                        LangChain to curate daily news based on user
+                        preferences. UC Berkeley AI Hackathon 2023.
+                        <img src="./images/TheRoast.png"
+                            class="project-image"
+                            loading="lazy"
+                            alt="Screenshot of The Roast project" />
+                    </li>
+                    <li>
+                        <a href="https://devpost.com/software/sea"
+                            target="_blank"
+                            rel="noopener noreferrer">SEA</a>
+                        <span class="date">(July 2020)</span>
+                        Deep learning pipeline using TensorFlow and Python
+                        to
+                        identify endangered marine wildlife images.
+                        <img src="./images/SEA.png" class="project-image"
+                            loading="lazy"
+                            alt="Screenshot of SEA project" />
+                    </li>
+                    <li>
+                        <a href="https://devpost.com/software/ad-lunam"
+                            target="_blank"
+                            rel="noopener noreferrer">Ad Lunam</a>
+                        <span class="date">(July 2020)</span>
+                        VR space exploration game using C# and Unity with
+                        procedurally generated planets and asteroid fields.
+                        Won
+                        3rd overall at To the Moon and Hack 2020.
+                        <img src="./images/AdLunam.png"
+                            class="project-image"
+                            loading="lazy"
+                            alt="Screenshot of Ad Lunam project" />
+                    </li>
+                    <li>
+                        <a href="https://devpost.com/software/shipworthy"
+                            target="_blank"
+                            rel="noopener noreferrer">Shipworthy</a>
+                        <span class="date">(June 2020)</span>
+                        Real-time ship simulator that uses computer vision
+                        with
+                        OpenCV to steer a ship in Unity via a physical
+                        steering
+                        wheel. Won 1st overall at HackItShipIt 2020.
+                        <img src="./images/Shipworthy.png"
+                            class="project-image"
+                            loading="lazy"
+                            alt="Screenshot of Shipworthy project" />
+                    </li>
+                    <li>
+                        <a href="https://github.com/ml5885/Stance"
+                            target="_blank"
+                            rel="noopener noreferrer">Stance</a>
+                        <span class="date">(June 2020)</span>
+                        Developed a machine learning app using sklearn and
+                        Flask
+                        to detect toxic comments online, using LIME to
+                        provide
+                        interpretable explanations of the classifications.
+                        Won
+                        1st overall at Data Day Grind 2020.
+                        <img src="./images/Stance.png" class="project-image"
+                            loading="lazy"
+                            alt="Screenshot of Stance project" />
+                    </li>
+                </ul>
+            </section>
+            <script src="script.js" defer></script>
+        </main>
+    </body>
+</html>

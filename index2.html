@@ -29,18 +29,23 @@
       padding: 5rem 1.5rem 3rem;
     }
 
+    h1, h2, h3 {
+      font-family: "PP Cirka";
+      font-weight: bold !important;
+    }
+
     h1 {
       font-weight: 500;
       font-size: 2.7rem;
       line-height: 1.05;
       margin: 0 0 1.25rem;
-      letter-spacing: -0.015em;
+      letter-spacing: -0.015em;  
     }
 
     h2 {
       font-weight: 500;
       font-size: 1.75rem;
-      margin: 3rem 0 1.5rem;
+      margin: 5rem 0 1rem;
       letter-spacing: -0.01em;
     }
 
@@ -77,68 +82,71 @@
     .pub { margin-bottom: 1.75rem; }
     .pub em { font-style: italic; }
 
-    /* Collapsible section */
-    details { margin-top: 3rem; }
-    details summary {
-      font-weight: 500;
-      font-size: 1.75rem;
-      letter-spacing: -0.01em;
-      cursor: pointer;
-      list-style: none;
-      margin-bottom: 1.5rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.7rem;
+    /* News timeline */
+    .news-box {
+      border: 1px solid #111;
+      max-height: 18rem;
+      overflow-y: auto;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.95em;
     }
-    details summary::-webkit-details-marker { display: none; }
-    details summary::after {
-      content: "+";
-      font-family: system-ui, -apple-system, sans-serif;
-      font-size: 0.8em;
-      font-weight: 400;
-      color: #bbb;
-      line-height: 1;
-      transition: color 150ms ease;
+    .news-item {
+      display: grid;
+      grid-template-columns: 5.5rem 1fr;
+      gap: 1rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid #eee;
     }
-    details[open] summary::after { content: "−"; }
-    details summary:hover::after { color: #111; }
+    .news-item:last-child { border-bottom: none; }
+    .news-date {
+      color: #666;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .news-body { margin: 0; text-align: left; hyphens: none; }
+
+    .news-box::-webkit-scrollbar { width: 8px; }
+    .news-box::-webkit-scrollbar-track { background: transparent; }
+    .news-box::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+    .news-box::-webkit-scrollbar-thumb:hover { background: #999; }
 
     .style-switcher {
       position: fixed;
       top: 1.25rem;
       left: 1.25rem;
-      margin-top: 0;
       font-size: 1rem;
       z-index: 10;
     }
     .style-switcher > summary {
       font-weight: 400;
       font-size: 1rem;
-      letter-spacing: 0;
-      margin-bottom: 0;
       color: #666;
       padding: 0.25rem 0.5rem;
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
       gap: 0.5rem;
     }
+    .style-switcher > summary::-webkit-details-marker { display: none; }
+    .style-switcher > summary::marker { content: ""; }
     .style-switcher > summary::after { content: "▾"; font-size: 1.1em; color: #999; line-height: 1; }
     .style-switcher[open] > summary::after { content: "▴"; }
     .style-switcher > summary:hover { color: #111; }
     .style-switcher-menu {
-      position: absolute;
-      left: 0;
-      margin-top: 0.35rem;
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      padding: 0.4rem 0;
-      min-width: 9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding: 0.35rem 0.5rem 0;
     }
     .style-switcher-menu a {
-      display: block;
-      padding: 0.25rem 0.9rem;
+      color: #666;
       text-decoration: none;
+    }
+    .style-switcher-menu a:hover {
+      font-style: italic;
       color: #111;
     }
-    .style-switcher-menu a:hover { background: #f4f4f4; }
 
     @media (max-width: 560px) {
       body { font-size: 19px; }
@@ -176,10 +184,7 @@
     </header>
 
     <p>
-      I am an incoming PhD student in Computer Science at Northeastern University,
-      where I will be advised by <a href="https://baulab.info/" target="_blank" rel="noopener noreferrer">David Bau</a> and
-      <a href="https://www.byronwallace.com/" target="_blank" rel="noopener noreferrer">Byron Wallace</a>. Currently, I am
-      an undergraduate at Carnegie Mellon University studying Statistics and Machine Learning,
+      I am an undergraduate at Carnegie Mellon University studying statistics and machine learning,
       working with <a href="https://nishantsubramani.github.io/" target="_blank" rel="noopener noreferrer">Nishant Subramani</a> at the
       Language Technologies Institute.
     </p>
@@ -190,10 +195,34 @@
       predictable and controllable.
     </p>
 
+    <h2>News</h2>
+    <div class="news-box">
+      <div class="news-item">
+        <span class="news-date">Apr 2026</span>
+        <p class="news-body"><em>How Much Do Circuits Tell Us? Measuring the Consistency and Specificity of Language Model Circuits</em> won a best paper award (preliminary track) at the LTI Student Research Symposium.</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Apr 2026</span>
+        <p class="news-body"><em>Model Internal Sleuthing</em> was accepted to ACL 2026.</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Oct 2025</span>
+        <p class="news-body">Presented <em>BERTology in the Modern World</em> at the Interplay workshop at COLM 2025.</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Aug 2025</span>
+        <p class="news-body">Wrapped up a summer internship at Google Research working on graph neural networks for anomaly detection.</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Jun 2025</span>
+        <p class="news-body">Started as a Software Engineering Intern at Google.</p>
+      </div>
+    </div>
+
     <h2>Publications</h2>
 
     <div class="pub">
-      <a href="#" target="_blank" rel="noopener noreferrer">How Much Do Circuits Tell Us? Measuring the Consistency and Specificity of Language Model Circuits</a><br />
+      <a href="#">How Much Do Circuits Tell Us? Measuring the Consistency and Specificity of Language Model Circuits</a><br />
       Michael Li, Nishant Subramani.<br />
       <em>Under review at COLM</em>, 2026.
     </div>
@@ -216,33 +245,31 @@
       <em>Journal of Global Health</em>, 2023.
     </div>
 
-    <details>
-      <summary>Experience</summary>
+    <h2>Experience</h2>
 
-      <div class="pub">
-        Software Engineering Intern, <a href="https://research.google/teams/global-networking/" target="_blank" rel="noopener noreferrer">Google</a>.<br />
-        Summer 2025.<br />
-        <em>Worked on self-supervised graph neural networks for anomaly detection.</em>
-      </div>
+    <div class="pub">
+      Software Engineering Intern, <a href="https://research.google/teams/global-networking/" target="_blank" rel="noopener noreferrer">Google</a>.<br />
+      Summer 2025.<br />
+      <em>Worked on self-supervised graph neural networks for anomaly detection.</em>
+    </div>
 
-      <div class="pub">
-        Machine Learning Intern, <a href="https://www.epirusinc.com/" target="_blank" rel="noopener noreferrer">Epirus</a>.<br />
-        Summer 2024.<br />
-        <em>Built a real-time drone simulator and trained RL agents with PPO to defend against drone swarms.</em>
-      </div>
+    <div class="pub">
+      Machine Learning Intern, <a href="https://www.epirusinc.com/" target="_blank" rel="noopener noreferrer">Epirus</a>.<br />
+      Summer 2024.<br />
+      <em>Built a real-time drone simulator and trained RL agents with PPO to defend against drone swarms.</em>
+    </div>
 
-      <div class="pub">
-        Software Engineering Intern, <a href="https://www.beaverhealth.org/" target="_blank" rel="noopener noreferrer">Beaver Health</a>.<br />
-        Summer 2023.<br />
-        <em>Developed a generative AI dialogue framework using GPT-4 and TypeScript to digitize evidence-based health interventions for Alzheimer's patients.</em>
-      </div>
+    <div class="pub">
+      Software Engineering Intern, <a href="https://www.beaverhealth.org/" target="_blank" rel="noopener noreferrer">Beaver Health</a>.<br />
+      Summer 2023.<br />
+      <em>Developed a generative AI dialogue framework using GPT-4 and TypeScript to digitize evidence-based health interventions for Alzheimer's patients.</em>
+    </div>
 
-      <div class="pub">
-        Researcher, University of Victoria.<br />
-        2022 &ndash; 2023.<br />
-        <em>Implemented and trained Temporal Convolutional Networks (TCNs) to forecast COVID-19 cases.</em>
-      </div>
-    </details>
+    <div class="pub">
+      Researcher, University of Victoria.<br />
+      2022 &ndash; 2023.<br />
+      <em>Implemented and trained Temporal Convolutional Networks (TCNs) to forecast COVID-19 cases.</em>
+    </div>
 
   </main>
 

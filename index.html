@@ -1,404 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Michael Li</title>
-        <link rel="stylesheet" href="font.css" />
-        <link rel="stylesheet" href="styles/style.css" />
-        <link rel="icon" type="image/x-icon" href="favicon.svg" />
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Li</title>
 
-    <body>
-        <div class="dropdown">
-            <button class="dropbtn">Style</button>
-            <div class="dropdown-content">
-                <a href="index.html">Main</a>
-                <a href="index_bauhaus.html">Bauhaus</a>
-                <a href="index_classical.html">Professional</a>
-            </div>
-        </div>
-        <div class="dropdown-info">
-            <button>
-                What is this?
-            </button>
-            <div class="tooltip">
-                When I first created this website in high school, HTML, CSS, and
-                JavaScript were all new to me. Building something visual was a
-                refreshing change from the low-level C code I was used to
-                writing for my robotics club. Over time, I played with
-                several different versions of my personal site. While I've kept
-                these older versions for posterity, I plan to maintain only this
-                one going forward.
-            </div>
-        </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
 
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
-        <main>
-            <div id="header-wrapper">
-                <div>
-                    <header class="header">
-                        <h1 id="title">Michael Li</h1>
-                    </header>
-                    <nav class="links">
-                        [<a href="https://github.com/ml5885" target="_blank"
-                            rel="noopener noreferrer">GitHub</a>]  
-                        [<a href="https://devpost.com/bearseascape"
-                            target="_blank"
-                            rel="noopener noreferrer">Devpost</a>]  
-                        [<a
-                            href="https://scholar.google.com/citations?user=JP1PmjYAAAAJ&hl=en"
-                            target="_blank"
-                            rel="noopener noreferrer">Google Scholar</a>]
-                    </nav>
-                </div>
-                <img src="images/profilepicture.jpeg" alt="Michael Li" class="profile-pic" />
-            </div>
-            <section>
-                <h2>About</h2>
-                <p>
-                    Hi, I'm Michael. I'm studying statistics
-                    and machine learning at Carnegie Mellon University.
-                    <br /><br />
-                    I'm interested in advancing our mechanistic
-                    understanding of
-                    <a
-                        href="https://arxiv.org/pdf/2501.16496"
-                        target="_blank" rel="noopener noreferrer">how modern
-                        deep learning
-                        models work</a>.
-                </p>
-                <p>
-                    Outside of this, I enjoy <a
-                        href="https://devpost.com/bearseascape"
-                        target="_blank"
-                        rel="noopener noreferrer">hackathons</a>, <a
-                        href="https://youtu.be/1yjtBMZ6ZhU?feature=shared"
-                        target="_blank"
-                        rel="noopener noreferrer">playing the piano</a> and
-                    <a
-                        href="https://en.wikipedia.org/wiki/Speedcubing"
-                        target="_blank"
-                        rel="noopener noreferrer">speedcubing.</a>
-                </p>
-            </section>
-            <section>
-                <h2>Work</h2>
-                <ul id="experience">
-                    <li>
-                        <span class="experience-title">
-                            <span>
-                                Software Engineering Intern,
-                                <a
-                                    href="https://research.google/teams/global-networking/"
-                                    target="_blank"
-                                    rel="noopener noreferrer">Google</a>
-                            </span>
-                            <span id="experience-date">
-                                (Summer 2025)
-                            </span>
-                        </span>
-                        <p class="experience-description">
-                            Worked on self-supervised graph neural networks
-                            (GNNs) for network anomaly detection.
-                        </p>
-                    </li>
-                    <li>
-                        <span class="experience-title">
-                            <span>
-                                Machine Learning Intern,
-                                <a href="https://www.epirusinc.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer">Epirus</a>
-                            </span>
-                            <span id="experience-date">(Summer 2024)</span>
-                        </span>
-                        <p class="experience-description">
-                            Built a real-time drone simulation environment and
-                            trained reinforcement learning agents with
-                            Proximal Policy Optimization (PPO) to engage unknown
-                            drone swarms.
-                        </p>
-                    </li>
-                    <li>
-                        <span class="experience-title">
-                            <span>
-                                Software Engineering Intern,
-                                <a href="https://www.beaverhealth.org/"
-                                    target="_blank"
-                                    rel="noopener noreferrer">Beaver Health</a>
-                            </span>
-                            <span id="experience-date">(Summer 2023)</span>
-                        </span>
-                        <p class="experience-description">
-                            Developed a generative AI dialogue framework using
-                            GPT-4 and TypeScript to digitize evidence-based
-                            health interventions for Alzheimer's patients.
-                        </p>
-                    </li>
-                    <li>
-                        <span class="experience-title">
-                            <span>Researcher, University of Victoria</span>
-                            <span id="experience-date">(2022 - 2023)</span>
-                        </span>
-                        <p class="experience-description">
-                            Implemented and trained Temporal Convolutional
-                            Networks (TCNs) to forecast COVID-19 cases.
-                        </p>
-                        <p class="experience-info">
-                            <a
-                                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10208648/"
-                                target="_blank"
-                                rel="noopener noreferrer">Paper</a>,
-                            <a href="./assets/BioGENEius_2022_Poster.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer">Research Poster</a>,
-                            <a href="./assets/CSEF_2022_Presentation.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer">Slides</a>
-                        </p>
-                    </li>
-                    <li>
-                        <span class="experience-title">
-                            <span>Creator & Software Engineer,
-                                COVIDCatcher</span>
-                            <span id="experience-date">(2021 - 2023)</span>
-                        </span>
-                        <p class="experience-description">
-                            Developed a multimodal machine learning model
-                            (VGG-19,
-                            XGBoost) for COVID-19 symptom detection, deployed
-                            with React, Flask, and AWS.
-                        </p>
-                        <p class="experience-info">
-                            <a href="./assets/CovidCatcherPresentation.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer">Research Poster</a>,
-                            <a href="./assets/CSEF_2021_Presentation.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer">Slides</a>
-                        </p>
-                    </li>
-                    <li>
-                        <span class="experience-title">
-                            <span>
-                                Software Engineer,
-                                <a href="https://avbotz.com/" target="_blank"
-                                    rel="noopener noreferrer">AVBotz</a>
-                            </span>
-                            <span id="experience-date">(2018 - 2022)</span>
-                        </span>
-                        <p class="experience-description">
-                            Implemented real-time object detection in ROS with
-                            OpenCV and C++. Automated image annotation for
-                            dataset creation using YOLOv5 and DetNet in PyTorch.
-                        </p>
-                        <p class="experience-info">
-                            <a href="https://www.avbotz.com/resources/journal-papers/2022.pdf"
-                                target="_blank" rel="noopener noreferrer">2022 Technical Report</a>,
-                            <a href="https://www.avbotz.com/resources/journal-papers/2021.pdf"
-                                target="_blank" rel="noopener noreferrer">2021 Technical Report</a>,
-                            <a href="https://www.avbotz.com/resources/journal-papers/2020.pdf"
-                                target="_blank" rel="noopener noreferrer">2020 Technical Report</a>
-                        </p>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Research</h2>
-                <ul id="research">
-                    <li>
-                        <div class="paper-hover-container">
-                            <a
-                                href="./assets/Model_Internal_Sleuthing__Finding_Lexical_Identity_and_Inflectional_Morphology_in_Modern_Language_Models.pdf"
-                                target="_blank" rel="noopener noreferrer">
-                                Model Internal Sleuthing: Finding Lexical
-                                Identity and Inflectional Morphology in
-                                Modern
-                                Language Models
-                            </a>
-                            <img src="./images/classifier_methodology.png"
-                                class="project-image"
-                                loading="lazy"
-                                alt="Model Internal Sleuthing methodology diagram" />
-                        </div>
-                        <br />
-                        <span class="pub-info">
-                            Michael Li, <a href="https://nishantsubramani.github.io/" target="_blank" rel="noopener noreferrer">Nishant Subramani</a><br />
-                            ACL 2026 Main
-                        </span>
-                    </li>
-                    <li>
-                        <div class="paper-hover-container">
-                            <a
-                                href="https://arxiv.org/abs/2506.02132"
-                                target="_blank" rel="noopener noreferrer">
-                                BERTology in the Modern World
-                            </a>
-                            <img src="./images/pipeline_heatmap.png"
-                                class="project-image"
-                                loading="lazy"
-                                alt="Echoes of BERT paper figure" />
-                        </div>
-                        <br />
-                        <span class="pub-info">
-                            Michael Li, <a href="https://nishantsubramani.github.io/" target="_blank" rel="noopener noreferrer">Nishant Subramani</a><br />
-                            Workshop on the Interplay of Model Behavior and
-                            Model Internals (INTERPLAY) at COLM 2025
-                        </span>
-                    </li>
-                    <li>
-                        <div class="paper-hover-container">
-                            <a
-                                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10208648/"
-                                target="_blank"
-                                rel="noopener noreferrer">Predicting
-                                the daily counts of COVID-19 infection using
-                                temporal convolutional networks</a>
-                            <img src="./images/COVIDCatcherDashboard.png"
-                                class="project-image"
-                                loading="lazy"
-                                alt="COVID-19 prediction dashboard" />
-                        </div>
-                        <br />
-                        <span class="pub-info">
-                            Michael Li, Fatemeh Esfahani, Li Xing, Xuekui
-                            Zhang <br />
-                            Journal of Global Health 13, 2023
-                        </span>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Projects</h2>
-                <ul id="projects">
-                     <li>
-                        <a
-                            href="https://devpost.com/software/autoclaim-q8who1"
-                            target="_blank"
-                            rel="noopener noreferrer">CLaiM</a>
-                        <span class="date">(October 2024)</span>
-                        Automatically file home insurance claims after
-                        natural
-                        disasters using computer vision. Won the Hyperbolic
-                        Prize ($1000) at CalHacks 11.0
-                        <img src="./images/CLaiM.png" class="project-image"
-                            loading="lazy"
-                            alt="Screenshot of CLaiM project" />
-                    </li>
-                    <li>
-                        <a href="https://file-explorer-ruby.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer">Github Repo
-                            Explorer</a>
-                        <span class="date">(June 2024)</span>
-                        Explore GitHub repos as folders.
-                        <img src="./images/FileExplorer.png"
-                            class="project-image"
-                            loading="lazy"
-                            alt="Screenshot of Github Repo Explorer project" />
-                    </li>
-                    <li>
-                        <a
-                            href="https://wesanderson-color-palettes.vercel.app"
-                            target="_blank" rel="noopener noreferrer">Colors
-                            of
-                            Wes Anderson</a>
-                        <span class="date">(October 2023)</span>
-                        Color palettes from Wes Anderson films.
-                        <img src="./images/WesAnderson.png"
-                            class="project-image"
-                            loading="lazy"
-                            alt="Screenshot of Colors of Wes Anderson project" />
-                    </li>
-                    <li>
-                        <a
-                            href="https://devpost.com/software/multivac-du7wve"
-                            target="_blank"
-                            rel="noopener noreferrer">Multivac</a>
-                        <span class="date">(October 2023)</span>
-                        Infinite text adventure game built with Python,
-                        React,
-                        Flask, LangChain, and LlamaIndex. Harvard Hacks
-                        2023.
-                        <img src="./images/Multivac.png"
-                            class="project-image"
-                            loading="lazy"
-                            alt="Screenshot of Multivac project" />
-                    </li>
-                    <li>
-                        <a href="https://github.com/The-Roast"
-                            target="_blank"
-                            rel="noopener noreferrer">The Roast</a>
-                        <span class="date">(July 2023)</span>
-                        Daily personalized newsletter using GPT, Claude, and
-                        LangChain to curate daily news based on user
-                        preferences. UC Berkeley AI Hackathon 2023.
-                        <img src="./images/TheRoast.png"
-                            class="project-image"
-                            loading="lazy"
-                            alt="Screenshot of The Roast project" />
-                    </li>
-                    <li>
-                        <a href="https://devpost.com/software/sea"
-                            target="_blank"
-                            rel="noopener noreferrer">SEA</a>
-                        <span class="date">(July 2020)</span>
-                        Deep learning pipeline using TensorFlow and Python
-                        to
-                        identify endangered marine wildlife images.
-                        <img src="./images/SEA.png" class="project-image"
-                            loading="lazy"
-                            alt="Screenshot of SEA project" />
-                    </li>
-                    <li>
-                        <a href="https://devpost.com/software/ad-lunam"
-                            target="_blank"
-                            rel="noopener noreferrer">Ad Lunam</a>
-                        <span class="date">(July 2020)</span>
-                        VR space exploration game using C# and Unity with
-                        procedurally generated planets and asteroid fields.
-                        Won
-                        3rd overall at To the Moon and Hack 2020.
-                        <img src="./images/AdLunam.png"
-                            class="project-image"
-                            loading="lazy"
-                            alt="Screenshot of Ad Lunam project" />
-                    </li>
-                    <li>
-                        <a href="https://devpost.com/software/shipworthy"
-                            target="_blank"
-                            rel="noopener noreferrer">Shipworthy</a>
-                        <span class="date">(June 2020)</span>
-                        Real-time ship simulator that uses computer vision
-                        with
-                        OpenCV to steer a ship in Unity via a physical
-                        steering
-                        wheel. Won 1st overall at HackItShipIt 2020.
-                        <img src="./images/Shipworthy.png"
-                            class="project-image"
-                            loading="lazy"
-                            alt="Screenshot of Shipworthy project" />
-                    </li>
-                    <li>
-                        <a href="https://github.com/ml5885/Stance"
-                            target="_blank"
-                            rel="noopener noreferrer">Stance</a>
-                        <span class="date">(June 2020)</span>
-                        Developed a machine learning app using sklearn and
-                        Flask
-                        to detect toxic comments online, using LIME to
-                        provide
-                        interpretable explanations of the classifications.
-                        Won
-                        1st overall at Data Day Grind 2020.
-                        <img src="./images/Stance.png" class="project-image"
-                            loading="lazy"
-                            alt="Screenshot of Stance project" />
-                    </li>
-                </ul>
-            </section>
-            <script src="script.js" defer></script>
-        </main>
-    </body>
+  <style>
+    @font-face {
+      font-family: "PP Cirka";
+      src: url("fonts/PP-Cirka/PPCirka-Variable.ttf") format("truetype-variations"),
+           url("fonts/PP-Cirka/PPCirka-Variable.ttf") format("truetype");
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "PP Cirka";
+      src: url("fonts/PP-Cirka/PPCirka-Light.otf") format("opentype");
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "PP Cirka";
+      src: url("fonts/PP-Cirka/PPCirka-Bold.otf") format("opentype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    html { background: #fff; -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #111;
+      font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "kern", "liga", "onum";
+    }
+
+    main {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 3rem;
+    }
+
+    h1, h2, h3 {
+      font-family: "PP Cirka";
+      font-weight: bold !important;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 2.5rem;
+      line-height: 1.05;
+      margin: 0 0 1.25rem;
+      letter-spacing: -0.015em;  
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 1.6rem;
+      margin: 2.5rem 0 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    p { margin: 0 0 1.1rem; text-align: justify; hyphens: auto; }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-thickness: 2px; }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .photo {
+      flex: 0 0 auto;
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .header-text { min-width: 0; }
+    .header-text h1 { margin: 0 0 0.5rem; }
+    .header-links { margin: 0; font-size: 0.9em; text-align: left; }
+
+    .pub { margin-bottom: 1.75rem; }
+    .pub em { font-style: italic; }
+
+    .news-box {
+      border: 1px solid #111;
+      max-height: 18rem;
+      overflow-y: auto;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.95em;
+    }
+    .news-item {
+      display: grid;
+      grid-template-columns: 5.5rem 1fr;
+      gap: 1rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-date {
+      color: #666;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .news-body { margin: 0; text-align: left; hyphens: none; }
+
+    .news-box::-webkit-scrollbar { width: 8px; }
+    .news-box::-webkit-scrollbar-track { background: transparent; }
+    .news-box::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+    .news-box::-webkit-scrollbar-thumb:hover { background: #999; }
+
+    .style-switcher {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      font-size: 1rem;
+      z-index: 10;
+    }
+    .style-switcher > summary {
+      font-weight: 400;
+      font-size: 1rem;
+      color: #666;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .style-switcher > summary::-webkit-details-marker { display: none; }
+    .style-switcher > summary::marker { content: ""; }
+    .style-switcher > summary::after { content: "▾"; font-size: 1.1em; color: #999; line-height: 1; }
+    .style-switcher[open] > summary::after { content: "▴"; }
+    .style-switcher > summary:hover { color: #111; }
+    .style-switcher-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding: 0.35rem 0.5rem 0;
+    }
+    .style-switcher-menu a {
+      color: #666;
+      text-decoration: none;
+    }
+    .style-switcher-menu a:hover {
+      font-style: italic;
+      color: #111;
+    }
+
+    @media (max-width: 560px) {
+      body { font-size: 17px; }
+      h1 { font-size: 1.85rem; }
+      .header { gap: 1.25rem; }
+      .photo { width: 100px; height: 100px; }
+      .style-switcher { top: 0.75rem; left: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+ <!--  <details class="style-switcher">
+    <summary>Style</summary>
+    <div class="style-switcher-menu">
+      <a href="index.html">Academic</a>
+      <a href="v1.html">v1</a>
+      <a href="index_bauhaus.html">Bauhaus</a>
+      <a href="index_classical.html">Professional</a>
+    </div>
+  </details>
+ -->
+  <main>
+
+    <header class="header">
+      <img class="photo" src="images/profilepicture.jpeg" alt="man with black hair smiling." />
+      <div class="header-text">
+        <h1>Michael Li</h1>
+        <p class="header-links">
+          <a href="mailto:limichael353@gmail.com">Email</a> &nbsp;·&nbsp;
+          <a href="https://scholar.google.com/citations?user=JP1PmjYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a> &nbsp;·&nbsp;
+          <a href="https://github.com/ml5885" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+      </div>
+    </header>
+
+    <p>
+      I am currently an undergraduate student at Carnegie Mellon University studying statistics and machine learning. In Fall 2026, I will be starting a PhD in CS at Northeastern University.
+    </p>
+
+    <p>
+      I'm interested in developing our scientific understanding of neural networks, by studying the underlying algorithms and representations they learn. More broadly, I'm excited by foundational questions about phenomena in deep learning, i.e. generalization, emergent capabilities, scaling laws, and so on.
+    </p>
+
+    <h2>News</h2>
+    <div class="news-box">
+      <div class="news-item">
+        <span class="news-date">Apr 2026</span>
+        <p class="news-body">Starting a CS PhD at Northeastern University in Fall 2026!</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Apr 2026</span>
+        <p class="news-body"><em>How Much Do Circuits Tell Us? Measuring the Consistency and Specificity of Language Model Circuits</em> won a best paper award (preliminary track) at the LTI Student Research Symposium.</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Apr 2026</span>
+        <p class="news-body"><em>Model Internal Sleuthing</em> was accepted to ACL 2026 (Main).</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Oct 2025</span>
+        <p class="news-body">Presented <em>BERTology in the Modern World</em> at the Interplay workshop at COLM 2025.</p>
+      </div>
+    </div>
+
+    <h2>Publications</h2>
+
+    <div class="pub">
+      <a href="#">How Much Do Circuits Tell Us? Measuring the Consistency and Specificity of Language Model Circuits</a><br />
+      Michael Li, Nishant Subramani.<br />
+      <em>Under review at COLM</em>, 2026.
+    </div>
+
+    <div class="pub">
+      <a href="https://arxiv.org/abs/2506.02132" target="_blank" rel="noopener noreferrer">Model Internal Sleuthing: Finding Lexical Identity and Inflectional Features in Modern Language Models</a><br />
+      Michael Li, Nishant Subramani.<br />
+      <em>ACL</em>, 2026.
+    </div>
+
+    <div class="pub">
+      <a href="https://openreview.net/pdf?id=FqahMD2wY8" target="_blank" rel="noopener noreferrer">BERTology in the Modern World</a><br />
+      Michael Li, Nishant Subramani.<br />
+      <em>Workshop on the Interplay of Model Behavior and Model Internals, COLM</em>, 2025.
+    </div>
+
+    <div class="pub">
+      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10208648/" target="_blank" rel="noopener noreferrer">Predicting the Daily Counts of COVID-19 Infection Using Temporal Convolutional Networks</a><br />
+      Michael Li, Fatemeh Esfahani, Li Xing, Xuekui Zhang.<br />
+      <em>Journal of Global Health</em>, 2023.
+    </div>
+
+    <h2>Experience</h2>
+
+    <div class="pub">
+      Software Engineering Intern, <a href="https://research.google/teams/global-networking/" target="_blank" rel="noopener noreferrer">Google</a>.<br />
+      Summer 2025.<br />
+      <em>Worked on self-supervised graph neural networks for anomaly detection.</em>
+    </div>
+
+    <div class="pub">
+      Machine Learning Intern, <a href="https://www.epirusinc.com/" target="_blank" rel="noopener noreferrer">Epirus</a>.<br />
+      Summer 2024.<br />
+      <em>Built a real-time drone simulator and trained RL agents with PPO to defend against drone swarms.</em>
+    </div>
+
+    <div class="pub">
+      Software Engineering Intern, <a href="https://www.beaverhealth.org/" target="_blank" rel="noopener noreferrer">Beaver Health</a>.<br />
+      Summer 2023.<br />
+      <em>Developed a generative AI dialogue framework using GPT-4 and TypeScript to digitize evidence-based health interventions for Alzheimer's patients.</em>
+    </div>
+
+  </main>
+
+</body>
 </html>

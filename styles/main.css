@@ -212,6 +212,10 @@ h2 {
 	hyphens: none;
 }
 
+.footer {
+	color: grey;
+}
+
 /* Mobile */
 
 @media (max-width: 560px) {

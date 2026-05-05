@@ -194,38 +194,6 @@
 }
 
 @font-face {
-	font-family: "Space Mono";
-	src: url("fonts/Space-Mono/SpaceMono-Regular.ttf") format("truetype");
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Space Mono";
-	src: url("fonts/Space-Mono/SpaceMono-Italic.ttf") format("truetype");
-	font-weight: normal;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Space Mono";
-	src: url("fonts/Space-Mono/SpaceMono-Bold.ttf") format("truetype");
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Space Mono";
-	src: url("fonts/Space-Mono/SpaceMono-BoldItalic.ttf") format("truetype");
-	font-weight: bold;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
 	font-family: "Grenette Pro";
 	src: url("fonts/Grenette Pro/grenette-regular-pro.ttf") format("truetype");
 	font-weight: 400;
@@ -247,4 +215,38 @@
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
+}
+
+
+@font-face {
+	font-family: "PP Cirka";
+	src:
+		url("../fonts/PP-Cirka/PPCirka-Variable.ttf") format("truetype-variations"),
+		url("../fonts/PP-Cirka/PPCirka-Variable.ttf") format("truetype");
+	font-weight: 300 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "PP Cirka";
+	src: url("../fonts/PP-Cirka/PPCirka-Light.otf") format("opentype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "PP Cirka";
+	src: url("../fonts/PP-Cirka/PPCirka-Bold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Libra";
+	src: url("../fonts/Libra/LIBRA___.TTF") format("truetype");
+	font-weight: 500;
+	font-style: normal;
 }

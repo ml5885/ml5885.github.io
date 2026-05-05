@@ -1,66 +1,15 @@
-/* Fonts */
-
-@font-face {
-	font-family: "PP Cirka";
-	src:
-		url("../fonts/PP-Cirka/PPCirka-Variable.ttf") format("truetype-variations"),
-		url("../fonts/PP-Cirka/PPCirka-Variable.ttf") format("truetype");
-	font-weight: 300 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "PP Cirka";
-	src: url("../fonts/PP-Cirka/PPCirka-Light.otf") format("opentype");
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "PP Cirka";
-	src: url("../fonts/PP-Cirka/PPCirka-Bold.otf") format("opentype");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Space Mono";
-	src: url("../fonts/Space-Mono/SpaceMono-Regular.ttf") format("truetype");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Space Mono";
-	src: url("../fonts/Space-Mono/SpaceMono-Italic.ttf") format("truetype");
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Space Mono";
-	src: url("../fonts/Space-Mono/SpaceMono-Bold.ttf") format("truetype");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
 /* Theme variables */
 
 :root {
 	--font-body: "Crimson Pro", Georgia, "Times New Roman", serif;
-	--font-display: "PP Cirka", Georgia, serif;
+	--font-display: "Libra";
 	--font-size-body: 21px;
 }
 
 body.theme-kiki {
 	--font-body: "Space Mono", "Courier New", monospace;
-	--font-size-body: 17px;
+	--font-display: "PP Cirka", Georgia, serif;	
+	--font-size-body: 16px;
 }
 
 /* Base */

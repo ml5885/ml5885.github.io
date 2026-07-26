@@ -34,7 +34,7 @@ body {
 }
 
 main {
-	max-width: 44rem;
+	max-width: 48rem;
 	margin: 0 auto;
 	padding: 5rem 1.5rem 3rem;
 }
@@ -76,21 +76,27 @@ h1 {
 h2 {
 	font-weight: 500;
 	font-size: 1.6rem;
-	margin: 2.5rem 0 1rem;
+	margin: 2.5rem 0 1.25rem;
 	letter-spacing: -0.01em;
 }
 
 /* Header (profile photo, name, links) */
 
 .header {
-	margin-bottom: 2rem;
+	margin-bottom: 2.5rem;
 }
 
-.header-text {
+.header-top {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.header-id {
 	min-width: 0;
 }
 
-.header-text h1 {
+.header-id h1 {
 	margin: 0 0 0.5rem;
 }
 
@@ -102,40 +108,102 @@ h2 {
 
 .header-bio {
 	display: flow-root;
-	margin-top: 0.75rem;
+	margin-top: 1.25rem;
 }
 
 .header-bio p:first-child {
 	margin-top: 0;
 }
 
+.header-bio p:last-child {
+	margin-bottom: 0;
+}
+
 .photo {
-	float: right;
+	flex: 0 0 150px;
 	width: 150px;
 	height: 150px;
-	margin: 0.15em 0 1rem 1.75rem;
 	object-fit: cover;
 	object-position: center top;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-	border-radius: 5px;
 }
 
 @media (max-width: 500px) {
+	.header-top {
+		gap: 1rem;
+	}
+
 	.photo {
+		flex-basis: 110px;
 		width: 110px;
 		height: 110px;
-		margin-left: 1rem;
 	}
 }
 
 /* Publications and experience entries */
 
 .pub {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.25rem;
 	margin-bottom: 1.75rem;
+}
+
+.pub-thumb {
+	flex: 0 0 auto;
+}
+
+.pub-thumb img {
+	display: block;
+	width: 180px;
+	height: auto;
+	cursor: zoom-in;
+}
+
+.pub-meta {
+	margin-top: 0.3rem;
+	font-size: 0.9em;
 }
 
 .pub em {
 	font-style: italic;
+}
+
+/* Lightbox */
+
+.lightbox {
+	position: fixed;
+	inset: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.65);
+	z-index: 2000;
+	cursor: zoom-out;
+	padding: 2rem;
+}
+
+.lightbox.open {
+	display: flex;
+}
+
+.lightbox img {
+	max-width: 90vw;
+	max-height: 90vh;
+	background: #fff;
+	cursor: default;
+}
+
+@media (max-width: 560px) {
+	.pub {
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.pub-thumb img {
+		height: auto;
+		width: 100%;
+		max-width: 260px;
+	}
 }
 
 /* News box */
@@ -195,14 +263,5 @@ h2 {
 
 	h1 {
 		font-size: 1.85rem;
-	}
-
-	.header {
-		gap: 1.25rem;
-	}
-
-	.photo {
-		width: 100px;
-		height: 100px;
 	}
 }

@@ -31,7 +31,7 @@ body {
   /* background: linear-gradient( #61323B, #141C24 ); */
   background: black fixed !important;
   font-family: cyber;
-  cursor: url('1 - Normal Select.cur'), auto;
+  cursor: url('../static/1 - Normal Select.cur'), auto;
 }
 
 body .cybr-btn + .cybr-btn {

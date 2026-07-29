@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "GT Cinetype";
-	src: url("fonts/GT-Cinetype/GT-Cinetype-Regular-Trial.otf") format("opentype");
+	src: url("../fonts/GT-Cinetype/GT-Cinetype-Regular-Trial.otf") format("opentype");
 	font-style: normal;
 	font-weight: normal;
 	font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: "GT Cinetype";
-	src: url("fonts/GT-Cinetype/GT-Cinetype-Regular-Italic-Trial.otf")
+	src: url("../fonts/GT-Cinetype/GT-Cinetype-Regular-Italic-Trial.otf")
 		format("opentype");
 	font-style: italic;
 	font-weight: normal;
@@ -17,7 +17,7 @@
 
 @font-face {
 	font-family: "GT Cinetype";
-	src: url("fonts/GT-Cinetype/GT-Cinetype-Light-Trial.otf") format("opentype");
+	src: url("../fonts/GT-Cinetype/GT-Cinetype-Light-Trial.otf") format("opentype");
 	font-style: normal;
 	font-weight: 300;
 	font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
 	font-family: "GT Cinetype";
-	src: url("fonts/GT-Cinetype/GT-Cinetype-Light-Italic-Trial.otf")
+	src: url("../fonts/GT-Cinetype/GT-Cinetype-Light-Italic-Trial.otf")
 		format("opentype");
 	font-style: italic;
 	font-weight: 300;
@@ -34,7 +34,7 @@
 
 @font-face {
 	font-family: "GT Cinetype";
-	src: url("fonts/GT-Cinetype/GT-Cinetype-Bold-Trial.otf") format("opentype");
+	src: url("../fonts/GT-Cinetype/GT-Cinetype-Bold-Trial.otf") format("opentype");
 	font-style: normal;
 	font-weight: bold;
 	font-display: swap;
@@ -42,7 +42,7 @@
 
 @font-face {
 	font-family: "GT Cinetype";
-	src: url("fonts/GT-Cinetype/GT-Cinetype-Bold-Italic-Trial.otf")
+	src: url("../fonts/GT-Cinetype/GT-Cinetype-Bold-Italic-Trial.otf")
 		format("opentype");
 	font-style: italic;
 	font-weight: bold;
@@ -51,20 +51,20 @@
 
 @font-face {
 	font-family: "GT Cinetype", monospace;
-	src: url("fonts/GT-Cinetype/GT-Cinetype-Mono-Trial.otf") format("opentype");
+	src: url("../fonts/GT-Cinetype/GT-Cinetype-Mono-Trial.otf") format("opentype");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Neue Montreal Mono";
-	src: url("fonts/Neue-Montreal/PPNeueMontrealMono-Book.otf") format("opentype");
+	src: url("../fonts/Neue-Montreal/PPNeueMontrealMono-Book.otf") format("opentype");
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Neue Montreal Mono";
-	src: url("fonts/Neue-Montreal/PPNeueMontrealMono-Medium.otf")
+	src: url("../fonts/Neue-Montreal/PPNeueMontrealMono-Medium.otf")
 		format("opentype");
 	font-weight: 500;
 	font-display: swap;
@@ -72,21 +72,21 @@
 
 @font-face {
 	font-family: "Neue Montreal Mono";
-	src: url("fonts/Neue-Montreal/PPNeueMontrealMono-Bold.otf") format("opentype");
+	src: url("../fonts/Neue-Montreal/PPNeueMontrealMono-Bold.otf") format("opentype");
 	font-weight: 700;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Neue Montreal Mono";
-	src: url("fonts/Neue-Montreal/PPNeueMontrealMono-Thin.otf") format("opentype");
+	src: url("../fonts/Neue-Montreal/PPNeueMontrealMono-Thin.otf") format("opentype");
 	font-weight: 100;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Neue Montreal Mono";
-	src: url("fonts/Neue-Montreal/PPNeueMontrealMono-BoldItalic.otf")
+	src: url("../fonts/Neue-Montreal/PPNeueMontrealMono-BoldItalic.otf")
 		format("opentype");
 	font-weight: 700;
 	font-style: italic;
@@ -95,7 +95,7 @@
 
 @font-face {
 	font-family: "Neue Montreal Mono";
-	src: url("fonts/Neue-Montreal/PPNeueMontrealMono-RegularItalic.otf")
+	src: url("../fonts/Neue-Montreal/PPNeueMontrealMono-RegularItalic.otf")
 		format("opentype");
 	font-weight: 400;
 	font-style: italic;
@@ -104,28 +104,28 @@
 
 @font-face {
 	font-family: "OT 2049";
-	src: url("fonts/OT-2049/OT2049-Black.otf") format("opentype");
+	src: url("../fonts/OT-2049/OT2049-Black.otf") format("opentype");
 	font-weight: 900;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "OT 2049";
-	src: url("fonts/OT-2049/OT2049-Regular.otf") format("opentype");
+	src: url("../fonts/OT-2049/OT2049-Regular.otf") format("opentype");
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "OT 2049";
-	src: url("fonts/OT-2049/OT2049-Thin.otf") format("opentype");
+	src: url("../fonts/OT-2049/OT2049-Thin.otf") format("opentype");
 	font-weight: 100;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Futura";
-	src: url("fonts/Futura/Futura Black/Futura Black.ttf") format("truetype");
+	src: url("../fonts/Futura/Futura Black/Futura Black.ttf") format("truetype");
 	font-weight: 900;
 	font-style: normal;
 	font-display: swap;
@@ -133,7 +133,7 @@
 
 @font-face {
 	font-family: "Futura";
-	src: url("fonts/Futura/Futura Bold/Futura Bold.otf") format("opentype");
+	src: url("../fonts/Futura/Futura Bold/Futura Bold.otf") format("opentype");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -141,7 +141,7 @@
 
 @font-face {
 	font-family: "Futura";
-	src: url("fonts/Futura/Futura Bold Italic/Futura Bold Italic.otf")
+	src: url("../fonts/Futura/Futura Bold Italic/Futura Bold Italic.otf")
 		format("opentype");
 	font-weight: 700;
 	font-style: italic;
@@ -150,7 +150,7 @@
 
 @font-face {
 	font-family: "Futura Book";
-	src: url("fonts/Futura/Futura Book/Futura Book.otf") format("opentype");
+	src: url("../fonts/Futura/Futura Book/Futura Book.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -158,7 +158,7 @@
 
 @font-face {
 	font-family: "Futura";
-	src: url("fonts/Futura/Futura Heavy/Futura Heavy.otf") format("opentype");
+	src: url("../fonts/Futura/Futura Heavy/Futura Heavy.otf") format("opentype");
 	font-weight: 900;
 	font-style: normal;
 	font-display: swap;
@@ -166,7 +166,7 @@
 
 @font-face {
 	font-family: "Futura";
-	src: url("fonts/Futura/Futura Medium/Futura Medium.otf") format("opentype");
+	src: url("../fonts/Futura/Futura Medium/Futura Medium.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -174,7 +174,7 @@
 
 @font-face {
 	font-family: "Futura";
-	src: url("fonts/Futura/Futura Medium Italic/Futura Medium Italic.otf")
+	src: url("../fonts/Futura/Futura Medium Italic/Futura Medium Italic.otf")
 		format("opentype");
 	font-weight: normal;
 	font-style: italic;
@@ -183,19 +183,19 @@
 
 @font-face {
 	font-family: "Futura";
-	src: url("fonts/Futura/Futura Light/Futura Light.otf") format("opentype");
+	src: url("../fonts/Futura/Futura Light/Futura Light.otf") format("opentype");
 	font-weight: 300;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "DidotLTRoman";
-	src: url("fonts/DidotLTStd-Roman.otf");
+	src: url("../fonts/DidotLTStd-Roman.otf");
 }
 
 @font-face {
 	font-family: "Grenette Pro";
-	src: url("fonts/Grenette Pro/grenette-regular-pro.ttf") format("truetype");
+	src: url("../fonts/Grenette Pro/grenette-regular-pro.ttf") format("truetype");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -203,7 +203,7 @@
 
 @font-face {
 	font-family: "Grenette Pro";
-	src: url("fonts/Grenette Pro/grenette-italic-pro.ttf") format("truetype");
+	src: url("../fonts/Grenette Pro/grenette-italic-pro.ttf") format("truetype");
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
@@ -211,7 +211,7 @@
 
 @font-face {
 	font-family: "Grenette Pro";
-	src: url("fonts/Grenette Pro/grenette-bold-pro.ttf") format("truetype");
+	src: url("../fonts/Grenette Pro/grenette-bold-pro.ttf") format("truetype");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
